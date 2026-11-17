@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "buzz-mediawijsheid",
     "public": ".",
     "ignore": [
       "firebase.json",
