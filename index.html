@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="nl" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUZZ! Mediawijsheid • De Grote Klasquiz</title>
+  <meta name="description" content="PS3 BUZZ! stijl interactieve TV-quiz over Mediawijsheid (De Schaal van M) en Algemene Kennis voor het lager onderwijs, compatibel met PS3 Buzz! controllers.">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Orbitron:wght@700;900&family=Quicksand:wght@500;600;700&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="studio-bg studio-grid min-h-screen flex flex-col text-white selection:bg-amber-400 selection:text-slate-950">
+
+  <!-- ==================== FULLSCREEN INTRO (AURORA BEAT-SYNC) ==================== -->
+  <div id="screenIntro" class="fixed inset-0 z-50 bg-[#060914] flex items-center justify-center overflow-hidden">
+    <canvas id="mgpro-canvas" class="w-full h-full block"></canvas>
+
+    <!-- Muziek toggle rechtsboven -->
+    <button id="btnIntroAudio" class="fixed top-5 right-5 z-20 px-4 py-2 rounded-full bg-slate-900/80 hover:bg-slate-800 backdrop-blur-md border border-white/20 text-xs sm:text-sm font-bold text-slate-200 transition cursor-pointer">
+      🔊 Muziek: Aan
+    </button>
+
+    <!-- Rode Knop naar Start Quiz -->
+    <div class="fixed bottom-7 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2">
+      <button id="btnIntroStartQuiz" class="group flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-red-600 via-rose-600 to-red-500 hover:from-red-500 hover:to-rose-400 text-white font-display font-black text-xl sm:text-2xl tracking-wide shadow-[0_0_35px_rgba(239,68,68,0.85)] border-2 border-red-200/80 transition transform hover:scale-105 active:scale-95 cursor-pointer">
+        <span class="w-6 h-6 rounded-full red-buzzer-dome lit inline-block"></span>
+        <span>START QUIZ!</span>
+      </button>
+      <span class="text-xs text-slate-300/85 font-semibold tracking-wide bg-slate-950/60 px-3 py-1 rounded-full backdrop-blur-sm">
+        Klik op de rode knop of druk op de rode PS3 buzzer
+      </span>
+    </div>
+  </div>
+
+  <!-- Studio Spotlights -->
+  <div class="spotlight-beam spotlight-left"></div>
+  <div class="spotlight-beam spotlight-right"></div>
+
+  <!-- TOP STUDIO HEADER -->
+  <header class="relative z-30 bg-slate-950/80 backdrop-blur-md border-b border-white/10 px-4 py-2 sm:px-6 flex flex-wrap items-center justify-between gap-3 shadow-xl">
+    <!-- Linksboven: Kinetix Spatial Oscilloscope (kleiner) + Kinetic Titel -->
+    <div class="flex items-center gap-3">
+      <div class="kinetix-mini-dial" id="kinetix-dial-container" title="Beweeg muis voor 3D parallax • Klik voor schokgolf">
+        <svg class="kinetix-bezel-svg" id="kinetix-bezel-svg" viewBox="0 0 480 480">
+          <path class="kinetix-arc-segment kinetix-arc-green" d="M 80 180 A 220 220 0 0 1 180 80" />
+          <path class="kinetix-arc-segment kinetix-arc-red" d="M 300 80 A 220 220 0 0 1 400 180" />
+          <path class="kinetix-arc-segment kinetix-arc-amber" d="M 400 300 A 220 220 0 0 1 300 400" />
+          <path class="kinetix-arc-segment kinetix-arc-teal" d="M 180 400 A 220 220 0 0 1 80 300" />
+        </svg>
+        <div class="kinetix-glass-face">
+          <div class="kinetix-lens-glare" id="kinetix-dial-glare"></div>
+          <div class="kinetix-dial-ticks" id="kinetix-dial-ticks"></div>
+          <svg class="kinetix-orbital-svg" viewBox="0 0 480 480">
+            <circle class="kinetix-track-rail" cx="240" cy="240" r="160" />
+            <circle class="kinetix-track-rail" cx="240" cy="240" r="172" />
+            <circle class="kinetix-track-rail" cx="240" cy="240" r="184" />
+            <circle class="kinetix-runner-1" cx="240" cy="240" r="160" />
+            <circle class="kinetix-runner-2" cx="240" cy="240" r="172" />
+            <circle class="kinetix-runner-3" cx="240" cy="240" r="184" />
+          </svg>
+          <canvas id="kinetix-oscilloscope-canvas"></canvas>
+        </div>
+      </div>
+
+      <div>
+        <div class="flex items-center gap-2 flex-wrap">
+          <h1 id="kinetix-kinetic-wrap" class="kinetix-kinetic-title text-sm sm:text-lg leading-none">
+            <span class="kinetix-fan-char">M</span><span class="kinetix-fan-char">E</span><span class="kinetix-fan-char">D</span><span class="kinetix-fan-char">I</span><span class="kinetix-fan-char">A</span><span class="kinetix-fan-char">W</span><span class="kinetix-fan-char">I</span><span class="kinetix-fan-char">J</span><span class="kinetix-fan-char">S</span><span class="kinetix-fan-char">H</span><span class="kinetix-fan-char">E</span><span class="kinetix-fan-char">I</span><span class="kinetix-fan-char">D</span><span class="kinetix-fan-char">&nbsp;</span><span class="kinetix-fan-char">Q</span><span class="kinetix-fan-char">U</span><span class="kinetix-fan-char">I</span><span class="kinetix-fan-char">Z</span>
+          </h1>
+          <span class="hidden md:inline-block text-[10px] font-bold uppercase tracking-wider bg-purple-500/30 border border-purple-400/40 text-purple-200 px-2 py-0.5 rounded-full">De Schaal van M</span>
+        </div>
+        <p class="kinetix-kinetic-subtitle text-[10px] sm:text-xs mt-1">Lager Onderwijs</p>
+      </div>
+    </div>
+
+    <!-- Hardware & Audio Controls -->
+    <div class="flex flex-wrap items-center gap-2">
+      <!-- Buzzer Connection Status -->
+      <div id="buzzerStatusBadge" class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-700 text-xs font-bold text-slate-300">
+        <span id="buzzerStatusDot" class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+        <span id="buzzerStatusText">Toetsenbord / Muis</span>
+      </div>
+
+      <button id="btnConnectBuzzers" class="px-3 py-1.5 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white text-xs sm:text-sm font-bold shadow-md shadow-red-900/40 border border-red-400/40 transition flex items-center gap-1.5 cursor-pointer">
+        <span>🔴</span>
+        <span>Koppel PS3 Buzzers</span>
+      </button>
+
+      <button id="btnHeaderHome" class="hidden px-3 py-1.5 rounded-xl bg-amber-400/20 hover:bg-amber-400/30 text-amber-200 text-xs sm:text-sm font-bold border border-amber-400/50 transition cursor-pointer" title="Terug naar het hoofdmenu">
+        🏠 Hoofdmenu
+      </button>
+
+      <button id="btnOpenTestModal" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs sm:text-sm font-bold border border-slate-600 transition cursor-pointer" title="Test en kalibreer je PS3 Buzzers">
+        🎮 Test
+      </button>
+
+      <button id="btnReplayIntro" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs sm:text-sm font-bold border border-slate-600 transition cursor-pointer" title="Speel intro opnieuw af">
+        🎬 Intro
+      </button>
+
+      <button id="btnToggleVoice" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs sm:text-sm font-bold border border-slate-600 transition cursor-pointer" title="Lees vragen voor (Web Speech)">
+        🗣️ Voorlezen: Uit
+      </button>
+
+      <button id="btnToggleMute" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs sm:text-sm font-bold border border-slate-600 transition cursor-pointer" title="Geluid aan/uit">
+        🔊
+      </button>
+
+      <button id="btnFullscreen" class="hidden sm:inline-flex px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs sm:text-sm font-bold border border-slate-600 transition cursor-pointer" title="Volledig scherm (Digibord)">
+        ⛶
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT STAGE -->
+  <main class="relative z-10 flex-1 flex flex-col max-w-7xl w-full mx-auto px-4 py-4 sm:px-6 sm:py-6">
+
+    <!-- ==================== SCREEN 1: LOBBY & SETUP ==================== -->
+    <section id="screenLobby" class="flex-1 flex flex-col gap-6 animate-pop-in">
+      <!-- Hero Banner -->
+      <div class="text-center py-2">
+        <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-amber-400/15 border border-amber-400/40 text-amber-300 text-xs sm:text-sm font-bold mb-2">
+          <span>📺</span> LIVE VANUIT DE KLASSTUDIO • PS3 BUZZ! COMPATIBEL
+        </div>
+        <h2 class="font-display font-black text-4xl sm:text-6xl tracking-tight buzz-logo-text text-amber-300">
+          KLAAR VOOR DE BUZZ?!
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mt-2">
+          Sluit je PS3 Buzz! controllers aan via USB (of speel met toetsenbord/muis), kies jullie teamnaam en strijd om de Mediawijsheid Bokaal!
+        </p>
+      </div>
+
+      <!-- Setup Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+
+        <!-- Left: Players Setup (7 cols) -->
+        <div class="lg:col-span-7 bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-3xl p-5 shadow-2xl flex flex-col gap-4">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <h3 class="font-heading text-xl font-bold text-white flex items-center gap-2">
+              <span>👥</span> Spelers / Teams
+            </h3>
+            <div class="flex items-center gap-1.5 bg-slate-950 p-1 rounded-xl border border-slate-800">
+              <button data-player-count="2" class="player-count-btn px-3 py-1 rounded-lg text-xs font-bold transition cursor-pointer">2 Spelers</button>
+              <button data-player-count="3" class="player-count-btn px-3 py-1 rounded-lg text-xs font-bold transition cursor-pointer">3 Spelers</button>
+              <button data-player-count="4" class="player-count-btn px-3 py-1 rounded-lg text-xs font-bold transition cursor-pointer">4 Spelers</button>
+            </div>
+          </div>
+
+          <p class="text-xs text-slate-400">
+            💡 Tip: Druk op de <strong class="text-red-400">Rode Buzzer</strong> van een controller om te checken of hij werkt!
+          </p>
+
+          <div id="lobbyPlayersGrid" class="flex-1 grid grid-cols-1 sm:grid-cols-2 auto-rows-fr gap-3.5">
+            <!-- Dynamically populated player cards -->
+          </div>
+        </div>
+
+        <!-- Right: Category & Mode Setup (5 cols) -->
+        <div class="lg:col-span-5 bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-3xl p-5 shadow-2xl flex flex-col gap-4">
+          <h3 class="font-heading text-xl font-bold text-white flex items-center gap-2">
+            <span>🎯</span> Kies Categorie
+          </h3>
+
+          <div id="categoryList" class="flex flex-col gap-2">
+            <!-- Dynamically populated categories -->
+          </div>
+
+          <div class="pt-2 border-t border-white/10">
+            <h4 class="font-heading text-sm font-bold text-slate-300 mb-2">⏱️ Spelmodus</h4>
+            <div class="grid grid-cols-3 gap-2">
+              <button data-mode="quick" class="mode-btn px-2 py-2.5 rounded-xl border text-center transition cursor-pointer">
+                <div class="font-bold text-xs sm:text-sm">Snel</div>
+                <div class="text-[11px] opacity-75">6 vragen</div>
+              </button>
+              <button data-mode="show" class="mode-btn px-2 py-2.5 rounded-xl border text-center transition cursor-pointer">
+                <div class="font-bold text-xs sm:text-sm">TV Show</div>
+                <div class="text-[11px] opacity-75">9 vragen • 3 rondes</div>
+              </button>
+              <button data-mode="marathon" class="mode-btn px-2 py-2.5 rounded-xl border text-center transition cursor-pointer">
+                <div class="font-bold text-xs sm:text-sm">Marathon</div>
+                <div class="text-[11px] opacity-75">12 vragen • 3 rondes</div>
+              </button>
+            </div>
+          </div>
+
+          <div class="pt-2 border-t border-white/10">
+            <h4 class="font-heading text-sm font-bold text-slate-300 mb-2">🐢 Denktijd per vraag</h4>
+            <div class="grid grid-cols-3 gap-2">
+              <button data-time-preset="15" class="time-btn px-2 py-2 rounded-xl border text-center transition cursor-pointer">
+                <div class="font-bold text-xs sm:text-sm">Normaal</div>
+                <div class="text-[11px] opacity-75">15 sec</div>
+              </button>
+              <button data-time-preset="30" class="time-btn px-2 py-2 rounded-xl border text-center transition cursor-pointer">
+                <div class="font-bold text-xs sm:text-sm">1e Graad</div>
+                <div class="text-[11px] opacity-75">30 sec extra</div>
+              </button>
+              <button data-time-preset="0" class="time-btn px-2 py-2 rounded-xl border text-center transition cursor-pointer">
+                <div class="font-bold text-xs sm:text-sm">Rustig ∞</div>
+                <div class="text-[11px] opacity-75">Geen timer</div>
+              </button>
+            </div>
+          </div>
+
+          <button id="btnStartGame" class="mt-auto w-full py-4 rounded-2xl bg-gradient-to-r from-amber-400 via-orange-500 to-red-500 hover:from-amber-300 hover:to-red-400 text-slate-950 font-display font-black text-xl tracking-wide shadow-xl shadow-orange-600/30 border-2 border-amber-200 transition transform hover:scale-[1.02] active:scale-[0.98] cursor-pointer">
+            🎬 START DE QUIZ!
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SCREEN 2: ROUND INTRO ==================== -->
+    <section id="screenRoundIntro" class="hidden flex-1 flex flex-col items-center justify-center text-center py-8 animate-pop-in">
+      <div class="relative overflow-hidden max-w-2xl w-full bg-slate-900/90 backdrop-blur-xl border-2 border-amber-400/50 rounded-3xl p-8 sm:p-10 shadow-2xl">
+        <!-- Morphing Shapes Background -->
+        <svg viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice" class="absolute inset-0 w-full h-full pointer-events-none opacity-85" style="filter: blur(28px); transform: scale(1.15);">
+          <defs>
+            <linearGradient id="roundMorphGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ec4899" />
+              <stop offset="100%" stop-color="#8b5cf6" />
+            </linearGradient>
+          </defs>
+          <path id="roundMorphBlob" fill="url(#roundMorphGrad)" opacity="0.9" />
+        </svg>
+
+        <div class="relative z-10">
+          <div id="roundIntroIcon" class="text-6xl mb-4">⚡</div>
+          <div id="roundIntroLabel" class="text-sm font-black uppercase tracking-widest text-amber-400 mb-2">RONDE 1</div>
+          <h2 id="roundIntroTitle" class="font-display font-black text-4xl sm:text-5xl text-white mb-4">Punten Bouwer</h2>
+          <p id="roundIntroDesc" class="text-slate-200 text-lg sm:text-xl leading-relaxed mb-8">
+            Iedereen antwoordt tegelijk met de gekleurde knoppen! Hoe sneller je antwoordt, hoe meer punten je verdient.
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-3">
+            <button id="btnContinueRound" class="px-8 py-4 rounded-2xl bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-display font-black text-xl shadow-lg hover:scale-105 transition cursor-pointer">
+              DAAR GAAN WE! →
+            </button>
+            <button id="btnRoundIntroHome" class="px-5 py-4 rounded-2xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 font-heading font-bold text-base border border-white/20 transition cursor-pointer">
+              🏠 Hoofdmenu
+            </button>
+          </div>
+          <p class="text-xs text-slate-300 mt-3">Of druk op een rode buzzer om door te gaan</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SCREEN 3: QUIZ STAGE ==================== -->
+    <section id="screenQuiz" class="hidden flex-1 flex flex-col gap-4">
+
+      <!-- Top Quiz Status Bar -->
+      <div class="flex flex-wrap items-center justify-between gap-3 bg-slate-900/80 border border-white/10 rounded-2xl px-4 py-2.5">
+        <div class="flex items-center gap-2.5">
+          <span id="quizRoundBadge" class="px-3 py-1 rounded-full bg-purple-600/40 border border-purple-400/50 text-purple-200 text-xs sm:text-sm font-black uppercase tracking-wide">
+            Ronde 1 • Punten Bouwer
+          </span>
+          <span id="quizTopicBadge" class="px-3 py-1 rounded-full bg-sky-500/20 border border-sky-400/40 text-sky-200 text-xs sm:text-sm font-bold">
+            🐱 1e Graad
+          </span>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <span id="quizCounter" class="font-heading font-bold text-sm sm:text-base text-slate-300">Vraag 1 / 9</span>
+          <div class="flex items-center gap-2 bg-slate-950 px-3 py-1 rounded-xl border border-slate-700">
+            <span class="text-xs text-slate-400 font-bold">TIJD</span>
+            <span id="quizTimerText" class="font-display font-black text-xl text-amber-300 w-7 text-right">15</span>
+          </div>
+          <button id="btnQuitQuiz" class="text-xs font-bold text-slate-400 hover:text-red-400 transition cursor-pointer" title="Stoppen naar lobby">
+            ✕ Stop
+          </button>
+        </div>
+      </div>
+
+      <!-- Timer Progress Bar -->
+      <div class="w-full h-3 bg-slate-900 rounded-full overflow-hidden border border-white/10">
+        <div id="quizTimerBar" class="timer-bar-fill h-full bg-gradient-to-r from-emerald-400 via-amber-400 to-red-500 w-full"></div>
+      </div>
+
+      <!-- Snelste Vinger Status Banner (Visible only in Round 2) -->
+      <div id="fastestFingerBanner" class="hidden rounded-2xl px-5 py-3 bg-gradient-to-r from-red-600/30 via-rose-500/30 to-red-600/30 border-2 border-red-400/60 text-center">
+        <p id="fastestFingerText" class="font-display font-black text-lg sm:text-2xl text-white tracking-wide">
+          🔴 DRUK ZO SNEL MOGELIJK OP DE RODE BUZZER!
+        </p>
+      </div>
+
+      <!-- Question Display Card -->
+      <div class="bg-slate-900/90 backdrop-blur-md border-2 border-indigo-400/30 rounded-3xl p-5 sm:p-8 shadow-2xl text-center">
+        <h2 id="quizQuestionText" class="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-white leading-snug">
+          Vraag wordt geladen...
+        </h2>
+      </div>
+
+      <!-- 4 Colored Buzz! Answer Buttons -->
+      <div id="quizOptionsGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+        <button data-opt="0" class="buzz-btn buzz-btn-blue p-4 sm:p-5 text-left flex items-center gap-4 cursor-pointer">
+          <span class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/25 border border-white/40 flex items-center justify-center font-display font-black text-xl shrink-0">🔵</span>
+          <span class="opt-label font-heading font-bold text-lg sm:text-xl md:text-2xl leading-tight">Optie A</span>
+        </button>
+
+        <button data-opt="1" class="buzz-btn buzz-btn-orange p-4 sm:p-5 text-left flex items-center gap-4 cursor-pointer">
+          <span class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/25 border border-white/40 flex items-center justify-center font-display font-black text-xl shrink-0">🟠</span>
+          <span class="opt-label font-heading font-bold text-lg sm:text-xl md:text-2xl leading-tight">Optie B</span>
+        </button>
+
+        <button data-opt="2" class="buzz-btn buzz-btn-green p-4 sm:p-5 text-left flex items-center gap-4 cursor-pointer">
+          <span class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/25 border border-white/40 flex items-center justify-center font-display font-black text-xl shrink-0">🟢</span>
+          <span class="opt-label font-heading font-bold text-lg sm:text-xl md:text-2xl leading-tight">Optie C</span>
+        </button>
+
+        <button data-opt="3" class="buzz-btn buzz-btn-yellow p-4 sm:p-5 text-left flex items-center gap-4 cursor-pointer">
+          <span class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-950/15 border border-slate-950/25 flex items-center justify-center font-display font-black text-xl shrink-0">🟡</span>
+          <span class="opt-label font-heading font-bold text-lg sm:text-xl md:text-2xl leading-tight">Optie D</span>
+        </button>
+      </div>
+
+      <!-- Explanation & Next Question Bar (Shown after reveal) -->
+      <div id="quizRevealBox" class="hidden bg-slate-900/95 border-2 border-emerald-400/50 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 animate-pop-in">
+        <div class="flex items-start gap-3">
+          <span class="text-3xl shrink-0">💡</span>
+          <div>
+            <div class="text-xs font-black uppercase tracking-wider text-emerald-400">Mediawijs Weetje</div>
+            <p id="quizExplanationText" class="text-sm sm:text-base text-slate-200 font-semibold"></p>
+          </div>
+        </div>
+        <button id="btnNextQuestion" class="shrink-0 px-6 py-3 rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-display font-black text-base sm:text-lg shadow-lg hover:scale-105 transition cursor-pointer">
+          Volgende Vraag →
+        </button>
+      </div>
+
+      <!-- Bottom Player Podiums -->
+      <div id="quizPodiumsGrid" class="mt-auto grid grid-cols-2 md:grid-cols-4 gap-3 pt-2">
+        <!-- Dynamically populated podiums -->
+      </div>
+    </section>
+
+    <!-- ==================== SCREEN 4: PODIUM & FINALE ==================== -->
+    <section id="screenFinale" class="hidden flex-1 flex flex-col items-center justify-center text-center py-6 animate-pop-in">
+      <div class="max-w-3xl w-full bg-slate-900/90 backdrop-blur-xl border-2 border-amber-400/50 rounded-3xl p-6 sm:p-10 shadow-2xl">
+        <div class="text-6xl mb-2">🏆</div>
+        <h2 class="font-display font-black text-4xl sm:text-5xl text-amber-300 buzz-logo-text mb-2">DE UITSLAG!</h2>
+        <p id="finaleWinnerText" class="text-xl sm:text-2xl font-bold text-white mb-6"></p>
+
+        <div id="finaleLeaderboard" class="flex flex-col gap-3 mb-8 text-left">
+          <!-- Dynamically populated -->
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <button id="btnPlayAgain" class="px-7 py-3.5 rounded-2xl bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-display font-black text-lg shadow-lg hover:scale-105 transition cursor-pointer">
+            🔄 Nog een keer!
+          </button>
+          <button id="btnBackToLobby" class="px-7 py-3.5 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-heading font-bold text-lg border border-slate-600 transition cursor-pointer">
+            🏠 Terug naar Lobby
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== MODAL: BUZZER TEST & KALIBRATIE ==================== -->
+  <div id="modalBuzzerTest" class="hidden fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-slate-900 border-2 border-slate-700 rounded-3xl max-w-4xl w-full p-6 shadow-2xl max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between gap-3 mb-4">
+        <div>
+          <h3 class="font-display font-black text-2xl text-white">🎮 PS3 Buzz! Controller Test & Kalibratie</h3>
+          <p class="text-sm text-slate-400">Druk op de knoppen van je PS3 Buzzers (of toetsenbord) om te zien of alles werkt.</p>
+        </div>
+        <button id="btnCloseTestModal" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold cursor-pointer">✕</button>
+      </div>
+
+      <!-- Connection Actions -->
+      <div class="flex flex-wrap items-center gap-2.5 mb-5 p-3.5 rounded-2xl bg-slate-950 border border-slate-800">
+        <button id="btnModalConnectSony" class="px-4 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white text-sm font-bold transition cursor-pointer">
+          🔌 Koppel Sony PS3 Buzz! (USB)
+        </button>
+        <button id="btnModalConnectAll" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-bold border border-slate-600 transition cursor-pointer">
+          🔍 Toon alle USB HID apparaten
+        </button>
+        <button id="btnModalTestLeds" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-sm font-bold transition cursor-pointer">
+          💡 Test Rode LEDs
+        </button>
+      </div>
+
+      <!-- 4 Virtual Buzz! Handsets -->
+      <div id="virtualHandsetsGrid" class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-5">
+        <!-- Populated by JS -->
+      </div>
+
+      <!-- Keyboard Shortcuts Legend -->
+      <div class="bg-slate-950/70 border border-slate-800 rounded-2xl p-4 text-xs text-slate-300">
+        <div class="font-bold text-amber-300 mb-1.5">⌨️ Toetsenbord Sneltoetsen (als je geen fysieke Buzzers gebruikt):</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          <div><strong>Speler 1:</strong> Rood = <code>Q</code> | Antwoorden = <code>1</code> <code>2</code> <code>3</code> <code>4</code></div>
+          <div><strong>Speler 2:</strong> Rood = <code>E</code> | Antwoorden = <code>5</code> <code>6</code> <code>7</code> <code>8</code></div>
+          <div><strong>Speler 3:</strong> Rood = <code>A</code> | Antwoorden = <code>Z</code> <code>X</code> <code>C</code> <code>V</code></div>
+          <div><strong>Speler 4:</strong> Rood = <code>P</code> | Antwoorden = <code>U</code> <code>I</code> <code>O</code> <code>K</code></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: CHARACTER KIEZER ==================== -->
+  <div id="modalCharacterPicker" class="hidden fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-slate-900 border-2 border-amber-400/40 rounded-3xl max-w-2xl w-full p-6 shadow-2xl max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between gap-3 mb-4">
+        <div>
+          <h3 id="charPickerTitle" class="font-display font-black text-2xl text-white">Kies je Character!</h3>
+          <p class="text-sm text-slate-400">Klik op een character om deze aan je team te koppelen.</p>
+        </div>
+        <button id="btnCloseCharModal" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold cursor-pointer">✕</button>
+      </div>
+      <div id="charPickerGrid" class="grid grid-cols-3 sm:grid-cols-5 gap-3">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/kinetix-badge.js"></script>
+  <script src="js/sound-fx.js"></script>
+  <script src="js/buzz-driver.js"></script>
+  <script src="js/questions.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/intro.js"></script>
+</body>
+</html>
