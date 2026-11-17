@@ -1,0 +1,308 @@
+{
+  "title": "Reeks 1: Dieren & Natuur (20 vragen)",
+  "categories": [
+    {
+      "id": "mix",
+      "title": "Alle Dieren & Natuur (Mix)",
+      "subtitle": "20 vragen door elkaar",
+      "icon": "🐾",
+      "color": "from-amber-400 to-orange-500"
+    },
+    {
+      "id": "zoogdieren",
+      "title": "Zoogdieren & Landdieren",
+      "subtitle": "Leeuwen, olifanten en meer",
+      "icon": "🦁",
+      "color": "from-emerald-400 to-teal-600"
+    },
+    {
+      "id": "oceaan-lucht",
+      "title": "Oceaan, Vogels & Insecten",
+      "subtitle": "Onder water en in de lucht",
+      "icon": "🐳",
+      "color": "from-sky-400 to-blue-600"
+    }
+  ],
+  "questions": [
+    {
+      "id": "d1",
+      "category": "zoogdieren",
+      "badge": "🦁 Zoogdieren",
+      "question": "Welk landdier kan het hardst rennen ter wereld?",
+      "options": [
+        "Cheeta (jachtluipaard)",
+        "Leeuw",
+        "Kangoeroe",
+        "Paard"
+      ],
+      "correct": 0,
+      "explanation": "Een cheeta kan wel 110 km/u halen in een korte sprint!"
+    },
+    {
+      "id": "d2",
+      "category": "zoogdieren",
+      "badge": "🐘 Zoogdieren",
+      "question": "Welk dier heeft de langste slurf en is het grootste landdier?",
+      "options": [
+        "Neushoorn",
+        "Nijlpaard",
+        "Olifant",
+        "Giraffe"
+      ],
+      "correct": 2,
+      "explanation": "De Afrikaanse olifant is het grootste landzoogdier ter wereld."
+    },
+    {
+      "id": "d3",
+      "category": "zoogdieren",
+      "badge": "🦒 Zoogdieren",
+      "question": "Hoeveel nekwervels heeft een giraffe, net als een mens?",
+      "options": [
+        "7",
+        "14",
+        "24",
+        "40"
+      ],
+      "correct": 0,
+      "explanation": "Net als mensen heeft een giraffe maar 7 nekwervels, alleen zijn ze enorm lang!"
+    },
+    {
+      "id": "d4",
+      "category": "zoogdieren",
+      "badge": "🦘 Zoogdieren",
+      "question": "Op welk werelddeel leven kangoeroes in het wild?",
+      "options": [
+        "Afrika",
+        "Australië",
+        "Zuid-Amerika",
+        "Azië"
+      ],
+      "correct": 1,
+      "explanation": "Kangoeroes zijn buideldieren die in het wild in Australië leven."
+    },
+    {
+      "id": "d5",
+      "category": "zoogdieren",
+      "badge": "🐼 Zoogdieren",
+      "question": "Wat eet een reuzenpanda bijna de hele dag door?",
+      "options": [
+        "Bamboe",
+        "Eucalyptus",
+        "Bananen",
+        "Vis"
+      ],
+      "correct": 0,
+      "explanation": "Een reuzenpanda eet tot wel 12 uur per dag bamboe."
+    },
+    {
+      "id": "d6",
+      "category": "zoogdieren",
+      "badge": "🐨 Zoogdieren",
+      "question": "Welke bladeren eet een koala vooral?",
+      "options": [
+        "Eikenbladeren",
+        "Eucalyptusbladeren",
+        "Bamboebladeren",
+        "Gras"
+      ],
+      "correct": 1,
+      "explanation": "Koala's eten bijna uitsluitend eucalyptusbladeren."
+    },
+    {
+      "id": "d7",
+      "category": "zoogdieren",
+      "badge": "🦇 Zoogdieren",
+      "question": "Welk zoogdier kan echt vliegen?",
+      "options": [
+        "Vliegende eekhoorn",
+        "Vleermuis",
+        "Kolibrie",
+        "Libel"
+      ],
+      "correct": 1,
+      "explanation": "De vleermuis is het enige zoogdier dat echt kan vliegen."
+    },
+    {
+      "id": "d8",
+      "category": "zoogdieren",
+      "badge": "🐪 Zoogdieren",
+      "question": "Wat zit er in de bulten van een kameel opgeslagen?",
+      "options": [
+        "Water",
+        "Vet",
+        "Zand",
+        "Lucht"
+      ],
+      "correct": 1,
+      "explanation": "In kamelenbulten zit vet opgeslagen als energiereserve."
+    },
+    {
+      "id": "d9",
+      "category": "zoogdieren",
+      "badge": "🦊 Zoogdieren",
+      "question": "Welk dier houdt 's winters een echte winterslaap in Nederland en België?",
+      "options": [
+        "Egel",
+        "Vos",
+        "Ree",
+        "Haas"
+      ],
+      "correct": 0,
+      "explanation": "Egels houden een winterslaap van ongeveer november tot maart."
+    },
+    {
+      "id": "d10",
+      "category": "zoogdieren",
+      "badge": "🦓 Zoogdieren",
+      "question": "Welke kleur heeft de huid van een zebra onder zijn zwart-witte vacht?",
+      "options": [
+        "Wit",
+        "Zwart",
+        "Roze",
+        "Grijs"
+      ],
+      "correct": 1,
+      "explanation": "Onder de gestreepte vacht heeft een zebra een zwarte huid."
+    },
+    {
+      "id": "d11",
+      "category": "oceaan-lucht",
+      "badge": "🐳 Oceaan",
+      "question": "Hoeveel harten heeft een octopus?",
+      "options": [
+        "1 hart",
+        "2 harten",
+        "3 harten",
+        "4 harten"
+      ],
+      "correct": 2,
+      "explanation": "Een octopus heeft 3 harten en blauw bloed!"
+    },
+    {
+      "id": "d12",
+      "category": "oceaan-lucht",
+      "badge": "🐧 Vogels",
+      "question": "Welke vogel kan NIET vliegen maar wel razendsnel zwemmen?",
+      "options": [
+        "Adelaar",
+        "Pinguïn",
+        "Meeuw",
+        "Zwaan"
+      ],
+      "correct": 1,
+      "explanation": "Pinguïns gebruiken hun vleugels als flippers onder water."
+    },
+    {
+      "id": "d13",
+      "category": "oceaan-lucht",
+      "badge": "🐝 Insecten",
+      "question": "Hoe maken bijen honing?",
+      "options": [
+        "Uit regenwater",
+        "Uit bloemennectar",
+        "Uit boomschors",
+        "Uit stuifmeel alleen"
+      ],
+      "correct": 1,
+      "explanation": "Bijen verzamelen nectar uit bloemen en maken daar honing van in de bijenkorf."
+    },
+    {
+      "id": "d14",
+      "category": "oceaan-lucht",
+      "badge": "🦋 Insecten",
+      "question": "Wat was een vlinder voordat hij vleugels kreeg?",
+      "options": [
+        "Een kever",
+        "Een rups",
+        "Een worm",
+        "Een mier"
+      ],
+      "correct": 1,
+      "explanation": "Uit een eitje komt een rups, die verpopt en daarna als vlinder tevoorschijn komt."
+    },
+    {
+      "id": "d15",
+      "category": "oceaan-lucht",
+      "badge": "🦉 Vogels",
+      "question": "Welke vogel kan zijn kop bijna helemaal ronddraaien (270 graden)?",
+      "options": [
+        "Duif",
+        "Uil",
+        "Mus",
+        "Specht"
+      ],
+      "correct": 1,
+      "explanation": "Uilen kunnen hun ogen niet draaien, dus draaien ze hun hele kop heel ver rond."
+    },
+    {
+      "id": "d16",
+      "category": "oceaan-lucht",
+      "badge": "🦈 Oceaan",
+      "question": "Welk dier in de zee is een vis: een dolfijn of een haai?",
+      "options": [
+        "Alleen de dolfijn",
+        "Alleen de haai",
+        "Allebei",
+        "Geen van beide"
+      ],
+      "correct": 1,
+      "explanation": "Een haai is een kraakbeenvis; een dolfijn is een zoogdier dat lucht ademt."
+    },
+    {
+      "id": "d17",
+      "category": "oceaan-lucht",
+      "badge": "🕷️ Natuur",
+      "question": "Hoeveel ogen hebben de meeste spinnen?",
+      "options": [
+        "2 ogen",
+        "4 ogen",
+        "8 ogen",
+        "12 ogen"
+      ],
+      "correct": 2,
+      "explanation": "De meeste spinnen hebben 8 ogen, al zien sommige soorten er niet heel scherp mee."
+    },
+    {
+      "id": "d18",
+      "category": "oceaan-lucht",
+      "badge": "🦩 Vogels",
+      "question": "Waarom zijn flamingo's roze?",
+      "options": [
+        "Door de zon",
+        "Door wat ze eten (garnaaltjes/algen)",
+        "Omdat ze zich schamen",
+        "Door zout water"
+      ],
+      "correct": 1,
+      "explanation": "Flamingo's krijgen hun roze kleur door de kleurstoffen in kreeftjes en algen die ze eten."
+    },
+    {
+      "id": "d19",
+      "category": "oceaan-lucht",
+      "badge": "🐢 Natuur",
+      "question": "Wat is het verschil tussen een kikker en een pad?",
+      "options": [
+        "Padden hebben een droge, wratachtige huid",
+        "Kikkers hebben 6 poten",
+        "Padden kunnen vliegen",
+        "Er is geen verschil"
+      ],
+      "correct": 0,
+      "explanation": "Kikkers hebben meestal een gladde, vochtige huid en springen ver; padden hebben een drogere huid."
+    },
+    {
+      "id": "d20",
+      "category": "oceaan-lucht",
+      "badge": "🌳 Natuur",
+      "question": "Hoe kun je tellen hoe oud een omgezaagde boom ongeveer is?",
+      "options": [
+        "Aan het aantal takken",
+        "Aan de jaarringen in de stam",
+        "Aan de kleur van de bladeren",
+        "Aan de lengte van de wortels"
+      ],
+      "correct": 1,
+      "explanation": "Elke jaarring in een boomstam staat voor één groeijaar."
+    }
+  ]
+}

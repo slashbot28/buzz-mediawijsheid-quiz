@@ -1,0 +1,308 @@
+{
+  "title": "Reeks 4: Wereld, Aardrijkskunde & Geschiedenis (20 vragen)",
+  "categories": [
+    {
+      "id": "mix",
+      "title": "Wereld & Geschiedenis (Mix)",
+      "subtitle": "20 vragen door elkaar",
+      "icon": "🗺️",
+      "color": "from-amber-400 to-orange-500"
+    },
+    {
+      "id": "aardrijkskunde",
+      "title": "Landen, Steden & Rivieren",
+      "subtitle": "Europa en de wereld",
+      "icon": "🌍",
+      "color": "from-emerald-400 to-teal-600"
+    },
+    {
+      "id": "geschiedenis",
+      "title": "Geschiedenis & Cultuur",
+      "subtitle": "Van ridders tot uitvindingen",
+      "icon": "🏰",
+      "color": "from-rose-400 to-red-600"
+    }
+  ],
+  "questions": [
+    {
+      "id": "g1",
+      "category": "aardrijkskunde",
+      "badge": "🇧🇪 België",
+      "question": "Hoeveel gewesten telt België?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "10"
+      ],
+      "correct": 1,
+      "explanation": "België heeft 3 gewesten: het Vlaams, Waals en Brussels Hoofdstedelijk Gewest."
+    },
+    {
+      "id": "g2",
+      "category": "aardrijkskunde",
+      "badge": "🇳🇱 Nederland",
+      "question": "Wat is de hoofdstad van Nederland?",
+      "options": [
+        "Rotterdam",
+        "Den Haag",
+        "Amsterdam",
+        "Utrecht"
+      ],
+      "correct": 2,
+      "explanation": "Amsterdam is de hoofdstad van Nederland; de regering zit in Den Haag."
+    },
+    {
+      "id": "g3",
+      "category": "aardrijkskunde",
+      "badge": "🇫🇷 Europa",
+      "question": "In welke stad staat de Eiffeltoren?",
+      "options": [
+        "Lyon",
+        "Marseille",
+        "Parijs",
+        "Brussel"
+      ],
+      "correct": 2,
+      "explanation": "De Eiffeltoren staat in Parijs en werd gebouwd voor de Wereldtentoonstelling van 1889."
+    },
+    {
+      "id": "g4",
+      "category": "aardrijkskunde",
+      "badge": "🇮🇹 Europa",
+      "question": "Welk land heeft op de kaart de vorm van een laars?",
+      "options": [
+        "Spanje",
+        "Italië",
+        "Griekenland",
+        "Portugal"
+      ],
+      "correct": 1,
+      "explanation": "Italië lijkt op een laars die naar het eiland Sicilië trapt."
+    },
+    {
+      "id": "g5",
+      "category": "aardrijkskunde",
+      "badge": "🌎 Werelddelen",
+      "question": "Wat is het grootste werelddeel (continent) op aarde?",
+      "options": [
+        "Afrika",
+        "Europa",
+        "Azië",
+        "Noord-Amerika"
+      ],
+      "correct": 2,
+      "explanation": "Azië is zowel qua oppervlakte als qua aantal inwoners het grootste continent."
+    },
+    {
+      "id": "g6",
+      "category": "aardrijkskunde",
+      "badge": "🌊 Oceanen",
+      "question": "Wat is de grootste oceaan op aarde?",
+      "options": [
+        "Atlantische Oceaan",
+        "Indische Oceaan",
+        "Stille (Grote) Oceaan",
+        "Noordelijke IJszee"
+      ],
+      "correct": 2,
+      "explanation": "De Stille of Grote Oceaan bedekt ongeveer een derde van het hele aardoppervlak."
+    },
+    {
+      "id": "g7",
+      "category": "aardrijkskunde",
+      "badge": "🏜️ Natuur",
+      "question": "Wat is de grootste warme woestijn ter wereld?",
+      "options": [
+        "Gobi",
+        "Sahara",
+        "Kalahari",
+        "Atacama"
+      ],
+      "correct": 1,
+      "explanation": "De Sahara in Noord-Afrika is bijna net zo groot als heel Europa!"
+    },
+    {
+      "id": "g8",
+      "category": "aardrijkskunde",
+      "badge": "🏔️ Bergen",
+      "question": "Hoe heet de hoogste berg ter wereld?",
+      "options": [
+        "Mont Blanc",
+        "Kilimanjaro",
+        "Mount Everest",
+        "Matterhorn"
+      ],
+      "correct": 2,
+      "explanation": "De Mount Everest in het Himalaya-gebergte is 8.848 meter hoog."
+    },
+    {
+      "id": "g9",
+      "category": "aardrijkskunde",
+      "badge": "🗽 Wereld",
+      "question": "In welke stad staat het Vrijheidsbeeld?",
+      "options": [
+        "Washington",
+        "New York",
+        "Los Angeles",
+        "Chicago"
+      ],
+      "correct": 1,
+      "explanation": "Het Vrijheidsbeeld staat op Liberty Island in New York en was een cadeau van Frankrijk."
+    },
+    {
+      "id": "g10",
+      "category": "aardrijkskunde",
+      "badge": "🇧🇪 België",
+      "question": "Welke rivier stroomt dwars door Antwerpen naar de Noordzee?",
+      "options": [
+        "De Maas",
+        "De Schelde",
+        "De Leie",
+        "De Demer"
+      ],
+      "correct": 1,
+      "explanation": "De Schelde stroomt door Gent en Antwerpen richting de Noordzee."
+    },
+    {
+      "id": "g11",
+      "category": "geschiedenis",
+      "badge": "🏺 Oudheid",
+      "question": "Hoe heette het beroemde amfitheater in Rome waar gladiatoren vochten?",
+      "options": [
+        "Parthenon",
+        "Colosseum",
+        "Piramide",
+        "Acropolis"
+      ],
+      "correct": 1,
+      "explanation": "Het Colosseum in Rome bood plaats aan tienduizenden toeschouwers."
+    },
+    {
+      "id": "g12",
+      "category": "geschiedenis",
+      "badge": "🛡️ Middeleeuwen",
+      "question": "Hoe heette een boogschutter of strijder te paard in een harnas in de middeleeuwen?",
+      "options": [
+        "Farao",
+        "Ridder",
+        "Viking",
+        "Astronaut"
+      ],
+      "correct": 1,
+      "explanation": "Ridders woonden vaak in kastelen of burchten en droegen een metalen harnas."
+    },
+    {
+      "id": "g13",
+      "category": "geschiedenis",
+      "badge": "⛵ Ontdekkingen",
+      "question": "Welke ontdekkingsreiziger voer in 1492 naar Amerika (toen hij dacht dat hij in Indië was)?",
+      "options": [
+        "Christoffel Columbus",
+        "Marco Polo",
+        "Willem Barentsz",
+        "James Cook"
+      ],
+      "correct": 0,
+      "explanation": "Christoffel Columbus bereikte in 1492 de Bahama's in Amerika."
+    },
+    {
+      "id": "g14",
+      "category": "geschiedenis",
+      "badge": "📖 Uitvindingen",
+      "question": "Wie wordt in Europa beroemd genoemd voor de uitvinding van de boekdrukkunst met losse letters?",
+      "options": [
+        "Johannes Gutenberg",
+        "Leonardo da Vinci",
+        "Rembrandt",
+        "Mozart"
+      ],
+      "correct": 0,
+      "explanation": "Rond 1450 ontwikkelde Johannes Gutenberg de drukpers met losse loden letters."
+    },
+    {
+      "id": "g15",
+      "category": "geschiedenis",
+      "badge": "🎨 Kunst",
+      "question": "Wie schilderde de wereldberoemde 'Mona Lisa'?",
+      "options": [
+        "Vincent van Gogh",
+        "Pablo Picasso",
+        "Leonardo da Vinci",
+        "Pieter Bruegel"
+      ],
+      "correct": 2,
+      "explanation": "Leonardo da Vinci schilderde de Mona Lisa; ze hangt in het Louvre in Parijs."
+    },
+    {
+      "id": "g16",
+      "category": "geschiedenis",
+      "badge": "🌻 Kunst",
+      "question": "Welke Nederlandse schilder is beroemd om zijn schilderijen van 'Zonnebloemen' en 'De Sterrennacht'?",
+      "options": [
+        "Rembrandt van Rijn",
+        "Vincent van Gogh",
+        "Johannes Vermeer",
+        "Piet Mondriaan"
+      ],
+      "correct": 1,
+      "explanation": "Vincent van Gogh schilderde in de 19e eeuw honderden kleurrijke meesterwerken."
+    },
+    {
+      "id": "g17",
+      "category": "geschiedenis",
+      "badge": "🏺 Oudheid",
+      "question": "Welk schrift gebruikten de Oude Egyptenaren met kleine tekeningetjes?",
+      "options": [
+        "Spijkerschrift",
+        "Hiërogliefen",
+        "Braille",
+        "Morsecode"
+      ],
+      "correct": 1,
+      "explanation": "Egyptische hiërogliefen bestaan uit honderden symbolen en afbeeldingen."
+    },
+    {
+      "id": "g18",
+      "category": "geschiedenis",
+      "badge": "🧱 Bouwwerken",
+      "question": "Welk gigantisch bouwwerk in Azië is duizenden kilometers lang en vanuit de ruimte vaak genoemd?",
+      "options": [
+        "De Eiffeltoren",
+        "De Chinese Muur",
+        "De Piramide van Cheops",
+        "De Toren van Pisa"
+      ],
+      "correct": 1,
+      "explanation": "De Chinese Muur werd gebouwd om het Chinese keizerrijk te beschermen."
+    },
+    {
+      "id": "g19",
+      "category": "geschiedenis",
+      "badge": "🏅 Sportgeschiedenis",
+      "question": "In welk land ontstonden de allereerste Olympische Spelen in de oudheid?",
+      "options": [
+        "Italië",
+        "Griekenland",
+        "Egypte",
+        "Frankrijk"
+      ],
+      "correct": 1,
+      "explanation": "In het oude Griekenland (Olympia) werden de eerste Spelen gehouden ter ere van Zeus."
+    },
+    {
+      "id": "g20",
+      "category": "geschiedenis",
+      "badge": "🚂 Uitvindingen",
+      "question": "Wat dreef de allereerste treinen in de 19e eeuw aan?",
+      "options": [
+        "Zonnepanelen",
+        "Stoom (kolen en water)",
+        "Benzine",
+        "Wind"
+      ],
+      "correct": 1,
+      "explanation": "Stoomlocomotieven verwarmden water met kolen om stoomkracht te maken."
+    }
+  ]
+}

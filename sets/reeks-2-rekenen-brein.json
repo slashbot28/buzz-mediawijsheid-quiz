@@ -1,0 +1,308 @@
+{
+  "title": "Reeks 2: Rekenen, Logica & Breinbrekers (20 vragen)",
+  "categories": [
+    {
+      "id": "mix",
+      "title": "Alle Reken & Brein (Mix)",
+      "subtitle": "20 vragen door elkaar",
+      "icon": "🧮",
+      "color": "from-amber-400 to-orange-500"
+    },
+    {
+      "id": "rekenen",
+      "title": "Rekenen & Tijd",
+      "subtitle": "Tafels, breuken en meten",
+      "icon": "➕",
+      "color": "from-sky-400 to-blue-600"
+    },
+    {
+      "id": "logica",
+      "title": "Raadsels & Logica",
+      "subtitle": "Slim nadenken!",
+      "icon": "🧠",
+      "color": "from-fuchsia-500 to-purple-700"
+    }
+  ],
+  "questions": [
+    {
+      "id": "r1",
+      "category": "rekenen",
+      "badge": "🧮 Rekenen",
+      "question": "Hoeveel is 7 x 8?",
+      "options": [
+        "54",
+        "56",
+        "58",
+        "64"
+      ],
+      "correct": 1,
+      "explanation": "7 x 8 = 56!"
+    },
+    {
+      "id": "r2",
+      "category": "rekenen",
+      "badge": "🧮 Rekenen",
+      "question": "Hoeveel is de helft van 150?",
+      "options": [
+        "65",
+        "70",
+        "75",
+        "85"
+      ],
+      "correct": 2,
+      "explanation": "150 gedeeld door 2 is 75."
+    },
+    {
+      "id": "r3",
+      "category": "rekenen",
+      "badge": "🧮 Meten",
+      "question": "Hoeveel centimeter zit er in 1 meter?",
+      "options": [
+        "10 cm",
+        "50 cm",
+        "100 cm",
+        "1000 cm"
+      ],
+      "correct": 2,
+      "explanation": "1 meter = 100 centimeter."
+    },
+    {
+      "id": "r4",
+      "category": "rekenen",
+      "badge": "🧮 Tijd",
+      "question": "Hoeveel dagen heeft een gewoon jaar (geen schrikkeljaar)?",
+      "options": [
+        "360",
+        "364",
+        "365",
+        "366"
+      ],
+      "correct": 2,
+      "explanation": "Een gewoon jaar heeft 365 dagen; een schrikkeljaar heeft er 366."
+    },
+    {
+      "id": "r5",
+      "category": "rekenen",
+      "badge": "🧮 Geld",
+      "question": "Je koopt een boek van € 12,50 en betaalt met € 20. Hoeveel krijg je terug?",
+      "options": [
+        "€ 6,50",
+        "€ 7,50",
+        "€ 8,50",
+        "€ 7,00"
+      ],
+      "correct": 1,
+      "explanation": "20 - 12,50 = € 7,50 wisselgeld."
+    },
+    {
+      "id": "r6",
+      "category": "rekenen",
+      "badge": "🧮 Vormen",
+      "question": "Hoeveel zijden heeft een zeshoek?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correct": 1,
+      "explanation": "Een zeshoek heeft 6 zijden en 6 hoeken."
+    },
+    {
+      "id": "r7",
+      "category": "rekenen",
+      "badge": "🧮 Rekenen",
+      "question": "Hoeveel is 250 + 375?",
+      "options": [
+        "525",
+        "615",
+        "625",
+        "635"
+      ],
+      "correct": 2,
+      "explanation": "250 + 300 = 550, en 550 + 75 = 625."
+    },
+    {
+      "id": "r8",
+      "category": "rekenen",
+      "badge": "🧮 Tijd",
+      "question": "Hoeveel seconden zitten er in 3 minuten?",
+      "options": [
+        "120",
+        "150",
+        "180",
+        "240"
+      ],
+      "correct": 2,
+      "explanation": "1 minuut = 60 seconden, dus 3 x 60 = 180 seconden."
+    },
+    {
+      "id": "r9",
+      "category": "rekenen",
+      "badge": "🧮 Breuken",
+      "question": "Je snijdt een pizza in 8 gelijke stukken en eet er 2 op. Welk deel is dat?",
+      "options": [
+        "1/2",
+        "1/4",
+        "1/8",
+        "3/4"
+      ],
+      "correct": 1,
+      "explanation": "2 van de 8 stukken is 2/8, en dat is hetzelfde als 1/4!"
+    },
+    {
+      "id": "r10",
+      "category": "rekenen",
+      "badge": "🧮 Meten",
+      "question": "Hoeveel gram is 1 kilogram?",
+      "options": [
+        "100 gram",
+        "500 gram",
+        "1000 gram",
+        "10.000 gram"
+      ],
+      "correct": 2,
+      "explanation": "Kilo betekent duizend: 1 kilogram = 1000 gram."
+    },
+    {
+      "id": "r11",
+      "category": "logica",
+      "badge": "🧠 Raadsel",
+      "question": "De moeder van Mieke heeft 3 kinderen: Kwik, Kwek en ...?",
+      "options": [
+        "Kwak",
+        "Mieke",
+        "Marie",
+        "Piet"
+      ],
+      "correct": 1,
+      "explanation": "De moeder van Mieke heeft 3 kinderen, dus het derde kind is Mieke zelf!"
+    },
+    {
+      "id": "r12",
+      "category": "logica",
+      "badge": "🧠 Logica",
+      "question": "Wat is zwaarder: 1 kilo veren of 1 kilo stenen?",
+      "options": [
+        "1 kilo stenen",
+        "1 kilo veren",
+        "Ze wegen precies evenveel",
+        "Dat hangt van het weer af"
+      ],
+      "correct": 2,
+      "explanation": "Allebei wegen precies 1 kilogram!"
+    },
+    {
+      "id": "r13",
+      "category": "logica",
+      "badge": "🧠 Reeksen",
+      "question": "Welk getal komt er na: 2 - 4 - 8 - 16 - ...?",
+      "options": [
+        "20",
+        "24",
+        "30",
+        "32"
+      ],
+      "correct": 3,
+      "explanation": "Elk getal wordt verdubbeld: 16 x 2 = 32."
+    },
+    {
+      "id": "r14",
+      "category": "logica",
+      "badge": "🧠 Raadsel",
+      "question": "Een haan legt een ei op de punt van een schuin dak. Welke kant rolt het ei op?",
+      "options": [
+        "Links",
+        "Rechts",
+        "Naar voren",
+        "Een haan legt geen eieren!"
+      ],
+      "correct": 3,
+      "explanation": "Een haan is een mannetje en legt helemaal geen eieren!"
+    },
+    {
+      "id": "r15",
+      "category": "logica",
+      "badge": "🧠 Logica",
+      "question": "Lisa is groter dan Tom. Tom is groter dan Sam. Wie is het kleinst?",
+      "options": [
+        "Lisa",
+        "Tom",
+        "Sam",
+        "Even groot"
+      ],
+      "correct": 2,
+      "explanation": "Lisa > Tom > Sam, dus Sam is het kleinst."
+    },
+    {
+      "id": "r16",
+      "category": "logica",
+      "badge": "🧠 Raadsel",
+      "question": "Hoeveel maanden hebben minstens 28 dagen?",
+      "options": [
+        "1 maand",
+        "6 maanden",
+        "11 maanden",
+        "Alle 12 maanden"
+      ],
+      "correct": 3,
+      "explanation": "Elke maand van het jaar heeft minstens 28 dagen!"
+    },
+    {
+      "id": "r17",
+      "category": "logica",
+      "badge": "🧠 Reeksen",
+      "question": "Welke letter ontbreekt in de rij: A - C - E - G - ...?",
+      "options": [
+        "H",
+        "I",
+        "J",
+        "K"
+      ],
+      "correct": 1,
+      "explanation": "Je slaat steeds één letter over (B, D, F, H), dus na G komt I."
+    },
+    {
+      "id": "r18",
+      "category": "logica",
+      "badge": "🧠 Logica",
+      "question": "Je haalt bij een hardloopwedstrijd de nummer 2 in. Op welke plaats loop je nu?",
+      "options": [
+        "1e plaats",
+        "2e plaats",
+        "3e plaats",
+        "4e plaats"
+      ],
+      "correct": 1,
+      "explanation": "Als je de nummer 2 inhaalt, neem je zijn plek over en loop je zelf 2e!"
+    },
+    {
+      "id": "r19",
+      "category": "logica",
+      "badge": "🧠 Raadsel",
+      "question": "Wat wordt steeds natter naarmate het meer droogt?",
+      "options": [
+        "Een paraplu",
+        "Een handdoek",
+        "Een spons",
+        "De zon"
+      ],
+      "correct": 1,
+      "explanation": "Een handdoek droogt jou af en wordt zelf steeds natter."
+    },
+    {
+      "id": "r20",
+      "category": "logica",
+      "badge": "🧠 Rekenen",
+      "question": "Hoeveel is 100 - 37?",
+      "options": [
+        "53",
+        "63",
+        "67",
+        "73"
+      ],
+      "correct": 1,
+      "explanation": "100 - 30 = 70, en 70 - 7 = 63."
+    }
+  ]
+}

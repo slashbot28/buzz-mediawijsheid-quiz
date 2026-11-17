@@ -1,0 +1,308 @@
+{
+  "title": "Reeks 3: Ruimte, Techniek & Wetenschap (20 vragen)",
+  "categories": [
+    {
+      "id": "mix",
+      "title": "Ruimte & Wetenschap (Mix)",
+      "subtitle": "20 vragen door elkaar",
+      "icon": "🚀",
+      "color": "from-amber-400 to-orange-500"
+    },
+    {
+      "id": "ruimte",
+      "title": "Het Heelal & Planeten",
+      "subtitle": "Zon, maan en sterren",
+      "icon": "🪐",
+      "color": "from-indigo-400 to-violet-600"
+    },
+    {
+      "id": "wetenschap",
+      "title": "Uitvindingen & Wetenschap",
+      "subtitle": "Natuurkunde en techniek",
+      "icon": "🔬",
+      "color": "from-sky-400 to-blue-600"
+    }
+  ],
+  "questions": [
+    {
+      "id": "w1",
+      "category": "ruimte",
+      "badge": "🪐 Planeten",
+      "question": "Welke planeet wordt ook wel de 'Rode Planeet' genoemd?",
+      "options": [
+        "Venus",
+        "Mars",
+        "Jupiter",
+        "Saturnus"
+      ],
+      "correct": 1,
+      "explanation": "Mars is roodachtig door het ijzeroxide (roest) in het stof op het oppervlak."
+    },
+    {
+      "id": "w2",
+      "category": "ruimte",
+      "badge": "🪐 Planeten",
+      "question": "Welke planeet is beroemd om zijn grote, duidelijke ringen?",
+      "options": [
+        "Mercurius",
+        "Saturnus",
+        "Uranus",
+        "Aarde"
+      ],
+      "correct": 1,
+      "explanation": "Saturnus heeft prachtige ringen die vooral uit ijs en rotsblokjes bestaan."
+    },
+    {
+      "id": "w3",
+      "category": "ruimte",
+      "badge": "🪐 Planeten",
+      "question": "Welke planeet is de GROOTSTE in ons zonnestelsel?",
+      "options": [
+        "Aarde",
+        "Neptunus",
+        "Jupiter",
+        "Mars"
+      ],
+      "correct": 2,
+      "explanation": "Jupiter is een enorme gasreus en de grootste planeet van ons zonnestelsel."
+    },
+    {
+      "id": "w4",
+      "category": "ruimte",
+      "badge": "🌙 Ruimtevaart",
+      "question": "Wie was in 1969 de allereerste mens die op de maan liep?",
+      "options": [
+        "Neil Armstrong",
+        "Yuri Gagarin",
+        "Dirk Frimout",
+        "André Kuipers"
+      ],
+      "correct": 0,
+      "explanation": "Neil Armstrong zette op 20 juli 1969 als eerste mens voet op de maan."
+    },
+    {
+      "id": "w5",
+      "category": "ruimte",
+      "badge": "☀️ Sterren",
+      "question": "Wat is de zon eigenlijk?",
+      "options": [
+        "Een grote planeet",
+        "Een ster",
+        "Een komeet",
+        "Een maan"
+      ],
+      "correct": 1,
+      "explanation": "De zon is een middelgrote ster die licht en warmte geeft aan de aarde."
+    },
+    {
+      "id": "w6",
+      "category": "ruimte",
+      "badge": "🌍 Aarde",
+      "question": "Hoe lang doet de aarde erover om één keer rond de zon te draaien?",
+      "options": [
+        "1 dag",
+        "1 maand",
+        "1 jaar",
+        "10 jaar"
+      ],
+      "correct": 2,
+      "explanation": "Eén rondje om de zon duurt ongeveer 365 dagen, dus 1 jaar."
+    },
+    {
+      "id": "w7",
+      "category": "ruimte",
+      "badge": "🌍 Aarde",
+      "question": "Hoe lang doet de aarde erover om één keer om haar eigen as te draaien?",
+      "options": [
+        "12 uur",
+        "24 uur (1 dag)",
+        "7 dagen",
+        "30 dagen"
+      ],
+      "correct": 1,
+      "explanation": "Door die draaiing van 24 uur krijgen we dag en nacht."
+    },
+    {
+      "id": "w8",
+      "category": "ruimte",
+      "badge": "🚀 Ruimtevaart",
+      "question": "Hoe heet het grote ruimtestation waarin astronauten maandenlang wonen en werken?",
+      "options": [
+        "NASA",
+        "ISS (International Space Station)",
+        "Apollo 11",
+        "Hubble"
+      ],
+      "correct": 1,
+      "explanation": "Het ISS draait op zo'n 400 km hoogte rond de aarde."
+    },
+    {
+      "id": "w9",
+      "category": "ruimte",
+      "badge": "🌌 Heelal",
+      "question": "Hoe heet het sterrenstelsel waarin ons zonnestelsel ligt?",
+      "options": [
+        "Andromeda",
+        "De Melkweg",
+        "De Grote Beer",
+        "Orion"
+      ],
+      "correct": 1,
+      "explanation": "Ons zonnestelsel maakt deel uit van het sterrenstelsel de Melkweg."
+    },
+    {
+      "id": "w10",
+      "category": "ruimte",
+      "badge": "🌙 Maan",
+      "question": "Waarom geeft de maan 's nachts licht?",
+      "options": [
+        "De maan brandt zelf als een lamp",
+        "De maan weerkaatst het licht van de zon",
+        "Door bliksem op de maan",
+        "Door satellieten"
+      ],
+      "correct": 1,
+      "explanation": "De maan geeft zelf geen licht, maar weerkaatst zonlicht net als een spiegel."
+    },
+    {
+      "id": "w11",
+      "category": "wetenschap",
+      "badge": "🔬 Natuurkunde",
+      "question": "Bij welke temperatuur kookt zuiver water?",
+      "options": [
+        "50 °C",
+        "80 °C",
+        "100 °C",
+        "120 °C"
+      ],
+      "correct": 2,
+      "explanation": "Water bevriest bij 0 °C en kookt bij 100 °C."
+    },
+    {
+      "id": "w12",
+      "category": "wetenschap",
+      "badge": "⚡ Elektriciteit",
+      "question": "Welk materiaal geleidt elektriciteit het best?",
+      "options": [
+        "Hout",
+        "Plastic",
+        "Koper (metaal)",
+        "Rubber"
+      ],
+      "correct": 2,
+      "explanation": "Metalen zoals koper geleiden stroom goed; plastic en rubber zijn isolatoren."
+    },
+    {
+      "id": "w13",
+      "category": "wetenschap",
+      "badge": "🧲 Magnetisme",
+      "question": "Welke metalen worden aangetrokken door een gewone magneet?",
+      "options": [
+        "Goud en zilver",
+        "IJzer en staal",
+        "Aluminium en koper",
+        "Lood en tin"
+      ],
+      "correct": 1,
+      "explanation": "Vooral ijzer, nikkel en kobalt zijn magnetisch."
+    },
+    {
+      "id": "w14",
+      "category": "wetenschap",
+      "badge": "🌈 Licht",
+      "question": "Uit hoeveel hoofdkleuren bestaat een klassieke regenboog?",
+      "options": [
+        "5 kleuren",
+        "6 kleuren",
+        "7 kleuren",
+        "10 kleuren"
+      ],
+      "correct": 2,
+      "explanation": "Rood, oranje, geel, groen, blauw, indigo en violet: 7 kleuren!"
+    },
+    {
+      "id": "w15",
+      "category": "wetenschap",
+      "badge": "💡 Uitvindingen",
+      "question": "Wie wordt vaak genoemd als de beroemde uitvinder van de praktische gloeilamp?",
+      "options": [
+        "Thomas Edison",
+        "Albert Einstein",
+        "Isaac Newton",
+        "Galileo Galilei"
+      ],
+      "correct": 0,
+      "explanation": "Thomas Edison verbeterde de gloeilamp in 1879 zodat hij lang kon branden."
+    },
+    {
+      "id": "w16",
+      "category": "wetenschap",
+      "badge": "✈️ Luchtvaart",
+      "question": "Wie maakten in 1903 de eerste geslaagde gemotoriseerde vlucht met een vliegtuig?",
+      "options": [
+        "De gebroeders Wright",
+        "De gebroeders Grimm",
+        "Leonardo da Vinci",
+        "Neil Armstrong"
+      ],
+      "correct": 0,
+      "explanation": "Orville en Wilbur Wright vlogen in 1903 voor het eerst met een gemotoriseerd vliegtuig."
+    },
+    {
+      "id": "w17",
+      "category": "wetenschap",
+      "badge": "🦴 Menselijk lichaam",
+      "question": "Hoeveel botten heeft een volwassen mens ongeveer?",
+      "options": [
+        "60 botten",
+        "120 botten",
+        "206 botten",
+        "500 botten"
+      ],
+      "correct": 2,
+      "explanation": "Een volwassen skelet bestaat uit ongeveer 206 botten."
+    },
+    {
+      "id": "w18",
+      "category": "wetenschap",
+      "badge": "💻 Techniek",
+      "question": "Waar staat 'CPU' in een computer voor?",
+      "options": [
+        "De batterij",
+        "De processor (het 'brein' van de computer)",
+        "Het beeldscherm",
+        "De muis"
+      ],
+      "correct": 1,
+      "explanation": "De CPU (Central Processing Unit) is de rekenkern van een computer."
+    },
+    {
+      "id": "w19",
+      "category": "wetenschap",
+      "badge": "🔊 Geluid",
+      "question": "Wat beweegt sneller: licht of geluid?",
+      "options": [
+        "Geluid",
+        "Licht",
+        "Precies even snel",
+        "Hangt af van de wind"
+      ],
+      "correct": 1,
+      "explanation": "Licht is bijna 900.000 keer sneller dan geluid! Daarom zie je eerst de bliksem en hoor je later de donder."
+    },
+    {
+      "id": "w20",
+      "category": "wetenschap",
+      "badge": "🌱 Planten",
+      "question": "Welk gas ademen mensen in dat door bomen en planten wordt gemaakt?",
+      "options": [
+        "Stikstof",
+        "Zuurstof",
+        "Helium",
+        "Koolstofdioxide"
+      ],
+      "correct": 1,
+      "explanation": "Planten maken zuurstof (O2) tijdens fotosynthese."
+    }
+  ]
+}

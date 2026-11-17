@@ -1,0 +1,308 @@
+{
+  "title": "Reeks 5: Games, Films, Strips & Muziek (20 vragen)",
+  "categories": [
+    {
+      "id": "mix",
+      "title": "Games, Films & Muziek (Mix)",
+      "subtitle": "20 vragen door elkaar",
+      "icon": "🎮",
+      "color": "from-amber-400 to-orange-500"
+    },
+    {
+      "id": "games",
+      "title": "Games & Consoles",
+      "subtitle": "Mario, Sonic, Minecraft & PlayStation",
+      "icon": "🕹️",
+      "color": "from-sky-400 to-blue-600"
+    },
+    {
+      "id": "films-muziek",
+      "title": "Films, Strips & Muziek",
+      "subtitle": "Disney, Pixar, strips en instrumenten",
+      "icon": "🎬",
+      "color": "from-fuchsia-500 to-purple-700"
+    }
+  ],
+  "questions": [
+    {
+      "id": "p1",
+      "category": "games",
+      "badge": "🍄 Nintendo",
+      "question": "Wat is het beroep van Mario en Luigi in de bekende games?",
+      "options": [
+        "Bakker",
+        "Loodgieter",
+        "Brandweerman",
+        "Piloot"
+      ],
+      "correct": 1,
+      "explanation": "Mario en Luigi zijn twee Italiaanse loodgieters!"
+    },
+    {
+      "id": "p2",
+      "category": "games",
+      "badge": "💨 Sonic",
+      "question": "Welke kleur heeft de razendsnelle egel Sonic?",
+      "options": [
+        "Rood",
+        "Groen",
+        "Blauw",
+        "Geel"
+      ],
+      "correct": 2,
+      "explanation": "Sonic the Hedgehog is felblauw en draagt rode schoenen."
+    },
+    {
+      "id": "p3",
+      "category": "games",
+      "badge": "⛏️ Minecraft",
+      "question": "Welk groen monster in Minecraft sluipt stilletjes dichterbij en ontploft?",
+      "options": [
+        "Enderman",
+        "Creeper",
+        "Zombie",
+        "Skeleton"
+      ],
+      "correct": 1,
+      "explanation": "De groene Creeper sist even en ontploft daarna!"
+    },
+    {
+      "id": "p4",
+      "category": "games",
+      "badge": "⚡ Pokémon",
+      "question": "Welke gele Pokémon is het bekendste maatje van Ash Ketchum?",
+      "options": [
+        "Charmander",
+        "Squirtle",
+        "Pikachu",
+        "Bulbasaur"
+      ],
+      "correct": 2,
+      "explanation": "Pikachu is een elektrische gele Pokémon met bliksemstaart."
+    },
+    {
+      "id": "p5",
+      "category": "games",
+      "badge": "🎮 PlayStation",
+      "question": "Welke vier symbolen staan op de actieknoppen van een PlayStation-controller?",
+      "options": [
+        "A, B, X, Y",
+        "Driehoek, Cirkel, Kruisje, Vierkant",
+        "1, 2, 3, 4",
+        "Noord, Oost, Zuid, West"
+      ],
+      "correct": 1,
+      "explanation": "PlayStation gebruikt altijd △, ○, × en □!"
+    },
+    {
+      "id": "p6",
+      "category": "games",
+      "badge": "🏎️ Mario Kart",
+      "question": "Welk voorwerp in Mario Kart achtervolgt automatisch de speler op de 1e plaats?",
+      "options": [
+        "Groen schild",
+        "Banaan",
+        "Blauw schild (Spiny Shell)",
+        "Muntje"
+      ],
+      "correct": 2,
+      "explanation": "Het gevleugelde blauwe schild vliegt recht naar de koploper!"
+    },
+    {
+      "id": "p7",
+      "category": "games",
+      "badge": "🧱 Games",
+      "question": "In welk klassiek puzzelspel moet je vallende blokjes (Tetromino's) netjes in rijen stapelen?",
+      "options": [
+        "Pac-Man",
+        "Tetris",
+        "Pong",
+        "Snake"
+      ],
+      "correct": 1,
+      "explanation": "Tetris werd in 1984 bedacht en is een van de beroemdste games ooit."
+    },
+    {
+      "id": "p8",
+      "category": "games",
+      "badge": "👾 Retro",
+      "question": "Wat eet het gele happertje Pac-Man in het doolhof?",
+      "options": [
+        "Appels",
+        "Witte stipjes (en fruit)",
+        "Diamanten",
+        "Paddenstoelen"
+      ],
+      "correct": 1,
+      "explanation": "Pac-Man eet alle stipjes op terwijl hij de vier spookjes ontwijkt."
+    },
+    {
+      "id": "p9",
+      "category": "games",
+      "badge": "🏰 Mario",
+      "question": "Wie is de grote schildpad-schurk die Prinses Peach steeds ontvoert?",
+      "options": [
+        "Wario",
+        "Bowser",
+        "Donkey Kong",
+        "Toad"
+      ],
+      "correct": 1,
+      "explanation": "Bowser is de koning van de Koopa's en de grootste rivaal van Mario."
+    },
+    {
+      "id": "p10",
+      "category": "games",
+      "badge": "🤖 Astro Bot",
+      "question": "Welke schattige kleine robot is de mascotte van de PlayStation 5?",
+      "options": [
+        "Clank",
+        "Astro Bot",
+        "Wall-E",
+        "Sackboy"
+      ],
+      "correct": 1,
+      "explanation": "Astro Bot schittert in Astro's Playroom en het bekroonde spel Astro Bot op PS5!"
+    },
+    {
+      "id": "p11",
+      "category": "films-muziek",
+      "badge": "❄️ Disney",
+      "question": "Hoe heet de vrolijke sneeuwpop in de film 'Frozen'?",
+      "options": [
+        "Sven",
+        "Olaf",
+        "Kristoff",
+        "Hans"
+      ],
+      "correct": 1,
+      "explanation": "Olaf houdt heel veel van warme knuffels!"
+    },
+    {
+      "id": "p12",
+      "category": "films-muziek",
+      "badge": "🦁 Disney",
+      "question": "Hoe heet het jonge leeuwtje dat koning wordt in 'De Leeuwenkoning'?",
+      "options": [
+        "Mufasa",
+        "Simba",
+        "Scar",
+        "Timon"
+      ],
+      "correct": 1,
+      "explanation": "Simba betekent 'leeuw' in het Swahili!"
+    },
+    {
+      "id": "p13",
+      "category": "films-muziek",
+      "badge": "🐠 Pixar",
+      "question": "Welk soort visje is Nemo in 'Finding Nemo'?",
+      "options": [
+        "Goudvis",
+        "Clownvis (anemoonvis)",
+        "Haai",
+        "Zeepaardje"
+      ],
+      "correct": 1,
+      "explanation": "Nemo en zijn vader Marlin zijn oranje-witte clownvissen."
+    },
+    {
+      "id": "p14",
+      "category": "films-muziek",
+      "badge": "🤠 Pixar",
+      "question": "Hoe heet de cowboy-pop die de leider is van het speelgoed in 'Toy Story'?",
+      "options": [
+        "Buzz Lightyear",
+        "Woody",
+        "Rex",
+        "Slinky"
+      ],
+      "correct": 1,
+      "explanation": "Sheriff Woody en ruimteheld Buzz Lightyear zijn beste vrienden."
+    },
+    {
+      "id": "p15",
+      "category": "films-muziek",
+      "badge": "🐶 Strips",
+      "question": "Hoe heet het witte hondje van Kuifje?",
+      "options": [
+        "Idéfix",
+        "Bobbie",
+        "Pluto",
+        "Samson"
+      ],
+      "correct": 1,
+      "explanation": "Bobbie is het trouwe foxterriërtje van reporter Kuifje."
+    },
+    {
+      "id": "p16",
+      "category": "films-muziek",
+      "badge": "🪨 Strips",
+      "question": "Wie viel er als baby in de ketel met toverdrank in de strips van Asterix?",
+      "options": [
+        "Asterix",
+        "Obelix",
+        "Panoramix",
+        "Abraracourcix"
+      ],
+      "correct": 1,
+      "explanation": "Obelix viel in de ketel en is daarom altijd supersterk!"
+    },
+    {
+      "id": "p17",
+      "category": "films-muziek",
+      "badge": "🎹 Muziek",
+      "question": "Hoeveel witte en zwarte toetsen heeft een standaard grote piano meestal?",
+      "options": [
+        "64 toetsen",
+        "76 toetsen",
+        "88 toetsen",
+        "100 toetsen"
+      ],
+      "correct": 2,
+      "explanation": "Een standaard piano heeft 88 toetsen: 52 witte en 36 zwarte."
+    },
+    {
+      "id": "p18",
+      "category": "films-muziek",
+      "badge": "🎺 Muziek",
+      "question": "Tot welke instrumentengroep behoort een trompet?",
+      "options": [
+        "Strijkinstrumenten",
+        "Koperblazers",
+        "Slagwerk",
+        "Toetsinstrumenten"
+      ],
+      "correct": 1,
+      "explanation": "De trompet, trombone en tuba zijn koperblazers."
+    },
+    {
+      "id": "p19",
+      "category": "films-muziek",
+      "badge": "⚡ Films",
+      "question": "Welk litteken heeft tovenaar Harry Potter op zijn voorhoofd?",
+      "options": [
+        "Een ster",
+        "Een bliksemschicht",
+        "Een halve maan",
+        "Een driehoek"
+      ],
+      "correct": 1,
+      "explanation": "Harry Potter heeft een bliksemschicht-litteken op zijn voorhoofd."
+    },
+    {
+      "id": "p20",
+      "category": "films-muziek",
+      "badge": "🍌 Films",
+      "question": "Welke gele figuurtjes uit 'Verschrikkelijke Ikke' zijn gek op bananen?",
+      "options": [
+        "De Smurfen",
+        "De Minions",
+        "De Trollen",
+        "De Pokémons"
+      ],
+      "correct": 1,
+      "explanation": "De Minions spreken Minionees en zijn dol op 'Bananas!'."
+    }
+  ]
+}
