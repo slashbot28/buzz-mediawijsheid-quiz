@@ -1,0 +1,143 @@
+{
+  "title": "Makkelijke Quizvragen (Quizvragen.eu)",
+  "categories": [
+    {
+      "id": "mix",
+      "title": "Makkelijke Quiz (Mix)",
+      "subtitle": "Alle makkelijke vragen door elkaar",
+      "icon": "🌟",
+      "color": "from-amber-400 to-orange-500"
+    },
+    {
+      "id": "strips-tv",
+      "title": "Strips, Disney & TV",
+      "subtitle": "Jommeke, Samson & Gert, Donald Duck",
+      "icon": "📺",
+      "color": "from-sky-400 to-blue-600"
+    },
+    {
+      "id": "sport-uit",
+      "title": "Sport & Pretparken",
+      "subtitle": "Stadions, voetbal en achtbanen",
+      "icon": "⚽",
+      "color": "from-emerald-400 to-teal-600"
+    },
+    {
+      "id": "varia",
+      "title": "Algemene Kennis & Geschiedenis",
+      "subtitle": "Aardrijkskunde, merken en geschiedenis",
+      "icon": "🌍",
+      "color": "from-fuchsia-500 to-purple-700"
+    }
+  ],
+  "questions": [
+    {
+      "id": "mv-1",
+      "category": "strips-tv",
+      "badge": "📺 Strips • Jommeke",
+      "question": "Hoe heet het slimme en trouwe aapje dat samen met Jommeke op avontuur trekt?",
+      "options": ["Choco", "Flip", "Pekkie", "Mataboe"],
+      "correct": 0,
+      "explanation": "Choco is het bekende aapje van Jommeke, bekend om zijn grote liefde voor chocopasta!"
+    },
+    {
+      "id": "mv-2",
+      "category": "strips-tv",
+      "badge": "📺 TV • Samson & Gert",
+      "question": "Walter De Donder speelt de Burgemeester in Samson en Gert. Van welke Vlaamse gemeente is hij in het echte leven burgemeester?",
+      "options": ["Aalst", "Affligem", "Asse", "Ternat"],
+      "correct": 1,
+      "explanation": "Walter De Donder is al jarenlang in het echt burgemeester van de Vlaams-Brabantse gemeente Affligem."
+    },
+    {
+      "id": "mv-3",
+      "category": "strips-tv",
+      "badge": "📺 Disney • Donald Duck",
+      "question": "In de verhalen van Donald Duck heeft Donald drie neefjes. Wat zijn hun voornamen?",
+      "options": ["Kwik, Kwek en Kwak", "Knabbel, Babbel en Pluto", "Dagobert, Guus en Willie", "Pief, Paf en Poef"],
+      "correct": 0,
+      "explanation": "Kwik (rood), Kwek (blauw) en Kwak (groen) zijn de drie bekende neefjes van Donald Duck."
+    },
+    {
+      "id": "mv-4",
+      "category": "strips-tv",
+      "badge": "📺 Series • Jaren 90",
+      "question": "Welke beroemde postcode hoort bij de titel van de Amerikaanse tienerserie \"Beverly Hills, ...\"?",
+      "options": ["90210", "10001", "90001", "94102"],
+      "correct": 0,
+      "explanation": "Beverly Hills, 90210 was van 1990 tot 2000 een wereldwijde hitserie!"
+    },
+    {
+      "id": "mv-5",
+      "category": "sport-uit",
+      "badge": "⚽ Voetbal • Stadions",
+      "question": "Welke Duitse voetbalclub speelt in de Allianz Arena, het stadion dat 's avonds in kleuren oplicht?",
+      "options": ["Borussia Dortmund", "Bayern München", "Bayer Leverkusen", "RB Leipzig"],
+      "correct": 1,
+      "explanation": "De Allianz Arena is de thuisbasis van Bayern München in Duitsland."
+    },
+    {
+      "id": "mv-6",
+      "category": "sport-uit",
+      "badge": "⚽ Voetbal • Stadions",
+      "question": "In welk wereldberoemd stadion speelt FC Barcelona zijn thuiswedstrijden?",
+      "options": ["Santiago Bernabéu", "Camp Nou", "San Siro", "Old Trafford"],
+      "correct": 1,
+      "explanation": "Camp Nou is het enorme stadion van FC Barcelona in Spanje."
+    },
+    {
+      "id": "mv-7",
+      "category": "sport-uit",
+      "badge": "⚽ Voetbal • Stadions",
+      "question": "Welke Londense voetbalclub speelt zijn thuiswedstrijden op Stamford Bridge?",
+      "options": ["Arsenal", "Chelsea", "Tottenham Hotspur", "West Ham United"],
+      "correct": 1,
+      "explanation": "Stamford Bridge is het stadion van Chelsea FC in Londen."
+    },
+    {
+      "id": "mv-8",
+      "category": "sport-uit",
+      "badge": "🎢 Pretparken",
+      "question": "Ten zuidwesten van Keulen ligt een bekend attractiepark met achtbanen als Taron en Black Mamba. Welk park is dit?",
+      "options": ["Europa-Park", "Phantasialand", "Movie Park Germany", "Heide Park"],
+      "correct": 1,
+      "explanation": "Phantasialand ligt in Brühl, vlak bij Keulen in Duitsland!"
+    },
+    {
+      "id": "mv-9",
+      "category": "varia",
+      "badge": "🏛️ Geschiedenis",
+      "question": "In welk jaar vond de beroemde scheepsramp met de Titanic plaats?",
+      "options": ["1902", "1912", "1922", "1932"],
+      "correct": 1,
+      "explanation": "De Titanic zonk in de nacht van 14 op 15 april 1912 tijdens haar eerste reis."
+    },
+    {
+      "id": "mv-10",
+      "category": "varia",
+      "badge": "🎨 Kunst & Merken",
+      "question": "Welk Frans zuivelmerk dankt zijn naam en logo aan het schilderij \"Het Melkmeisje\" van Johannes Vermeer?",
+      "options": ["Danone", "La Laitière", "Yoplait", "Campina"],
+      "correct": 1,
+      "explanation": "\"La Laitière\" betekent letterlijk \"Het Melkmeisje\" in het Frans!"
+    },
+    {
+      "id": "mv-11",
+      "category": "varia",
+      "badge": "🌍 Aardrijkskunde",
+      "question": "Welke bekende rivier stroomt dwars door de Britse hoofdstad Londen?",
+      "options": ["De Seine", "De Theems", "De Donau", "De Rijn"],
+      "correct": 1,
+      "explanation": "De Theems (Thames) stroomt door Londen, langs de Tower Bridge en de Big Ben."
+    },
+    {
+      "id": "mv-12",
+      "category": "varia",
+      "badge": "🌍 Aardrijkskunde",
+      "question": "Wat is de hoofdstad van Spanje?",
+      "options": ["Barcelona", "Sevilla", "Madrid", "Valencia"],
+      "correct": 2,
+      "explanation": "Madrid ligt in het midden van Spanje en is de hoofdstad van het land."
+    }
+  ]
+}
