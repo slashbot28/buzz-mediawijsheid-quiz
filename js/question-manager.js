@@ -584,13 +584,28 @@
     });
   }
 
-  // Startup: laad automatisch via ?source=..., ?quiz=... of opgeslagen online URL
+  // Startup: laad automatisch via ?set=..., ?source=..., ?quiz=... of opgeslagen online URL
   (async function autoLoadOnStartup() {
     const params = new URLSearchParams(window.location.search);
+    const paramSet = params.get('set');
     const paramSource = params.get('source');
     const paramQuiz = params.get('quiz');
 
-    if (paramQuiz) {
+    if (paramSet && window.CloudQuizStore) {
+      try {
+        const cloudSet = await window.CloudQuizStore.getSet(paramSet);
+        if (cloudSet && Array.isArray(cloudSet.questions) && cloudSet.questions.length > 0) {
+          window.QuizStore.importJson(
+            JSON.stringify({
+              categories: cloudSet.categories,
+              questions: cloudSet.questions
+            })
+          );
+        }
+      } catch {
+        // Stille fout bij opstarten
+      }
+    } else if (paramQuiz) {
       try {
         const decoded = decodeURIComponent(escape(atob(paramQuiz)));
         window.QuizStore.importJson(decoded);
