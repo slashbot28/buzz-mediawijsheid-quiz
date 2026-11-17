@@ -102,6 +102,10 @@
         🎮 Test
       </button>
 
+      <button id="btnOpenQuestionManager" class="px-3 py-1.5 rounded-xl bg-indigo-600/80 hover:bg-indigo-500 text-white text-xs sm:text-sm font-bold border border-indigo-400/50 transition cursor-pointer" title="Eigen vragen en categorieën toevoegen of inladen">
+        📚 Vragen Beheer
+      </button>
+
       <button id="btnReplayIntro" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs sm:text-sm font-bold border border-slate-600 transition cursor-pointer" title="Speel intro opnieuw af">
         🎬 Intro
       </button>
@@ -420,11 +424,156 @@
     </div>
   </div>
 
+  <!-- ==================== MODAL: VRAGEN & CATEGORIEËN PLATFORM ==================== -->
+  <div id="modalQuestionManager" class="hidden fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-slate-900 border-2 border-indigo-400/40 rounded-3xl max-w-5xl w-full p-6 shadow-2xl max-h-[92vh] overflow-y-auto flex flex-col gap-4">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <div class="flex items-center gap-2.5">
+            <h3 class="font-display font-black text-2xl text-white">📚 Vragen &amp; Categorieën Platform</h3>
+            <span id="qmTotalCount" class="text-xs font-bold px-2.5 py-1 rounded-full bg-indigo-500/30 border border-indigo-400/40 text-indigo-200">48 vragen</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-400">Voeg zelf vragen &amp; categorieën toe of laad ze in via Excel/CSV of JSON. Alles wordt direct bijgewerkt bij de start!</p>
+        </div>
+        <button id="btnCloseQuestionManager" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold cursor-pointer">✕</button>
+      </div>
+
+      <!-- Stijlgids -->
+      <div class="bg-slate-950/80 border border-amber-400/30 rounded-2xl p-3.5 text-xs text-slate-300">
+        <span class="font-black text-amber-300">📝 Vraagstijl:</span>
+        Korte, duidelijke vraag (1–2 zinnen) &bull; Precies <strong>4 antwoordopties</strong> (🔵 Blauw, 🟠 Oranje, 🟢 Groen, 🟡 Geel) &bull; <strong>1 juist antwoord</strong> &bull; Optioneel een kort <em>Mediawijs Weetje</em> als uitleg na de vraag.
+      </div>
+
+      <div id="qmStatusMsg" class="hidden"></div>
+
+      <!-- Tabs -->
+      <div class="flex flex-wrap items-center gap-2">
+        <button type="button" data-qm-tab="manage" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-amber-400 text-slate-950 cursor-pointer">
+          ➕ Vragen &amp; Categorieën
+        </button>
+        <button type="button" data-qm-tab="import" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-slate-800 text-slate-300 hover:text-white cursor-pointer">
+          📥 CSV / JSON Inladen &amp; Opslaan
+        </button>
+      </div>
+
+      <!-- TAB 1: BEHEREN -->
+      <div data-qm-panel="manage" class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+        <!-- Links: Formulieren -->
+        <div class="lg:col-span-5 flex flex-col gap-4">
+          <!-- Nieuwe Categorie -->
+          <form id="qmCategoryForm" class="bg-slate-950/70 border border-white/10 rounded-2xl p-4 flex flex-col gap-2.5">
+            <h4 class="font-heading font-bold text-sm text-amber-300">🏷️ Nieuwe Categorie</h4>
+            <div class="grid grid-cols-4 gap-2">
+              <input id="qmCatIcon" type="text" value="📚" maxlength="4" class="col-span-1 bg-slate-900 border border-white/15 rounded-xl px-2 py-2 text-center text-lg" title="Emoji icoon" />
+              <input id="qmCatTitle" type="text" required placeholder="Naam (bv. Verkeer)" class="col-span-3 bg-slate-900 border border-white/15 rounded-xl px-3 py-2 text-xs font-bold text-white" />
+            </div>
+            <div class="grid grid-cols-3 gap-2">
+              <input id="qmCatSub" type="text" placeholder="Ondertitel (bv. 2e graad)" class="col-span-2 bg-slate-900 border border-white/15 rounded-xl px-3 py-2 text-xs text-white" />
+              <select id="qmCatColor" class="col-span-1 bg-slate-900 border border-white/15 rounded-xl px-2 py-2 text-xs text-white"></select>
+            </div>
+            <button type="submit" class="py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs cursor-pointer">
+              + Categorie Toevoegen
+            </button>
+          </form>
+
+          <!-- Nieuwe Vraag -->
+          <form id="qmQuestionForm" class="bg-slate-950/70 border border-white/10 rounded-2xl p-4 flex flex-col gap-2.5">
+            <h4 class="font-heading font-bold text-sm text-sky-300">❓ Nieuwe Vraag Toevoegen</h4>
+            <div class="grid grid-cols-2 gap-2">
+              <select id="qmQuestionCategory" class="bg-slate-900 border border-white/15 rounded-xl px-2.5 py-2 text-xs font-bold text-white"></select>
+              <input id="qmQuestionBadge" type="text" placeholder="Label (optioneel)" class="bg-slate-900 border border-white/15 rounded-xl px-2.5 py-2 text-xs text-white" />
+            </div>
+            <textarea id="qmQuestionText" rows="2" required placeholder="Typ hier je quizvraag..." class="bg-slate-900 border border-white/15 rounded-xl px-3 py-2 text-xs font-semibold text-white"></textarea>
+
+            <div class="text-[11px] text-slate-400 font-bold">Antwoordopties (vink het juiste antwoord aan):</div>
+            <div class="flex flex-col gap-1.5">
+              <label class="flex items-center gap-2">
+                <input type="radio" name="qmCorrect" value="0" checked class="accent-sky-400" />
+                <span>🔵</span>
+                <input id="qmOpt0" type="text" required placeholder="Optie Blauw" class="flex-1 bg-slate-900 border border-white/15 rounded-lg px-2.5 py-1.5 text-xs text-white" />
+              </label>
+              <label class="flex items-center gap-2">
+                <input type="radio" name="qmCorrect" value="1" class="accent-orange-400" />
+                <span>🟠</span>
+                <input id="qmOpt1" type="text" required placeholder="Optie Oranje" class="flex-1 bg-slate-900 border border-white/15 rounded-lg px-2.5 py-1.5 text-xs text-white" />
+              </label>
+              <label class="flex items-center gap-2">
+                <input type="radio" name="qmCorrect" value="2" class="accent-emerald-400" />
+                <span>🟢</span>
+                <input id="qmOpt2" type="text" required placeholder="Optie Groen" class="flex-1 bg-slate-900 border border-white/15 rounded-lg px-2.5 py-1.5 text-xs text-white" />
+              </label>
+              <label class="flex items-center gap-2">
+                <input type="radio" name="qmCorrect" value="3" class="accent-yellow-400" />
+                <span>🟡</span>
+                <input id="qmOpt3" type="text" required placeholder="Optie Geel" class="flex-1 bg-slate-900 border border-white/15 rounded-lg px-2.5 py-1.5 text-xs text-white" />
+              </label>
+            </div>
+
+            <input id="qmQuestionExpl" type="text" placeholder="Korte uitleg / weetje na de vraag..." class="bg-slate-900 border border-white/15 rounded-xl px-3 py-2 text-xs text-white" />
+            <button type="submit" class="py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs sm:text-sm cursor-pointer">
+              💾 Vraag Opslaan
+            </button>
+          </form>
+        </div>
+
+        <!-- Rechts: Overzicht -->
+        <div class="lg:col-span-7 flex flex-col gap-3">
+          <div id="qmCategoryChips" class="flex flex-wrap gap-1.5"></div>
+          <div class="flex items-center justify-between gap-2">
+            <span class="text-xs font-bold text-slate-300">Alle opgeslagen vragen:</span>
+            <select id="qmFilterCategory" class="bg-slate-950 border border-white/15 rounded-xl px-3 py-1.5 text-xs font-bold text-white"></select>
+          </div>
+          <div id="qmQuestionList" class="flex flex-col gap-2 max-h-[430px] overflow-y-auto pr-1"></div>
+        </div>
+      </div>
+
+      <!-- TAB 2: IMPORT / EXPORT -->
+      <div data-qm-panel="import" class="hidden flex flex-col gap-4">
+        <div class="bg-slate-950/70 border border-white/10 rounded-2xl p-4 flex flex-col gap-3">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h4 class="font-heading font-bold text-sm text-amber-300">📊 Snel Inladen vanuit Excel / CSV</h4>
+            <button id="btnQmSampleCsv" type="button" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-200 border border-white/15 cursor-pointer">
+              ⬇️ Download Voorbeeld CSV
+            </button>
+          </div>
+          <p class="text-xs text-slate-400">
+            Plak regels in dit formaat (gescheiden door <code>;</code>):<br />
+            <code class="text-sky-300">vraag;optie1;optie2;optie3;optie4;juist(1-4);uitleg</code> (of met <code>categorie;badge;...</code> vooraan).
+          </p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold text-slate-300">Standaard categorie voor deze import:</span>
+            <select id="qmCsvCategory" class="bg-slate-900 border border-white/15 rounded-xl px-3 py-1.5 text-xs font-bold text-white"></select>
+          </div>
+          <textarea id="qmCsvInput" rows="5" placeholder="Hoeveel poten heeft een spin?;4;6;8;10;3;Spinnen zijn spinachtigen en hebben altijd 8 poten!" class="bg-slate-900 border border-white/15 rounded-xl p-3 text-xs text-white font-mono"></textarea>
+          <button id="btnQmImportCsv" type="button" class="self-start px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs sm:text-sm cursor-pointer">
+            📥 Importeer CSV Vragen
+          </button>
+        </div>
+
+        <div class="bg-slate-950/70 border border-white/10 rounded-2xl p-4 flex flex-wrap items-center justify-between gap-3">
+          <div class="flex flex-wrap items-center gap-2.5">
+            <button id="btnQmExportJson" type="button" class="px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs sm:text-sm cursor-pointer">
+              💾 Exporteer alles (.json)
+            </button>
+            <label class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs sm:text-sm border border-white/15 cursor-pointer">
+              📂 Laad .json bestand
+              <input id="inputQmImportJson" type="file" accept=".json" class="hidden" />
+            </label>
+          </div>
+          <button id="btnQmResetDefaults" type="button" class="px-4 py-2 rounded-xl bg-rose-500/20 hover:bg-rose-500/35 text-rose-300 font-bold text-xs border border-rose-400/30 cursor-pointer">
+            🔄 Herstel standaardvragen
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- SCRIPTS -->
   <script src="js/kinetix-badge.js"></script>
   <script src="js/sound-fx.js"></script>
   <script src="js/buzz-driver.js"></script>
   <script src="js/questions.js"></script>
+  <script src="js/question-manager.js"></script>
   <script src="js/app.js"></script>
   <script src="js/intro.js"></script>
 </body>

@@ -261,8 +261,12 @@
   }
 
   function renderCategories() {
+    const categories = window.QuizStore ? window.QuizStore.getCategories() : window.BUZZ_CATEGORIES;
+    if (!categories.some((c) => c.id === state.selectedCategory)) {
+      state.selectedCategory = categories[0] ? categories[0].id : 'mix';
+    }
     el.categoryList.innerHTML = '';
-    window.BUZZ_CATEGORIES.forEach((cat) => {
+    categories.forEach((cat) => {
       const selected = cat.id === state.selectedCategory;
       const btn = document.createElement('button');
       btn.type = 'button';
@@ -330,10 +334,11 @@
   }
 
   function buildDeck() {
+    const allQuestions = window.QuizStore ? window.QuizStore.getQuestions() : window.BUZZ_QUESTIONS;
     let pool =
       state.selectedCategory === 'mix'
-        ? [...window.BUZZ_QUESTIONS]
-        : window.BUZZ_QUESTIONS.filter((q) => q.category === state.selectedCategory);
+        ? [...allQuestions]
+        : allQuestions.filter((q) => q.category === state.selectedCategory);
 
     pool = shuffle(pool);
     const total = state.selectedMode === 'quick' ? 6 : state.selectedMode === 'marathon' ? 12 : 9;
@@ -921,6 +926,9 @@
   }
 
   /* ==================== INIT ==================== */
+  window.onQuizStoreUpdated = () => {
+    renderCategories();
+  };
   renderLobbyPlayers();
   renderCategories();
   renderModeButtons();
