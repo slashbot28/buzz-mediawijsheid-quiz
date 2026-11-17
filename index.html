@@ -529,6 +529,24 @@
 
       <!-- TAB 2: IMPORT / EXPORT -->
       <div data-qm-panel="import" class="hidden flex flex-col gap-4">
+        <!-- Online URL / Google Sheets -->
+        <div class="bg-slate-950/70 border border-sky-400/30 rounded-2xl p-4 flex flex-col gap-3">
+          <h4 class="font-heading font-bold text-sm text-sky-300">🌐 Online Inladen via Website-URL of Google Sheets</h4>
+          <p class="text-xs text-slate-400">
+            Plak de link van een publiek <strong>Google Sheet</strong> (<em>Delen → Iedereen met de link</em>), een <strong>.csv</strong>-bestand of een <strong>.json</strong>-bestand op het internet.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <input id="qmOnlineUrl" type="url" placeholder="https://docs.google.com/spreadsheets/d/... of https://jouwsite.be/vragen.json" class="flex-1 bg-slate-900 border border-white/15 rounded-xl px-3 py-2 text-xs text-white" />
+            <button id="btnQmLoadUrl" type="button" class="px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-black text-xs sm:text-sm cursor-pointer shrink-0">
+              🌐 Nu Online Inladen
+            </button>
+          </div>
+          <label class="inline-flex items-center gap-2 text-xs text-slate-300 cursor-pointer">
+            <input id="qmOnlineAutoLoad" type="checkbox" class="accent-sky-400" />
+            <span>🔄 Automatisch verversen vanaf deze URL telkens als de quiz opstart</span>
+          </label>
+        </div>
+
         <div class="bg-slate-950/70 border border-white/10 rounded-2xl p-4 flex flex-col gap-3">
           <div class="flex flex-wrap items-center justify-between gap-2">
             <h4 class="font-heading font-bold text-sm text-amber-300">📊 Snel Inladen vanuit Excel / CSV</h4>
@@ -554,6 +572,9 @@
           <div class="flex flex-wrap items-center gap-2.5">
             <button id="btnQmExportJson" type="button" class="px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs sm:text-sm cursor-pointer">
               💾 Exporteer alles (.json)
+            </button>
+            <button id="btnQmCopyShareLink" type="button" class="px-4 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs sm:text-sm cursor-pointer">
+              🔗 Kopieer Deelbare Quiz-Link
             </button>
             <label class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs sm:text-sm border border-white/15 cursor-pointer">
               📂 Laad .json bestand

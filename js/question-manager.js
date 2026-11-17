@@ -191,6 +191,57 @@
       this._save();
       return added;
     }
+
+    normalizeSourceUrl(rawUrl) {
+      let url = (rawUrl || '').trim();
+      if (!url) return '';
+      // Converteer Google Sheets /edit link automatisch naar /export?format=csv
+      const gsMatch = url.match(/https:\/\/docs\.google\.com\/spreadsheets\/d\/([a-zA-Z0-9_-]+)/);
+      if (gsMatch && !url.includes('output=csv') && !url.includes('format=csv')) {
+        url = `https://docs.google.com/spreadsheets/d/${gsMatch[1]}/export?format=csv`;
+      }
+      return url;
+    }
+
+    getSourceConfig() {
+      return {
+        url: localStorage.getItem('buzz_online_source_url') || '',
+        autoLoad: localStorage.getItem('buzz_online_autoload') === 'true'
+      };
+    }
+
+    saveSourceConfig(url, autoLoad) {
+      localStorage.setItem('buzz_online_source_url', (url || '').trim());
+      localStorage.setItem('buzz_online_autoload', autoLoad ? 'true' : 'false');
+    }
+
+    async loadFromUrl(rawUrl, targetCategoryId = 'algemeen') {
+      const url = this.normalizeSourceUrl(rawUrl);
+      if (!url) throw new Error('Vul eerst een geldige website-URL in.');
+
+      const res = await fetch(url, { cache: 'no-store' });
+      if (!res.ok) {
+        throw new Error(`Kon URL niet ophalen (HTTP ${res.status}). Controleer of het bestand publiek gedeeld is.`);
+      }
+      const text = await res.text();
+      const trimmed = text.trim();
+      if (trimmed.startsWith('{') || trimmed.startsWith('[')) {
+        const parsed = JSON.parse(trimmed);
+        const normalized = Array.isArray(parsed) ? { questions: parsed } : parsed;
+        return this.importJson(JSON.stringify(normalized));
+      }
+      return this.importCsv(text, targetCategoryId);
+    }
+
+    generateShareUrl() {
+      const cfg = this.getSourceConfig();
+      const base = `${window.location.origin}${window.location.pathname}`;
+      if (cfg.url) {
+        return `${base}?source=${encodeURIComponent(cfg.url)}`;
+      }
+      const payload = btoa(unescape(encodeURIComponent(this.exportJson())));
+      return `${base}?quiz=${encodeURIComponent(payload)}`;
+    }
   }
 
   window.QuizStore = new QuizStoreEngine();
@@ -483,8 +534,91 @@
     });
   }
 
+  // Online URL & Deelbare link controls
+  const urlInput = document.getElementById('qmOnlineUrl');
+  const autoLoadChk = document.getElementById('qmOnlineAutoLoad');
+  const btnLoadUrl = document.getElementById('btnQmLoadUrl');
+  const btnCopyShareLink = document.getElementById('btnQmCopyShareLink');
+
+  function syncUrlInputs() {
+    const cfg = window.QuizStore.getSourceConfig();
+    if (urlInput) urlInput.value = cfg.url;
+    if (autoLoadChk) autoLoadChk.checked = cfg.autoLoad;
+  }
+
+  if (btnLoadUrl && urlInput) {
+    btnLoadUrl.addEventListener('click', async () => {
+      const rawUrl = urlInput.value.trim();
+      const autoLoad = !!(autoLoadChk && autoLoadChk.checked);
+      window.QuizStore.saveSourceConfig(rawUrl, autoLoad);
+      btnLoadUrl.disabled = true;
+      btnLoadUrl.textContent = '⏳ Laden...';
+      try {
+        const count = await window.QuizStore.loadFromUrl(rawUrl, csvTargetSelect ? csvTargetSelect.value : 'algemeen');
+        refreshAll();
+        showStatus(`🌐 ${count} vragen online ingeladen vanaf de website!`);
+      } catch (err) {
+        showStatus(err.message, true);
+      } finally {
+        btnLoadUrl.disabled = false;
+        btnLoadUrl.textContent = '🌐 Nu Online Inladen';
+      }
+    });
+  }
+
+  if (autoLoadChk && urlInput) {
+    autoLoadChk.addEventListener('change', () => {
+      window.QuizStore.saveSourceConfig(urlInput.value.trim(), autoLoadChk.checked);
+    });
+  }
+
+  if (btnCopyShareLink) {
+    btnCopyShareLink.addEventListener('click', async () => {
+      try {
+        const link = window.QuizStore.generateShareUrl();
+        await navigator.clipboard.writeText(link);
+        showStatus('🔗 Deelbare quiz-link gekopieerd! Open deze link op elk digibord.');
+      } catch {
+        showStatus('Kon link niet kopiëren. Controleer browserrechten.', true);
+      }
+    });
+  }
+
+  // Startup: laad automatisch via ?source=..., ?quiz=... of opgeslagen online URL
+  (async function autoLoadOnStartup() {
+    const params = new URLSearchParams(window.location.search);
+    const paramSource = params.get('source');
+    const paramQuiz = params.get('quiz');
+
+    if (paramQuiz) {
+      try {
+        const decoded = decodeURIComponent(escape(atob(paramQuiz)));
+        window.QuizStore.importJson(decoded);
+      } catch {
+        // Negeer ongeldige quiz param
+      }
+    } else if (paramSource) {
+      window.QuizStore.saveSourceConfig(paramSource, true);
+      try {
+        await window.QuizStore.loadFromUrl(paramSource);
+      } catch {
+        // Stille fout bij opstarten
+      }
+    } else {
+      const cfg = window.QuizStore.getSourceConfig();
+      if (cfg.autoLoad && cfg.url) {
+        try {
+          await window.QuizStore.loadFromUrl(cfg.url);
+        } catch {
+          // Stille fout als offline
+        }
+      }
+    }
+  })();
+
   btnOpen.addEventListener('click', () => {
     refreshAll();
+    syncUrlInputs();
     modal.classList.remove('hidden');
   });
 
