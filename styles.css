@@ -431,3 +431,29 @@ body {
   text-transform: uppercase;
   text-shadow: 0 0 8px rgba(239, 68, 68, 0.8), 0 0 16px rgba(251, 191, 36, 0.45);
 }
+
+/* ==================== KARAKTER-ANIMATIES OP PODIUM ==================== */
+@keyframes charCheer {
+  0%, 100% { transform: translateY(0) scale(1) rotate(0deg); }
+  25% { transform: translateY(-12px) scale(1.14) rotate(-6deg); }
+  50% { transform: translateY(0) scale(1.06) rotate(6deg); }
+  75% { transform: translateY(-9px) scale(1.12) rotate(-4deg); }
+}
+
+@keyframes charShake {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  20% { transform: translateX(-7px) rotate(-6deg); }
+  40% { transform: translateX(7px) rotate(6deg); }
+  60% { transform: translateX(-5px) rotate(-4deg); }
+  80% { transform: translateX(5px) rotate(4deg); }
+}
+
+.char-cheer {
+  animation: charCheer 0.75s ease-in-out 2;
+  filter: drop-shadow(0 0 14px rgba(74, 222, 128, 0.85));
+}
+
+.char-shake {
+  animation: charShake 0.55s ease-in-out 1;
+  filter: drop-shadow(0 0 10px rgba(248, 113, 113, 0.75));
+}

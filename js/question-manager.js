@@ -274,6 +274,7 @@
   const qTextInput = document.getElementById('qmQuestionText');
   const qOptInputs = [0, 1, 2, 3].map((i) => document.getElementById(`qmOpt${i}`));
   const qExplInput = document.getElementById('qmQuestionExpl');
+  const qImgInput = document.getElementById('qmQuestionImage');
   const qListEl = document.getElementById('qmQuestionList');
   const qFilterSelect = document.getElementById('qmFilterCategory');
   const qCountBadge = document.getElementById('qmTotalCount');
@@ -453,12 +454,14 @@
         question: qTextInput.value.trim(),
         options: qOptInputs.map((inp) => inp.value.trim()),
         correct,
-        explanation: qExplInput.value.trim() || 'Goed geredeneerd!'
+        explanation: qExplInput.value.trim() || 'Goed geredeneerd!',
+        image: qImgInput ? qImgInput.value.trim() : ''
       });
 
       qTextInput.value = '';
       qOptInputs.forEach((inp) => (inp.value = ''));
       qExplInput.value = '';
+      if (qImgInput) qImgInput.value = '';
       refreshAll();
       showStatus('✅ Vraag opgeslagen! Hij staat meteen klaar in de quiz.');
     });

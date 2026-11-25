@@ -281,8 +281,14 @@
           </span>
         </div>
 
-        <div class="flex items-center gap-4">
+        <div class="flex flex-wrap items-center gap-2 sm:gap-3">
           <span id="quizCounter" class="font-heading font-bold text-sm sm:text-base text-slate-300">Vraag 1 / 9</span>
+          <button id="btnRepeatSpeech" type="button" class="px-2.5 py-1 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-600 text-xs font-bold text-slate-200 transition cursor-pointer" title="Lees de vraag opnieuw voor">
+            🔁 Lees voor
+          </button>
+          <button id="btnPauseTimer" type="button" class="px-2.5 py-1 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-600 text-xs font-bold text-amber-200 transition cursor-pointer" title="Pauzeer of hervat de klok">
+            ⏸️ Pauze
+          </button>
           <div class="flex items-center gap-2 bg-slate-950 px-3 py-1 rounded-xl border border-slate-700">
             <span class="text-xs text-slate-400 font-bold">TIJD</span>
             <span id="quizTimerText" class="font-display font-black text-xl text-amber-300 w-7 text-right">15</span>
@@ -298,15 +304,26 @@
         <div id="quizTimerBar" class="timer-bar-fill h-full bg-gradient-to-r from-emerald-400 via-amber-400 to-red-500 w-full"></div>
       </div>
 
-      <!-- Snelste Vinger Status Banner (Visible only in Round 2) -->
+      <!-- Snelste Vinger Status Banner -->
       <div id="fastestFingerBanner" class="hidden rounded-2xl px-5 py-3 bg-gradient-to-r from-red-600/30 via-rose-500/30 to-red-600/30 border-2 border-red-400/60 text-center">
         <p id="fastestFingerText" class="font-display font-black text-lg sm:text-2xl text-white tracking-wide">
           🔴 DRUK ZO SNEL MOGELIJK OP DE RODE BUZZER!
         </p>
       </div>
 
+      <!-- Puntendief Banner (Stelen van 100 punten) -->
+      <div id="stealBanner" class="hidden rounded-2xl px-5 py-4 bg-gradient-to-r from-fuchsia-700/40 via-purple-600/40 to-rose-600/40 border-2 border-fuchsia-400 text-center animate-pop-in">
+        <p id="stealBannerText" class="font-display font-black text-lg sm:text-2xl text-amber-300 mb-3">
+          😈 PUNTENDIEF! Kies van welk team je 100 punten steelt:
+        </p>
+        <div id="stealTargetsGrid" class="flex flex-wrap items-center justify-center gap-2.5"></div>
+      </div>
+
       <!-- Question Display Card -->
       <div class="bg-slate-900/90 backdrop-blur-md border-2 border-indigo-400/30 rounded-3xl p-5 sm:p-8 shadow-2xl text-center">
+        <div id="quizImageWrap" class="hidden mb-4 flex justify-center">
+          <img id="quizQuestionImage" src="" alt="Vraag afbeelding" class="max-h-52 sm:max-h-64 rounded-2xl border-2 border-white/20 shadow-xl object-contain bg-slate-950/60" />
+        </div>
         <h2 id="quizQuestionText" class="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-white leading-snug">
           Vraag wordt geladen...
         </h2>
@@ -360,17 +377,21 @@
       <div class="max-w-3xl w-full bg-slate-900/90 backdrop-blur-xl border-2 border-amber-400/50 rounded-3xl p-6 sm:p-10 shadow-2xl">
         <div class="text-6xl mb-2">🏆</div>
         <h2 class="font-display font-black text-4xl sm:text-5xl text-amber-300 buzz-logo-text mb-2">DE UITSLAG!</h2>
-        <p id="finaleWinnerText" class="text-xl sm:text-2xl font-bold text-white mb-6"></p>
+        <p id="finaleWinnerText" class="text-xl sm:text-2xl font-bold text-white mb-2"></p>
+        <div id="finaleRecordBadge" class="inline-block mb-6 px-4 py-1.5 rounded-full bg-purple-500/25 border border-purple-400/50 text-xs sm:text-sm font-bold text-purple-200"></div>
 
         <div id="finaleLeaderboard" class="flex flex-col gap-3 mb-8 text-left">
           <!-- Dynamically populated -->
         </div>
 
-        <div class="flex flex-wrap items-center justify-center gap-4">
-          <button id="btnPlayAgain" class="px-7 py-3.5 rounded-2xl bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-display font-black text-lg shadow-lg hover:scale-105 transition cursor-pointer">
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          <button id="btnPrintDiploma" class="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-400 to-teal-500 text-slate-950 font-display font-black text-base sm:text-lg shadow-lg hover:scale-105 transition cursor-pointer">
+            🖨️ Print Diploma
+          </button>
+          <button id="btnPlayAgain" class="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-display font-black text-base sm:text-lg shadow-lg hover:scale-105 transition cursor-pointer">
             🔄 Nog een keer!
           </button>
-          <button id="btnBackToLobby" class="px-7 py-3.5 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-heading font-bold text-lg border border-slate-600 transition cursor-pointer">
+          <button id="btnBackToLobby" class="px-6 py-3.5 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-heading font-bold text-base sm:text-lg border border-slate-600 transition cursor-pointer">
             🏠 Terug naar Lobby
           </button>
         </div>
@@ -528,6 +549,7 @@
             </div>
 
             <input id="qmQuestionExpl" type="text" placeholder="Korte uitleg / weetje na de vraag..." class="bg-slate-900 border border-white/15 rounded-xl px-3 py-2 text-xs text-white" />
+            <input id="qmQuestionImage" type="url" placeholder="🖼️ Afbeelding URL (optioneel, bv. https://.../foto.jpg)" class="bg-slate-900 border border-white/15 rounded-xl px-3 py-2 text-xs text-white" />
             <button type="submit" class="py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs sm:text-sm cursor-pointer">
               💾 Vraag Opslaan
             </button>

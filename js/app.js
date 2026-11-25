@@ -74,8 +74,11 @@
     deck: [],
     currentIndex: 0,
     currentRoundType: 'builder', // 'builder' | 'fastest' | 'finale'
-    phase: 'idle', // 'waitingBuzz' | 'answering' | 'revealed'
+    phase: 'idle', // 'waitingBuzz' | 'answering' | 'stealing' | 'revealed'
     activeBuzzPlayer: null,
+    stealThief: null,
+    stealTargets: [],
+    isPaused: false,
     timeLeft: 15,
     maxTime: 15,
     timerId: null,
@@ -117,10 +120,17 @@
     quizRoundBadge: document.getElementById('quizRoundBadge'),
     quizTopicBadge: document.getElementById('quizTopicBadge'),
     quizCounter: document.getElementById('quizCounter'),
+    btnRepeatSpeech: document.getElementById('btnRepeatSpeech'),
+    btnPauseTimer: document.getElementById('btnPauseTimer'),
     quizTimerText: document.getElementById('quizTimerText'),
     quizTimerBar: document.getElementById('quizTimerBar'),
     fastestFingerBanner: document.getElementById('fastestFingerBanner'),
     fastestFingerText: document.getElementById('fastestFingerText'),
+    stealBanner: document.getElementById('stealBanner'),
+    stealBannerText: document.getElementById('stealBannerText'),
+    stealTargetsGrid: document.getElementById('stealTargetsGrid'),
+    quizImageWrap: document.getElementById('quizImageWrap'),
+    quizQuestionImage: document.getElementById('quizQuestionImage'),
     quizQuestionText: document.getElementById('quizQuestionText'),
     quizOptionsGrid: document.getElementById('quizOptionsGrid'),
     quizRevealBox: document.getElementById('quizRevealBox'),
@@ -130,7 +140,9 @@
     btnQuitQuiz: document.getElementById('btnQuitQuiz'),
 
     finaleWinnerText: document.getElementById('finaleWinnerText'),
+    finaleRecordBadge: document.getElementById('finaleRecordBadge'),
     finaleLeaderboard: document.getElementById('finaleLeaderboard'),
+    btnPrintDiploma: document.getElementById('btnPrintDiploma'),
     btnPlayAgain: document.getElementById('btnPlayAgain'),
     btnBackToLobby: document.getElementById('btnBackToLobby'),
 
@@ -347,8 +359,47 @@
 
   function getRoundForIndex(idx, total) {
     if (state.selectedMode === 'quick') {
-      return { type: 'builder', num: 1, title: 'Punten Bouwer', icon: '⚡', desc: 'Iedereen antwoordt tegelijk! Kies Blauw, Oranje, Groen of Geel.' };
+      return { type: 'builder', num: 1, title: 'Punten Bouwer', icon: '⚡', desc: 'Iedereen antwoordt tegelijk! Kies Blauw, Oranje, Groen of Geel. 3 op rij = +100 Reeksbonus!' };
     }
+    if (state.selectedMode === 'marathon') {
+      const perRound = Math.ceil(total / 4);
+      if (idx < perRound) {
+        return {
+          type: 'builder',
+          num: 1,
+          title: 'Punten Bouwer',
+          icon: '⚡',
+          desc: 'Iedereen antwoordt tegelijk met de 4 gekleurde knoppen! 3 juiste antwoorden op rij = +100 Reeksbonus!'
+        };
+      }
+      if (idx < perRound * 2) {
+        return {
+          type: 'fastest',
+          num: 2,
+          title: 'Snelste Vinger!',
+          icon: '🔴',
+          desc: 'Druk zo snel mogelijk op de GROTE RODE BUZZER! Goed antwoord = +300 punten, fout = -150 punten!'
+        };
+      }
+      if (idx < perRound * 3) {
+        return {
+          type: 'stealer',
+          num: 3,
+          title: 'Puntendief!',
+          icon: '😈',
+          desc: 'Druk als eerste op de RODE BUZZER en antwoord juist om +250 punten te scoren én 100 punten te STELEN van een ander team!'
+        };
+      }
+      return {
+        type: 'finale',
+        num: 4,
+        title: 'De Grote Finale!',
+        icon: '🔥',
+        desc: 'Alle remmen los! Iedereen antwoordt tegelijk voor DUBBELE PUNTEN (tot wel +500 per vraag)!'
+      };
+    }
+
+    // TV Show (9 vragen, 3 rondes inclusief Puntendief!)
     const perRound = Math.ceil(total / 3);
     if (idx < perRound) {
       return {
@@ -356,16 +407,16 @@
         num: 1,
         title: 'Punten Bouwer',
         icon: '⚡',
-        desc: 'Iedereen antwoordt tegelijk met de 4 gekleurde knoppen! Hoe sneller je bent, hoe meer bonuspunten je verdient.'
+        desc: 'Iedereen antwoordt tegelijk met de 4 gekleurde knoppen! Hoe sneller je bent, hoe meer bonuspunten (+100 Reeksbonus bij 3 op rij!).'
       };
     }
     if (idx < perRound * 2) {
       return {
-        type: 'fastest',
+        type: 'stealer',
         num: 2,
-        title: 'Snelste Vinger!',
-        icon: '🔴',
-        desc: 'Druk zo snel mogelijk op de GROTE RODE BUZZER om de beurt te claimen! Goed antwoord = +300 punten, fout = -150 punten!'
+        title: 'Puntendief!',
+        icon: '😈',
+        desc: 'Druk als snelste op de GROTE RODE BUZZER! Antwoord je juist, dan krijg je +250 punten én mag je 100 punten STELEN van een ander team!'
       };
     }
     return {
@@ -434,6 +485,12 @@
     });
 
     state.activeBuzzPlayer = null;
+    state.stealThief = null;
+    state.stealTargets = [];
+    state.isPaused = false;
+    if (el.btnPauseTimer) el.btnPauseTimer.textContent = '⏸️ Pauze';
+    if (el.stealBanner) el.stealBanner.classList.add('hidden');
+
     const baseTime =
       state.questionTimePreset === 0
         ? 0
@@ -442,11 +499,24 @@
         : state.questionTimePreset;
     state.maxTime = baseTime;
     state.timeLeft = baseTime;
-    state.phase = state.currentRoundType === 'fastest' ? 'waitingBuzz' : 'answering';
+    const isBuzzInRound = state.currentRoundType === 'fastest' || state.currentRoundType === 'stealer';
+    state.phase = isBuzzInRound ? 'waitingBuzz' : 'answering';
 
     el.quizRoundBadge.textContent = `Ronde ${roundInfo.num} • ${roundInfo.title}`;
     el.quizTopicBadge.textContent = q.badge;
     el.quizCounter.textContent = `Vraag ${state.currentIndex + 1} / ${state.deck.length}`;
+
+    // Optionele afbeelding bij de vraag (visuele vragen)
+    if (el.quizImageWrap && el.quizQuestionImage) {
+      if (q.image) {
+        el.quizQuestionImage.src = q.image;
+        el.quizImageWrap.classList.remove('hidden');
+      } else {
+        el.quizQuestionImage.src = '';
+        el.quizImageWrap.classList.add('hidden');
+      }
+    }
+
     const safeHtml = String(q.question || '')
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
@@ -457,9 +527,12 @@
     el.quizQuestionText.innerHTML = safeHtml;
     el.quizRevealBox.classList.add('hidden');
 
-    if (state.currentRoundType === 'fastest') {
+    if (isBuzzInRound) {
       el.fastestFingerBanner.classList.remove('hidden');
-      el.fastestFingerText.textContent = '🔴 DRUK ZO SNEL MOGELIJK OP DE RODE BUZZER!';
+      el.fastestFingerText.textContent =
+        state.currentRoundType === 'stealer'
+          ? '😈 PUNTENDIEF! DRUK EERST OP DE RODE BUZZER OM 100 PUNTEN TE STELEN!'
+          : '🔴 DRUK ZO SNEL MOGELIJK OP DE RODE BUZZER!';
     } else {
       el.fastestFingerBanner.classList.add('hidden');
     }
@@ -481,6 +554,7 @@
 
     if (state.maxTime > 0) {
       state.timerId = setInterval(() => {
+        if (state.isPaused) return;
         state.timeLeft = Math.max(0, state.timeLeft - 1);
         updateTimerUI();
 
@@ -517,14 +591,24 @@
       const isBuzzed = state.activeBuzzPlayer === i;
 
       let stateClass = '';
+      let charAnimClass = '';
       if (isBuzzed && !revealed) stateClass = 'active-buzz';
       else if (!revealed && p.answer !== null) stateClass = 'answered';
       else if (revealed && p.answer !== null) {
-        stateClass = p.answer === correctIdx ? 'correct-podium' : 'wrong-podium';
+        if (p.answer === correctIdx) {
+          stateClass = 'correct-podium';
+          charAnimClass = 'char-cheer';
+        } else {
+          stateClass = 'wrong-podium';
+          charAnimClass = 'char-shake';
+        }
       }
 
+      const isBuzzRound = state.currentRoundType === 'fastest' || state.currentRoundType === 'stealer';
       let statusText = 'Wacht...';
-      if (state.currentRoundType === 'fastest' && !revealed) {
+      if (state.phase === 'stealing') {
+        statusText = state.stealThief === i ? '😈 KIES SLACHTOFFER!' : 'Pas op... 😬';
+      } else if (isBuzzRound && !revealed) {
         statusText = isBuzzed ? '🎤 MAG ANTWOORDEN!' : state.activeBuzzPlayer !== null ? 'Geblokkeerd' : 'Druk Rood!';
       } else if (!revealed) {
         statusText = p.answer !== null ? '✓ Geantwoord' : 'Kies kleur...';
@@ -534,13 +618,21 @@
         else statusText = 'Geen punten';
       }
 
+      const streakBadge =
+        p.streak >= 2
+          ? `<span class="text-[11px] font-black px-1.5 py-0.5 rounded-md bg-orange-500/30 border border-orange-400/60 text-amber-200">🔥 x${p.streak}</span>`
+          : '';
+
       const card = document.createElement('div');
       card.className = `podium-card rounded-2xl p-3 flex flex-col gap-1.5 ${stateClass}`;
       card.innerHTML = `
         <div class="flex items-center justify-between gap-2">
           <div class="flex items-center gap-2.5 min-w-0">
-            ${renderAvatarHtml(p.char, 'w-16 h-16 sm:w-20 sm:h-20 shrink-0')}
-            <span class="font-heading font-bold text-sm sm:text-base text-white truncate">${p.name}</span>
+            <div class="${charAnimClass} shrink-0">${renderAvatarHtml(p.char, 'w-16 h-16 sm:w-20 sm:h-20')}</div>
+            <div class="min-w-0">
+              <div class="font-heading font-bold text-sm sm:text-base text-white truncate">${p.name}</div>
+              ${streakBadge}
+            </div>
           </div>
           <span class="w-3 h-3 rounded-full ${theme.badge} shrink-0"></span>
         </div>
@@ -588,6 +680,16 @@
       return;
     }
 
+    // Puntendief: de winnaar kiest met een gekleurde knop van wie hij/zij 100 ptn steelt
+    if (state.phase === 'stealing') {
+      if (playerIndex !== state.stealThief) return;
+      const optIdx = OPTION_KEYS.indexOf(button);
+      if (optIdx !== -1 && state.stealTargets[optIdx] !== undefined) {
+        executeSteal(state.stealTargets[optIdx]);
+      }
+      return;
+    }
+
     // Ronde 2: Snelste Vinger - eerst Rood drukken!
     if (state.phase === 'waitingBuzz') {
       if (button === 'red') {
@@ -620,7 +722,7 @@
       const optIdx = OPTION_KEYS.indexOf(button);
       if (optIdx === -1) return;
 
-      if (state.currentRoundType === 'fastest') {
+      if (state.currentRoundType === 'fastest' || state.currentRoundType === 'stealer') {
         if (playerIndex !== state.activeBuzzPlayer) return;
         state.players[playerIndex].answer = optIdx;
         state.players[playerIndex].answerTime = state.timeLeft;
@@ -651,14 +753,85 @@
     }
   }
 
-  function revealAnswer() {
-    if (state.phase === 'revealed') return;
+  function startStealPhase(thiefIdx) {
+    state.phase = 'stealing';
+    state.stealThief = thiefIdx;
+    const targets = [];
+    for (let i = 0; i < state.playerCount; i++) {
+      if (i !== thiefIdx) targets.push(i);
+    }
+    state.stealTargets = targets;
+
+    const thief = state.players[thiefIdx];
+    const colorBtns = [
+      { emoji: '🔵', cls: 'bg-sky-500 hover:bg-sky-400 text-white' },
+      { emoji: '🟠', cls: 'bg-orange-500 hover:bg-orange-400 text-white' },
+      { emoji: '🟢', cls: 'bg-emerald-500 hover:bg-emerald-400 text-white' },
+      { emoji: '🟡', cls: 'bg-yellow-400 hover:bg-yellow-300 text-slate-950' }
+    ];
+
+    el.stealBannerText.textContent = `😈 PUNTENDIEF! ${thief.name} mag 100 punten stelen! Kies een team:`;
+    el.stealTargetsGrid.innerHTML = '';
+
+    targets.forEach((targetIdx, btnIdx) => {
+      const target = state.players[targetIdx];
+      const style = colorBtns[btnIdx % colorBtns.length];
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = `px-4 py-2.5 rounded-xl font-heading font-bold text-sm sm:text-base shadow-lg transition hover:scale-105 cursor-pointer flex items-center gap-2 ${style.cls}`;
+      btn.innerHTML = `<span>${style.emoji}</span><span>${target.name} (${target.score})</span>`;
+      btn.addEventListener('click', () => executeSteal(targetIdx));
+      el.stealTargetsGrid.appendChild(btn);
+    });
+
+    el.stealBanner.classList.remove('hidden');
+    window.BuzzDriver.setLeds([0, 1, 2, 3].map((i) => i === thiefIdx));
+    renderQuizPodiums();
+  }
+
+  function executeSteal(victimIdx) {
+    if (state.phase !== 'stealing') return;
+    const thief = state.players[state.stealThief];
+    const victim = state.players[victimIdx];
+    const stolen = Math.min(100, victim.score);
+    victim.score -= stolen;
+    victim.lastDelta = -stolen;
+    thief.score += stolen;
+    thief.lastDelta += stolen;
+
+    el.stealBanner.classList.add('hidden');
+    window.BuzzSound.playBuzzer(state.stealThief);
+    finishRevealUI(state.deck[state.currentIndex]);
+  }
+
+  function finishRevealUI(q) {
     state.phase = 'revealed';
+    const correctIdx = q.correct;
+
+    const optionButtons = el.quizOptionsGrid.querySelectorAll('.buzz-btn');
+    optionButtons.forEach((btn, idx) => {
+      btn.disabled = true;
+      if (idx === correctIdx) btn.classList.add('is-correct');
+      else btn.classList.add('is-dimmed');
+    });
+
+    el.quizExplanationText.textContent = q.explanation;
+    el.quizRevealBox.classList.remove('hidden');
+    el.btnNextQuestion.textContent =
+      state.currentIndex + 1 >= state.deck.length ? 'Bekijk Uitslag 🏆' : 'Volgende Vraag →';
+
+    renderQuizPodiums(true, correctIdx);
+    window.BuzzDriver.setLeds([false, false, false, false]);
+  }
+
+  function revealAnswer() {
+    if (state.phase === 'revealed' || state.phase === 'stealing') return;
     window.BuzzSound.stopSpeech();
 
     const q = state.deck[state.currentIndex];
     const correctIdx = q.correct;
     let anyoneCorrect = false;
+    let stealerWinner = null;
 
     for (let i = 0; i < state.playerCount; i++) {
       const p = state.players[i];
@@ -673,12 +846,20 @@
         p.streak += 1;
         let pts = 150 + p.answerTime * 8;
         if (state.currentRoundType === 'fastest') pts = 300;
+        if (state.currentRoundType === 'stealer') {
+          pts = 250;
+          stealerWinner = i;
+        }
         if (state.currentRoundType === 'finale') pts = (150 + p.answerTime * 10) * 2;
+        // Reeksbonus (+100 bij 3 of meer op rij!)
+        if (p.streak >= 3) {
+          pts += 100;
+        }
         p.score += pts;
         p.lastDelta = pts;
       } else {
         p.streak = 0;
-        if (state.currentRoundType === 'fastest') {
+        if (state.currentRoundType === 'fastest' || state.currentRoundType === 'stealer') {
           const penalty = -150;
           p.score = Math.max(0, p.score + penalty);
           p.lastDelta = penalty;
@@ -694,21 +875,13 @@
       window.BuzzSound.playWrong();
     }
 
-    // Highlight juiste knop
-    const optionButtons = el.quizOptionsGrid.querySelectorAll('.buzz-btn');
-    optionButtons.forEach((btn, idx) => {
-      btn.disabled = true;
-      if (idx === correctIdx) btn.classList.add('is-correct');
-      else btn.classList.add('is-dimmed');
-    });
+    // In Puntendief-ronde: als winnaar juist antwoordde, mag hij/zij 100 ptn stelen!
+    if (state.currentRoundType === 'stealer' && stealerWinner !== null && state.playerCount >= 2) {
+      startStealPhase(stealerWinner);
+      return;
+    }
 
-    el.quizExplanationText.textContent = q.explanation;
-    el.quizRevealBox.classList.remove('hidden');
-    el.btnNextQuestion.textContent =
-      state.currentIndex + 1 >= state.deck.length ? 'Bekijk Uitslag 🏆' : 'Volgende Vraag →';
-
-    renderQuizPodiums(true, correctIdx);
-    window.BuzzDriver.setLeds([false, false, false, false]);
+    finishRevealUI(q);
   }
 
   function goToNextQuestion() {
@@ -728,7 +901,25 @@
 
     const sorted = [...state.players.slice(0, state.playerCount)].sort((a, b) => b.score - a.score);
     const winner = sorted[0];
+    state.lastWinner = winner;
     el.finaleWinnerText.textContent = `${winner.name} (${winner.char.name}) wint met ${winner.score} punten!`;
+
+    // Klas-record bijhouden in localStorage
+    const recKey = 'buzz_class_highscore_v1';
+    let prevRec = { score: 0, name: '' };
+    try {
+      const raw = localStorage.getItem(recKey);
+      if (raw) prevRec = JSON.parse(raw);
+    } catch {}
+
+    if (el.finaleRecordBadge) {
+      if (winner.score > (prevRec.score || 0)) {
+        localStorage.setItem(recKey, JSON.stringify({ score: winner.score, name: winner.name }));
+        el.finaleRecordBadge.textContent = `🎉 NIEUW KLAS-RECORD: ${winner.score} punten (${winner.name})!`;
+      } else {
+        el.finaleRecordBadge.textContent = `🏆 Huidig Klas-Record: ${prevRec.score} punten (${prevRec.name})`;
+      }
+    }
 
     const medals = ['🥇', '🥈', '🥉', '🎖️'];
     el.finaleLeaderboard.innerHTML = '';
@@ -811,12 +1002,74 @@
     el.btnPlayAgain.addEventListener('click', startGame);
     el.btnBackToLobby.addEventListener('click', goToMainMenu);
 
+    if (el.btnPauseTimer) {
+      el.btnPauseTimer.addEventListener('click', () => {
+        if (state.phase === 'revealed') return;
+        state.isPaused = !state.isPaused;
+        el.btnPauseTimer.textContent = state.isPaused ? '▶️ Hervat' : '⏸️ Pauze';
+        el.btnPauseTimer.classList.toggle('border-amber-400', state.isPaused);
+      });
+    }
+
+    if (el.btnRepeatSpeech) {
+      el.btnRepeatSpeech.addEventListener('click', () => {
+        const q = state.deck[state.currentIndex];
+        if (!q) return;
+        const prev = window.BuzzSound.voiceEnabled;
+        window.BuzzSound.voiceEnabled = true;
+        window.BuzzSound.speak(q.question);
+        window.BuzzSound.voiceEnabled = prev;
+      });
+    }
+
+    if (el.btnPrintDiploma) {
+      el.btnPrintDiploma.addEventListener('click', () => {
+        const w = state.lastWinner;
+        if (!w) return;
+        const charUrl = new URL(w.char.src, window.location.href).href;
+        const today = new Date().toLocaleDateString('nl-BE', { day: 'numeric', month: 'long', year: 'numeric' });
+        const win = window.open('', '_blank', 'width=850,height=650');
+        if (!win) {
+          alert('Sta pop-ups toe om het diploma te printen.');
+          return;
+        }
+        win.document.write(`<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><title>Winnaars-Diploma • ${w.name}</title>
+          <style>
+            body{font-family:'Segoe UI',system-ui,sans-serif;background:#f8fafc;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;padding:24px;}
+            .diploma{background:#fff;border:12px double #f59e0b;border-radius:28px;max-width:760px;width:100%;padding:40px 48px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,0.12);}
+            .badge{display:inline-block;background:#fef3c7;color:#b45309;font-weight:800;font-size:13px;letter-spacing:2px;padding:6px 18px;border-radius:999px;text-transform:uppercase;}
+            h1{font-size:42px;margin:14px 0 6px;color:#0f172a;letter-spacing:-0.5px;}
+            .sub{font-size:18px;color:#475569;margin-bottom:24px;}
+            .char{width:130px;height:130px;object-fit:contain;margin:0 auto 12px;display:block;}
+            .winner{font-size:36px;font-weight:900;color:#ea580c;margin:6px 0;}
+            .score{display:inline-block;background:#0f172a;color:#fbbf24;font-size:24px;font-weight:900;padding:10px 28px;border-radius:16px;margin:14px 0 28px;}
+            .footer{display:flex;justify-content:space-between;margin-top:30px;padding-top:18px;border-top:2px dashed #cbd5e1;color:#64748b;font-size:14px;}
+            @media print{body{background:#fff;padding:0;}.diploma{box-shadow:none;}}
+          </style></head><body>
+          <div class="diploma">
+            <div class="badge">🏆 Officieel BUZZ! Mediawijsheid Diploma</div>
+            <h1>GEFELICITEERD!</h1>
+            <div class="sub">Dit diploma wordt uitgereikt aan de winnaar van de klasquiz:</div>
+            <img class="char" src="${charUrl}" alt="${w.char.name}" />
+            <div class="winner">${w.name}</div>
+            <div class="score">⭐ Eindscore: ${w.score} punten</div>
+            <div class="footer">
+              <div><strong>Datum:</strong> ${today}</div>
+              <div><strong>Handtekening Juf / Meester:</strong> ______________________</div>
+            </div>
+          </div>
+          <script>window.onload=()=>{setTimeout(()=>window.print(),350);};<\/script>
+          </body></html>`);
+        win.document.close();
+      });
+    }
+
     // Clickable on-screen answer buttons (voor muis/digibord)
     el.quizOptionsGrid.querySelectorAll('.buzz-btn').forEach((btn) => {
       btn.addEventListener('click', () => {
         const optIdx = Number(btn.dataset.opt);
         const key = OPTION_KEYS[optIdx];
-        if (state.currentRoundType === 'fastest') {
+        if (state.currentRoundType === 'fastest' || state.currentRoundType === 'stealer') {
           if (state.phase === 'waitingBuzz') {
             // Op digibord: als niemand gebuzzt heeft, laat Speler 1 antwoorden
             handlePlayerButton(0, 'red');
