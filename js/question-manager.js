@@ -34,9 +34,24 @@
       return JSON.parse(JSON.stringify(fallback));
     }
 
-    _save() {
+    _save(markEdited = true) {
       localStorage.setItem(LS_CATS_KEY, JSON.stringify(this.categories));
       localStorage.setItem(LS_QUESTIONS_KEY, JSON.stringify(this.questions));
+      if (markEdited) {
+        localStorage.setItem('buzz_user_edited', '1');
+      }
+      if (typeof window.onQuizStoreUpdated === 'function') {
+        window.onQuizStoreUpdated();
+      }
+    }
+
+    loadTransient(categories, questions) {
+      if (Array.isArray(categories) && categories.length > 0) {
+        this.categories = categories;
+      }
+      if (Array.isArray(questions) && questions.length > 0) {
+        this.questions = questions;
+      }
       if (typeof window.onQuizStoreUpdated === 'function') {
         window.onQuizStoreUpdated();
       }
@@ -100,9 +115,10 @@
     }
 
     resetDefaults() {
+      localStorage.removeItem('buzz_user_edited');
       this.categories = JSON.parse(JSON.stringify(window.BUZZ_CATEGORIES || []));
       this.questions = JSON.parse(JSON.stringify(window.BUZZ_QUESTIONS || []));
-      this._save();
+      this._save(false);
     }
 
     exportJson() {
@@ -595,12 +611,7 @@
       try {
         const cloudSet = await window.CloudQuizStore.getSet(paramSet);
         if (cloudSet && Array.isArray(cloudSet.questions) && cloudSet.questions.length > 0) {
-          window.QuizStore.importJson(
-            JSON.stringify({
-              categories: cloudSet.categories,
-              questions: cloudSet.questions
-            })
-          );
+          window.QuizStore.loadTransient(cloudSet.categories, cloudSet.questions);
         }
       } catch {
         // Stille fout bij opstarten
@@ -608,7 +619,8 @@
     } else if (paramQuiz) {
       try {
         const decoded = decodeURIComponent(escape(atob(paramQuiz)));
-        window.QuizStore.importJson(decoded);
+        const parsed = JSON.parse(decoded);
+        window.QuizStore.loadTransient(parsed.categories, parsed.questions);
       } catch {
         // Negeer ongeldige quiz param
       }
@@ -627,6 +639,12 @@
         } catch {
           // Stille fout als offline
         }
+      } else if (
+        !localStorage.getItem('buzz_user_edited') &&
+        !window.QuizStore.getCategories().some((c) => c.id === 'media-1')
+      ) {
+        // Herstel standaard Mediawijsheid-sectie als eerdere ?set= localStorage had overschreven
+        window.QuizStore.resetDefaults();
       }
     }
   })();

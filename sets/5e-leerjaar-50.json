@@ -1,0 +1,749 @@
+{
+  "title": "Basisschool 5e Leerjaar (50 vragen)",
+  "categories": [
+    {
+      "id": "mix",
+      "title": "5e Leerjaar Compleet (Mix • 50 vragen)",
+      "subtitle": "Alle vakken & mediawijsheid door elkaar",
+      "icon": "🎓",
+      "color": "from-amber-400 to-orange-500"
+    },
+    {
+      "id": "taal-5e",
+      "title": "Taal & Spelling (5e Leerjaar)",
+      "subtitle": "Werkwoorden, zinsbouw en betekenissen",
+      "icon": "📖",
+      "color": "from-sky-400 to-blue-600"
+    },
+    {
+      "id": "wiskunde-5e",
+      "title": "Wiskunde & Meten (5e Leerjaar)",
+      "subtitle": "Procenten, breuken, schaal en oppervlakte",
+      "icon": "🧮",
+      "color": "from-emerald-400 to-teal-600"
+    },
+    {
+      "id": "natuur-5e",
+      "title": "Natuur & Techniek (5e Leerjaar)",
+      "subtitle": "Lichaam, kringlopen, planeten en energie",
+      "icon": "🔬",
+      "color": "from-indigo-400 to-violet-600"
+    },
+    {
+      "id": "wo-5e",
+      "title": "Aardrijkskunde & Geschiedenis (5e)",
+      "subtitle": "België, Europa, oudheid en middeleeuwen",
+      "icon": "🌍",
+      "color": "from-rose-400 to-red-600"
+    },
+    {
+      "id": "media-5e",
+      "title": "Mediawijsheid (5e Leerjaar)",
+      "subtitle": "AI, deepfakes, phishing, 2FA en algoritmes",
+      "icon": "⚡",
+      "color": "from-fuchsia-500 to-purple-700"
+    }
+  ],
+  "questions": [
+    {
+      "id": "lj5-1",
+      "category": "taal-5e",
+      "badge": "📖 5e Leerjaar • Taal",
+      "question": "Welke werkwoordsvorm is juist in de zin: 'Hij ... elke dag naar school'?",
+      "options": [
+        "fiets",
+        "fietst",
+        "fietsd",
+        "fietste"
+      ],
+      "correct": 1,
+      "explanation": "Tegenwoordige tijd bij 'hij': stam + t -> fietst!"
+    },
+    {
+      "id": "lj5-2",
+      "category": "taal-5e",
+      "badge": "📖 5e Leerjaar • Taal",
+      "question": "Wat is het onderwerp in de zin: 'De vrolijke leerlingen maken een moeilijke quiz'?",
+      "options": [
+        "een moeilijke quiz",
+        "maken",
+        "De vrolijke leerlingen",
+        "moeilijke"
+      ],
+      "correct": 2,
+      "explanation": "Wie maken een moeilijke quiz? De vrolijke leerlingen!"
+    },
+    {
+      "id": "lj5-3",
+      "category": "taal-5e",
+      "badge": "📖 5e Leerjaar • Taal",
+      "question": "Welk woord is een synoniem (hetzelfde betekent) voor 'razendsnel'?",
+      "options": [
+        "traag",
+        "bliksemsnel",
+        "voorzichtig",
+        "luidruchtig"
+      ],
+      "correct": 1,
+      "explanation": "Synoniemen zijn woorden met ongeveer dezelfde betekenis, zoals razendsnel en bliksemsnel."
+    },
+    {
+      "id": "lj5-4",
+      "category": "taal-5e",
+      "badge": "📖 5e Leerjaar • Taal",
+      "question": "Wat betekent de uitdrukking 'de kat uit de boom kijken'?",
+      "options": [
+        "Een kat redden",
+        "Eerst rustig afwachten voordat je iets doet",
+        "Heel hoog klimmen",
+        "Boos worden op iemand"
+      ],
+      "correct": 1,
+      "explanation": "De kat uit de boom kijken betekent eerst afwachten hoe iets afloopt."
+    },
+    {
+      "id": "lj5-5",
+      "category": "taal-5e",
+      "badge": "📖 5e Leerjaar • Taal",
+      "question": "Welk woord is een bijvoeglijk naamwoord in: 'Het oude kasteel staat op een hoge berg'?",
+      "options": [
+        "kasteel",
+        "staat",
+        "hoge",
+        "berg"
+      ],
+      "correct": 2,
+      "explanation": "'Oude' en 'hoge' zijn bijvoeglijke naamwoorden: ze zeggen iets over een zelfstandig naamwoord."
+    },
+    {
+      "id": "lj5-6",
+      "category": "taal-5e",
+      "badge": "📖 5e Leerjaar • Taal",
+      "question": "Wat is de juiste verleden tijd van 'lopen' in: 'Gisteren ... wij naar het bos'?",
+      "options": [
+        "loopte",
+        "liepen",
+        "loopten",
+        "gelopen"
+      ],
+      "correct": 1,
+      "explanation": "'Lopen' is een sterk werkwoord: wij liepen."
+    },
+    {
+      "id": "lj5-7",
+      "category": "taal-5e",
+      "badge": "📖 5e Leerjaar • Taal",
+      "question": "Welk woord is een samenstelling?",
+      "options": [
+        "moeilijk",
+        "boekentas",
+        "lopen",
+        "snelheid"
+      ],
+      "correct": 1,
+      "explanation": "Boekentas bestaat uit twee zelfstandige woorden: boek(en) + tas."
+    },
+    {
+      "id": "lj5-8",
+      "category": "taal-5e",
+      "badge": "📖 5e Leerjaar • Taal",
+      "question": "Wat is het meervoud van 'museum'?",
+      "options": [
+        "museums of musea",
+        "museummen",
+        "museumes",
+        "musie"
+      ],
+      "correct": 0,
+      "explanation": "Zowel 'museums' als 'musea' is juist Nederlands meervoud."
+    },
+    {
+      "id": "lj5-9",
+      "category": "taal-5e",
+      "badge": "📖 5e Leerjaar • Taal",
+      "question": "Welk leesteken gebruik je aan het einde van een uitroep zoals 'Pas op!'?",
+      "options": [
+        "Een punt",
+        "Een vraagteken",
+        "Een uitroepteken",
+        "Een komma"
+      ],
+      "correct": 2,
+      "explanation": "Na een bevel, waarschuwing of uitroep zet je een uitroepteken (!)."
+    },
+    {
+      "id": "lj5-10",
+      "category": "taal-5e",
+      "badge": "📖 5e Leerjaar • Taal",
+      "question": "Wat is het tegenovergestelde (antoniem) van 'zuinig'?",
+      "options": [
+        "spaarzaam",
+        "verkwistend",
+        "beleefd",
+        "handig"
+      ],
+      "correct": 1,
+      "explanation": "Wie niet zuinig is maar veel geld uitgeeft, is verkwistend."
+    },
+    {
+      "id": "lj5-11",
+      "category": "wiskunde-5e",
+      "badge": "🧮 5e Leerjaar • Wiskunde",
+      "question": "Hoeveel is 25% van 200?",
+      "options": [
+        "25",
+        "50",
+        "75",
+        "100"
+      ],
+      "correct": 1,
+      "explanation": "25% is een kwart (1/4). 200 : 4 = 50!"
+    },
+    {
+      "id": "lj5-12",
+      "category": "wiskunde-5e",
+      "badge": "🧮 5e Leerjaar • Wiskunde",
+      "question": "Wat is de oppervlakte van een rechthoek van 8 cm lang en 5 cm breed?",
+      "options": [
+        "13 cm²",
+        "26 cm²",
+        "40 cm²",
+        "80 cm²"
+      ],
+      "correct": 2,
+      "explanation": "Oppervlakte = lengte x breedte = 8 x 5 = 40 cm²."
+    },
+    {
+      "id": "lj5-13",
+      "category": "wiskunde-5e",
+      "badge": "🧮 5e Leerjaar • Wiskunde",
+      "question": "Welk kommagetal is gelijk aan de breuk 3/4?",
+      "options": [
+        "0,25",
+        "0,5",
+        "0,75",
+        "0,8"
+      ],
+      "correct": 2,
+      "explanation": "1/4 = 0,25, dus 3/4 = 0,75!"
+    },
+    {
+      "id": "lj5-14",
+      "category": "wiskunde-5e",
+      "badge": "🧮 5e Leerjaar • Wiskunde",
+      "question": "Op een kaart staat schaal 1 : 100.000. Hoeveel km is 1 cm op de kaart in het echt?",
+      "options": [
+        "100 meter",
+        "1 km",
+        "10 km",
+        "100 km"
+      ],
+      "correct": 1,
+      "explanation": "100.000 cm = 1.000 meter = 1 kilometer!"
+    },
+    {
+      "id": "lj5-15",
+      "category": "wiskunde-5e",
+      "badge": "🧮 5e Leerjaar • Wiskunde",
+      "question": "Hoeveel graden is een rechte hoek?",
+      "options": [
+        "45°",
+        "90°",
+        "180°",
+        "360°"
+      ],
+      "correct": 1,
+      "explanation": "Een rechte hoek (zoals de hoek van een blad papier) is precies 90 graden."
+    },
+    {
+      "id": "lj5-16",
+      "category": "wiskunde-5e",
+      "badge": "🧮 5e Leerjaar • Wiskunde",
+      "question": "Hoeveel liter zit er in 2.500 milliliter (ml)?",
+      "options": [
+        "0,25 liter",
+        "2,5 liter",
+        "25 liter",
+        "250 liter"
+      ],
+      "correct": 1,
+      "explanation": "1 liter = 1.000 ml, dus 2.500 ml = 2,5 liter."
+    },
+    {
+      "id": "lj5-17",
+      "category": "wiskunde-5e",
+      "badge": "🧮 5e Leerjaar • Wiskunde",
+      "question": "Een fiets kost € 240. Je krijgt 10% korting. Hoeveel euro korting is dat?",
+      "options": [
+        "€ 10",
+        "€ 24",
+        "€ 48",
+        "€ 216"
+      ],
+      "correct": 1,
+      "explanation": "10% van 240 is 240 : 10 = € 24 korting."
+    },
+    {
+      "id": "lj5-18",
+      "category": "wiskunde-5e",
+      "badge": "🧮 5e Leerjaar • Wiskunde",
+      "question": "Hoeveel is 1,5 + 2,75?",
+      "options": [
+        "3,25",
+        "4,15",
+        "4,25",
+        "4,75"
+      ],
+      "correct": 2,
+      "explanation": "1,50 + 2,75 = 4,25."
+    },
+    {
+      "id": "lj5-19",
+      "category": "wiskunde-5e",
+      "badge": "🧮 5e Leerjaar • Wiskunde",
+      "question": "De les begint om 08:45 en duurt 50 minuten. Hoe laat is de les afgelopen?",
+      "options": [
+        "09:25",
+        "09:35",
+        "09:45",
+        "09:55"
+      ],
+      "correct": 1,
+      "explanation": "Van 08:45 naar 09:00 is 15 min; nog 35 min erbij = 09:35."
+    },
+    {
+      "id": "lj5-20",
+      "category": "wiskunde-5e",
+      "badge": "🧮 5e Leerjaar • Wiskunde",
+      "question": "Wat is de omtrek van een vierkant met een zijde van 9 cm?",
+      "options": [
+        "18 cm",
+        "27 cm",
+        "36 cm",
+        "81 cm"
+      ],
+      "correct": 2,
+      "explanation": "Een vierkant heeft 4 gelijke zijden: 4 x 9 cm = 36 cm."
+    },
+    {
+      "id": "lj5-21",
+      "category": "natuur-5e",
+      "badge": "🔬 5e Leerjaar • Natuur",
+      "question": "Hoe heet het proces waarbij water verdampt, wolken vormt en weer als regen valt?",
+      "options": [
+        "Fotosynthese",
+        "De waterkringloop",
+        "De voedselketen",
+        "Verdamping alleen"
+      ],
+      "correct": 1,
+      "explanation": "Verdamping, condensatie (wolken) en neerslag vormen samen de waterkringloop."
+    },
+    {
+      "id": "lj5-22",
+      "category": "natuur-5e",
+      "badge": "🔬 5e Leerjaar • Natuur",
+      "question": "Welke bloedcellen in ons lichaam vervoeren zuurstof vanuit de longen?",
+      "options": [
+        "Witte bloedcellen",
+        "Rode bloedcellen",
+        "Bloedplaatjes",
+        "Zenuwcellen"
+      ],
+      "correct": 1,
+      "explanation": "Rode bloedcellen geven het bloed zijn kleur en vervoeren zuurstof."
+    },
+    {
+      "id": "lj5-23",
+      "category": "natuur-5e",
+      "badge": "🔬 5e Leerjaar • Natuur",
+      "question": "Welke energiebron is hernieuwbaar (raakt niet op)?",
+      "options": [
+        "Steenkool",
+        "Aardolie",
+        "Zonne-energie",
+        "Aardgas"
+      ],
+      "correct": 2,
+      "explanation": "Zon, wind en water zijn hernieuwbare energiebronnen."
+    },
+    {
+      "id": "lj5-24",
+      "category": "natuur-5e",
+      "badge": "🔬 5e Leerjaar • Natuur",
+      "question": "Welk orgaan haalt zuurstof uit de ingeademde lucht?",
+      "options": [
+        "De maag",
+        "De longen",
+        "De lever",
+        "De nieren"
+      ],
+      "correct": 1,
+      "explanation": "In de longblaasjes wordt zuurstof opgenomen in het bloed."
+    },
+    {
+      "id": "lj5-25",
+      "category": "natuur-5e",
+      "badge": "🔬 5e Leerjaar • Natuur",
+      "question": "Wat is het grootste orgaan aan de buitenkant van het menselijk lichaam?",
+      "options": [
+        "Het hart",
+        "De hersenen",
+        "De huid",
+        "De spieren"
+      ],
+      "correct": 2,
+      "explanation": "Je huid beschermt heel je lichaam tegen kou, warmte en bacteriën."
+    },
+    {
+      "id": "lj5-26",
+      "category": "natuur-5e",
+      "badge": "🔬 5e Leerjaar • Natuur",
+      "question": "Welke kracht zorgt ervoor dat een appel naar beneden valt en wij op de aarde blijven staan?",
+      "options": [
+        "Magnetisme",
+        "Zwaartekracht",
+        "Wrijvingskracht",
+        "Luchtdruk"
+      ],
+      "correct": 1,
+      "explanation": "De zwaartekracht van de aarde trekt alles naar beneden."
+    },
+    {
+      "id": "lj5-27",
+      "category": "natuur-5e",
+      "badge": "🔬 5e Leerjaar • Natuur",
+      "question": "Wat is een herbivoor?",
+      "options": [
+        "Een vleeseter",
+        "Een planteneter",
+        "Een alleseter",
+        "Een insect"
+      ],
+      "correct": 1,
+      "explanation": "Herbivoren (zoals koeien en konijnen) eten alleen planten."
+    },
+    {
+      "id": "lj5-28",
+      "category": "natuur-5e",
+      "badge": "🔬 5e Leerjaar • Natuur",
+      "question": "Hoeveel tanden en kiezen heeft een volledig volwassen gebit normaal?",
+      "options": [
+        "20",
+        "24",
+        "32",
+        "40"
+      ],
+      "correct": 2,
+      "explanation": "Een melkgebit heeft 20 tandjes; een blijvend volwassen gebit heeft er 32 (met verstandskiezen)."
+    },
+    {
+      "id": "lj5-29",
+      "category": "natuur-5e",
+      "badge": "🔬 5e Leerjaar • Natuur",
+      "question": "Waarvoor dienen de witte bloedcellen in je bloed?",
+      "options": [
+        "Zuurstof vervoeren",
+        "Ziekteverwekkers zoals bacteriën bestrijden",
+        "Eten verteren",
+        "Botten laten groeien"
+      ],
+      "correct": 1,
+      "explanation": "Witte bloedcellen zijn de 'soldaatjes' van je afweersysteem."
+    },
+    {
+      "id": "lj5-30",
+      "category": "natuur-5e",
+      "badge": "🔬 5e Leerjaar • Natuur",
+      "question": "Welke planeet staat het verst van de zon in ons zonnestelsel (sinds Pluto een dwergplaneet is)?",
+      "options": [
+        "Uranus",
+        "Saturnus",
+        "Neptunus",
+        "Jupiter"
+      ],
+      "correct": 2,
+      "explanation": "Neptunus is de 8e en buitenste planeet van ons zonnestelsel."
+    },
+    {
+      "id": "lj5-31",
+      "category": "wo-5e",
+      "badge": "🌍 5e Leerjaar • Wereld",
+      "question": "Hoeveel provincies telt België in totaal (5 in Vlaanderen en 5 in Wallonië)?",
+      "options": [
+        "8 provincies",
+        "10 provincies",
+        "12 provincies",
+        "6 provincies"
+      ],
+      "correct": 1,
+      "explanation": "België telt 10 provincies, plus het Brussels Hoofdstedelijk Gewest."
+    },
+    {
+      "id": "lj5-32",
+      "category": "wo-5e",
+      "badge": "🌍 5e Leerjaar • Wereld",
+      "question": "Welke vier landen grenzen rechtstreeks aan België?",
+      "options": [
+        "Nederland, Duitsland, Luxemburg, Frankrijk",
+        "Nederland, Engeland, Spanje, Duitsland",
+        "Frankrijk, Zwitserland, Nederland, Denemarken",
+        "Duitsland, Oostenrijk, Frankrijk, Nederland"
+      ],
+      "correct": 0,
+      "explanation": "Nederland (noord), Duitsland (oost), Luxemburg (zuidoost) en Frankrijk (zuid)."
+    },
+    {
+      "id": "lj5-33",
+      "category": "wo-5e",
+      "badge": "🌍 5e Leerjaar • Wereld",
+      "question": "Hoe heet de denkbeeldige lijn midden rond de aarde die het noordelijk en zuidelijk halfrond scheidt?",
+      "options": [
+        "De nulmeridiaan",
+        "De evenaar",
+        "De poolcirkel",
+        "De horizon"
+      ],
+      "correct": 1,
+      "explanation": "Rond de evenaar is het het hele jaar door warm."
+    },
+    {
+      "id": "lj5-34",
+      "category": "wo-5e",
+      "badge": "🌍 5e Leerjaar • Wereld",
+      "question": "Welke zee ligt ten noordwesten van België en Nederland?",
+      "options": [
+        "De Middellandse Zee",
+        "De Noordzee",
+        "De Zwarte Zee",
+        "De Rode Zee"
+      ],
+      "correct": 1,
+      "explanation": "De Belgische en Nederlandse kust liggen aan de Noordzee."
+    },
+    {
+      "id": "lj5-35",
+      "category": "wo-5e",
+      "badge": "🌍 5e Leerjaar • Wereld",
+      "question": "Hoe heet de Europese samenwerking waar 27 Europese landen bij aangesloten zijn?",
+      "options": [
+        "De Verenigde Naties (VN)",
+        "De Europese Unie (EU)",
+        "De NAVO",
+        "De Benelux"
+      ],
+      "correct": 1,
+      "explanation": "België en Nederland waren in 1957 al bij de oprichters van de voorloper van de EU."
+    },
+    {
+      "id": "lj5-36",
+      "category": "wo-5e",
+      "badge": "🏛️ 5e Leerjaar • Geschiedenis",
+      "question": "In welke tijd leefden Julius Caesar en de Romeinen?",
+      "options": [
+        "De prehistorie",
+        "De oudheid",
+        "De middeleeuwen",
+        "De moderne tijd"
+      ],
+      "correct": 1,
+      "explanation": "De Romeinen leefden in de oudheid en bouwden verharde wegen en steden in onze streken."
+    },
+    {
+      "id": "lj5-37",
+      "category": "wo-5e",
+      "badge": "🏛️ 5e Leerjaar • Geschiedenis",
+      "question": "Wat is het verschil tussen de prehistorie en de historische tijd?",
+      "options": [
+        "In de prehistorie was er nog geen schrift",
+        "In de prehistorie waren er geen mensen",
+        "In de middeleeuwen was er geen vuur",
+        "Er is geen verschil"
+      ],
+      "correct": 0,
+      "explanation": "De geschiedenis begint zodra mensen dingen opschrijven (het schrift)."
+    },
+    {
+      "id": "lj5-38",
+      "category": "wo-5e",
+      "badge": "🏛️ 5e Leerjaar • Geschiedenis",
+      "question": "Waarvoor diende een burcht of kasteel in de middeleeuwen vooral?",
+      "options": [
+        "Als zwembad",
+        "Om bewoners en de streek te beschermen tegen vijanden",
+        "Als treinstation",
+        "Als supermarkt"
+      ],
+      "correct": 1,
+      "explanation": "Kastelen hadden dikke muren, torens en vaak een slotgracht ter verdediging."
+    },
+    {
+      "id": "lj5-39",
+      "category": "wo-5e",
+      "badge": "🏛️ 5e Leerjaar • Geschiedenis",
+      "question": "Welke uitvinding zorgde er tijdens de industriële revolutie voor dat fabrieken en treinen op machines gingen draaien?",
+      "options": [
+        "De stoommachine",
+        "De smartphone",
+        "Het internet",
+        "Het kompas"
+      ],
+      "correct": 0,
+      "explanation": "De stoommachine maakte fabrieken, mijnen en stoomtreinen mogelijk."
+    },
+    {
+      "id": "lj5-40",
+      "category": "wo-5e",
+      "badge": "🏛️ 5e Leerjaar • Geschiedenis",
+      "question": "In welk jaar werd België een onafhankelijk koninkrijk?",
+      "options": [
+        "1815",
+        "1830",
+        "1914",
+        "1945"
+      ],
+      "correct": 1,
+      "explanation": "Na de Belgische Revolutie in 1830 werd België onafhankelijk (met Leopold I als eerste koning in 1831)."
+    },
+    {
+      "id": "lj5-41",
+      "category": "media-5e",
+      "badge": "⚡ 5e Leerjaar • Mediawijsheid",
+      "question": "Wat moet je doen als je een berichtje krijgt: 'Je hebt een nieuwe telefoon gewonnen! Klik hier en vul je adres in'?",
+      "options": [
+        "Meteen invullen",
+        "Niet klikken: dit is vaak phishing of oplichting",
+        "Doorsturen naar je hele klas",
+        "Je wachtwoord mailen"
+      ],
+      "correct": 1,
+      "explanation": "Winacties waar je zomaar persoonlijke gegevens moet invullen zijn bijna altijd valstrikken."
+    },
+    {
+      "id": "lj5-42",
+      "category": "media-5e",
+      "badge": "⚡ 5e Leerjaar • Mediawijsheid",
+      "question": "Waarom is een wachtwoord als 'welkom123' onveilig?",
+      "options": [
+        "Het is te lang",
+        "Hackers en programma's raden zulke simpele woorden binnen een seconde",
+        "Er zitten te veel tekens in",
+        "Het werkt alleen op tablets"
+      ],
+      "correct": 1,
+      "explanation": "Gebruik een lange wachtzin met hoofdletters, cijfers en speciale tekens."
+    },
+    {
+      "id": "lj5-43",
+      "category": "media-5e",
+      "badge": "⚡ 5e Leerjaar • Mediawijsheid",
+      "question": "Wat doet het algoritme op TikTok of YouTube?",
+      "options": [
+        "Het verwijdert alle oude video's",
+        "Het kiest video's die lijken op wat jij eerder hebt gekeken en geliket",
+        "Het maakt je scherm helderder",
+        "Het blokkeert je wifi"
+      ],
+      "correct": 1,
+      "explanation": "Een algoritme houdt je aandacht vast door meer van hetzelfde te tonen."
+    },
+    {
+      "id": "lj5-44",
+      "category": "media-5e",
+      "badge": "⚡ 5e Leerjaar • Mediawijsheid",
+      "question": "Je ziet een filmpje waarin een bekende sporter iets heel geks zegt. Hoe weet je of het geen AI-deepfake is?",
+      "options": [
+        "Controleren bij betrouwbare nieuwssites en letten op vreemde mond- of oogbewegingen",
+        "Kijken of het veel views heeft",
+        "Als het op YouTube staat is het altijd echt",
+        "Aan de kleur van het logo"
+      ],
+      "correct": 0,
+      "explanation": "Deepfakes worden met AI gemaakt. Check altijd betrouwbare nieuwsbronnen!"
+    },
+    {
+      "id": "lj5-45",
+      "category": "media-5e",
+      "badge": "⚡ 5e Leerjaar • Mediawijsheid",
+      "question": "Wat betekent '2FA' (tweestapsverificatie) bij je game-account?",
+      "options": [
+        "Twee keer per dag spelen",
+        "Naast je wachtwoord heb je ook een extra code (op je gsm/mail) nodig",
+        "Met twee mensen op één account",
+        "Twee wachtwoorden achter elkaar"
+      ],
+      "correct": 1,
+      "explanation": "Met 2FA blijft je account veel beter beschermd tegen hackers."
+    },
+    {
+      "id": "lj5-46",
+      "category": "media-5e",
+      "badge": "⚡ 5e Leerjaar • Mediawijsheid",
+      "question": "Iemand in een groepschat stuurt een gênante foto van een klasgenoot door. Wat is het slimste om te doen?",
+      "options": [
+        "Verder doorsturen voor de grap",
+        "Niet doorsturen, voor je klasgenoot opkomen en een volwassene verwittigen",
+        "Er een sticker op plakken",
+        "Niets zeggen en meelachen"
+      ],
+      "correct": 1,
+      "explanation": "Doorsturen maakt cyberpesten erger. Help het slachtoffer en meld het."
+    },
+    {
+      "id": "lj5-47",
+      "category": "media-5e",
+      "badge": "⚡ 5e Leerjaar • Mediawijsheid",
+      "question": "Een influencer prijst in een video een nieuw drankje aan met '#ad'. Wat betekent dat?",
+      "options": [
+        "Het is alleen voor volwassenen",
+        "Het is betaalde reclame",
+        "Het drankje is gratis",
+        "De video is bijna afgelopen"
+      ],
+      "correct": 1,
+      "explanation": "#ad of #spon betekent dat de maker betaald krijgt om reclame te maken."
+    },
+    {
+      "id": "lj5-48",
+      "category": "media-5e",
+      "badge": "⚡ 5e Leerjaar • Mediawijsheid",
+      "question": "Wat is een 'filterbubbel'?",
+      "options": [
+        "Een app om selfies mooier te maken",
+        "Dat je online vooral meningen ziet die op de jouwe lijken",
+        "Een virus op je router",
+        "Een filter voor drinkwater"
+      ],
+      "correct": 1,
+      "explanation": "Zoek zelf ook naar andere bronnen zodat je niet in een filterbubbel blijft zitten."
+    },
+    {
+      "id": "lj5-49",
+      "category": "media-5e",
+      "badge": "⚡ 5e Leerjaar • Mediawijsheid",
+      "question": "Je gebruikt informatie van Wikipedia of een website voor je spreekbeurt. Wat moet je doen?",
+      "options": [
+        "Doen alsof je het zelf verzonnen hebt",
+        "De bron vermelden en checken of de informatie ook op een andere site klopt",
+        "Alles woord voor woord overschrijven zonder te lezen",
+        "Alleen de eerste zin kopiëren"
+      ],
+      "correct": 1,
+      "explanation": "Bronvermelding is eerlijk en een goede onderzoeker controleert altijd meerdere bronnen."
+    },
+    {
+      "id": "lj5-50",
+      "category": "media-5e",
+      "badge": "⚡ 5e Leerjaar • Mediawijsheid",
+      "question": "Waarom leggen artsen uit dat te veel schermtijd vlak voor het slapen niet goed is?",
+      "options": [
+        "Blauw licht houdt je hersenen alert waardoor je slechter inslaapt",
+        "Je batterij gaat dan kapot",
+        "Wifi werkt niet na 21 uur",
+        "Je droomt dan alleen over rekenen"
+      ],
+      "correct": 0,
+      "explanation": "Leg schermen minstens een halfuur voor het slapengaan weg voor een goede nachtrust!"
+    }
+  ]
+}

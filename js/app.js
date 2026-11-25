@@ -926,6 +926,35 @@
   }
 
   /* ==================== INIT ==================== */
+  const lobbySetSelector = document.getElementById('lobbySetSelector');
+  if (lobbySetSelector) {
+    const initialSet = new URLSearchParams(window.location.search).get('set');
+    if (initialSet && Array.from(lobbySetSelector.options).some((o) => o.value === initialSet)) {
+      lobbySetSelector.value = initialSet;
+    }
+    lobbySetSelector.addEventListener('change', async () => {
+      const val = lobbySetSelector.value;
+      if (val === 'default') {
+        if (window.QuizStore) window.QuizStore.resetDefaults();
+        return;
+      }
+      if (window.CloudQuizStore && window.QuizStore) {
+        lobbySetSelector.disabled = true;
+        try {
+          const cloudSet = await window.CloudQuizStore.getSet(val);
+          if (cloudSet && cloudSet.questions.length > 0) {
+            window.QuizStore.loadTransient(cloudSet.categories, cloudSet.questions);
+          }
+        } catch (err) {
+          alert(err.message || 'Kon vragenset niet ophalen.');
+          lobbySetSelector.value = 'default';
+        } finally {
+          lobbySetSelector.disabled = false;
+        }
+      }
+    });
+  }
+
   window.onQuizStoreUpdated = () => {
     renderCategories();
   };

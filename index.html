@@ -169,9 +169,21 @@
 
         <!-- Right: Category & Mode Setup (5 cols) -->
         <div class="lg:col-span-5 bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-3xl p-5 shadow-2xl flex flex-col gap-4">
-          <h3 class="font-heading text-xl font-bold text-white flex items-center gap-2">
-            <span>🎯</span> Kies Categorie
-          </h3>
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h3 class="font-heading text-xl font-bold text-white flex items-center gap-2">
+              <span>🎯</span> Kies Categorie
+            </h3>
+            <select id="lobbySetSelector" class="bg-slate-950 border border-amber-400/40 rounded-xl px-2.5 py-1.5 text-xs font-bold text-amber-200 focus:outline-none focus:border-amber-400 cursor-pointer" title="Wissel van vragenset">
+              <option value="default">🛡️ Mediawijsheid (Standaard)</option>
+              <option value="5e-leerjaar-50">🎓 5e Leerjaar (50 vragen)</option>
+              <option value="makkelijke-vragen">🌟 Makkelijke Vragen (12)</option>
+              <option value="reeks-1-dieren-natuur">🐾 Reeks 1: Dieren &amp; Natuur (20)</option>
+              <option value="reeks-2-rekenen-brein">🧮 Reeks 2: Rekenen &amp; Brein (20)</option>
+              <option value="reeks-3-ruimte-wetenschap">🚀 Reeks 3: Ruimte &amp; Wetenschap (20)</option>
+              <option value="reeks-4-wereld-geschiedenis">🌍 Reeks 4: Wereld &amp; Geschiedenis (20)</option>
+              <option value="reeks-5-games-films-muziek">🎮 Reeks 5: Games &amp; Films (20)</option>
+            </select>
+          </div>
 
           <div id="categoryList" class="flex flex-col gap-2">
             <!-- Dynamically populated categories -->
