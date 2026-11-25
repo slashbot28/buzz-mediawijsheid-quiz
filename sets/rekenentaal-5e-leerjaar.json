@@ -1,0 +1,1911 @@
+{
+  "title": "5e Leerjaar Rekenentaal (Taal, Rekenen & Frans)",
+  "categories": [
+    {
+      "id": "mix",
+      "title": "5e Leerjaar Rekenentaal (Mix)",
+      "subtitle": "Taal, Rekenen & Frans door elkaar",
+      "icon": "🎓",
+      "color": "from-amber-400 to-orange-500"
+    },
+    {
+      "id": "taal-5",
+      "title": "Taal & Spelling (Talent 5)",
+      "subtitle": "Werkwoorden, spelling en taalbeschouwing",
+      "icon": "📖",
+      "color": "from-sky-400 to-blue-600"
+    },
+    {
+      "id": "rekenen-5",
+      "title": "Wiskunde (Reken Maar! 5)",
+      "subtitle": "Problemen oplossen, breuken en meten",
+      "icon": "🧮",
+      "color": "from-emerald-400 to-teal-600"
+    },
+    {
+      "id": "frans-5",
+      "title": "Frans (Passepartout 5)",
+      "subtitle": "Woordenschat en werkwoorden",
+      "icon": "🇫🇷",
+      "color": "from-fuchsia-500 to-purple-700"
+    }
+  ],
+  "questions": [
+    {
+      "id": "rt5-taal-1",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Fictie of non-fictie?",
+      "question": "Is het verhaal \"De verschrikkelijke schoolmeester\" van Dolf Verroen FICTIE of NON-FICTIE?",
+      "options": [
+        "Fictie (verzonnen verhaal met fantasie)",
+        "Non-fictie (waargebeurd verslag)",
+        "Instructietekst",
+        "Gedicht"
+      ],
+      "correct": 0,
+      "explanation": "De meester die tenensplijters en spijkerbedden verzint is pure fantasie: fictie!"
+    },
+    {
+      "id": "rt5-taal-2",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Woorden met (e)lijk(e): De Y",
+      "question": "Zet de woorden in de juiste volgorde: \"De bevolking van de Himalaya is ervan overtuigd dat de [ ? ].\"",
+      "options": [
+        "verschrikkelijke sneeuwman bestaat",
+        "sneeuwman verschrikkelijke bestaat",
+        "bestaat verschrikkelijke sneeuwman",
+        "verschrikkelijk sneeuwman bestaand"
+      ],
+      "correct": 0,
+      "explanation": "Bijvoeglijk naamwoord (verschrikkelijke) + zelfstandig naamwoord (sneeuwman) + persoonsvorm (bestaat)."
+    },
+    {
+      "id": "rt5-taal-3",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Spellingweter 5: -ig(e) in z",
+      "question": "Vervang door een woord op -ig(e): \"Twee keer veertig is [ ? ].\"",
+      "options": [
+        "tachtig",
+        "tachtug",
+        "tachtich",
+        "tachtelijk"
+      ],
+      "correct": 0,
+      "explanation": "Tachtig schrijf je met -ig achteraan."
+    },
+    {
+      "id": "rt5-taal-4",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Politiebericht GEZOCHT: Vere",
+      "question": "Vul de ontbrekende woorden aan in het politiebericht: \"Bij de [ ? 1 ] zijn waardevolle [ ? 2 ] gestolen.\"",
+      "options": [
+        "weduwe en juwelen (beide verenkeld)",
+        "weduwwe en juweelen",
+        "weduwe en juwellen",
+        "weduwe en juwelenen"
+      ],
+      "correct": 0,
+      "explanation": "We-du-we (lange e -> één e) en ju-we-len (lange e -> één e)."
+    },
+    {
+      "id": "rt5-taal-5",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Taak C Geheimschrift: ZWEMBA",
+      "question": "Welke eindletter d of t hoort bij: \"voor-kan[ ? ]\", \"zo-gezeg[ ? ]\" en \"onder-schei[ ? ]\"?",
+      "options": [
+        "voorkant (t), zogezegd (d), onderscheid (d)",
+        "voorkand, zogezegt, onderscheit",
+        "allemaal t",
+        "allemaal d"
+      ],
+      "correct": 0,
+      "explanation": "Kanten (t), gezegde (d), onderscheiden (d)."
+    },
+    {
+      "id": "rt5-taal-6",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Chatbox leugens (Tais Teng):",
+      "question": "Waarom vult Jef op de chatsite \"KLETS MAAR RAAK\" de valse naam Erik van der Hoeve in?",
+      "options": [
+        "Hij wil wraak nemen omdat Erik zijn vriendin Ina heeft ingepikt.",
+        "Hij is zijn eigen voornaam vergeten.",
+        "Hij vindt Erik de alleraardigste jongen van de klas.",
+        "De computer vroeg om een willekeurige naam."
+      ],
+      "correct": 0,
+      "explanation": "Jef is kwaad op Erik en wil hem terugpakken door zijn naam online te gebruiken."
+    },
+    {
+      "id": "rt5-taal-7",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Afkortingen met of zonder pu",
+      "question": "Welke afkorting schrijf je ZONDER afkortingsteken (zonder punt)?",
+      "options": [
+        "EHBO (Eerste Hulp Bij Ongevallen: hoofdletters, zonder punt)",
+        "nl. (namelijk: met punt)",
+        "d.w.z. (dat wil zeggen: met punten)",
+        "m.a.w. (met andere woorden: met punten)"
+      ],
+      "correct": 0,
+      "explanation": "Afkortingen in hoofdletters zoals EHBO, EU en PC krijgen geen punten."
+    },
+    {
+      "id": "rt5-taal-8",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Dagboek van een vlogger (Oli",
+      "question": "Waarom besluiten Olivia en Emma om hun vlog alleen te delen met goede vrienden?",
+      "options": [
+        "Om hun online privacy te beschermen tegen nare reacties van vreemden.",
+        "Omdat hun camera kapot was gegaan.",
+        "Omdat ze geen internetverbinding meer hadden.",
+        "Omdat ze alleen nog brieven wilden schrijven."
+      ],
+      "correct": 0,
+      "explanation": "Privacy en veiligheid op internet gaan vóór likes van vreemden."
+    },
+    {
+      "id": "rt5-taal-9",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Het Coca-Cola geheim: John P",
+      "question": "Waarvoor was het drankje Coca-Cola oorspronkelijk bedoeld toen apotheker John Pemberton het in 1886 uitvond?",
+      "options": [
+        "Als medicijn tegen hoofdpijn en vermoeidheid.",
+        "Als sportdrank voor marathonlopers.",
+        "Als siroop voor pannenkoeken.",
+        "Als schoonmaakmiddel voor machines."
+      ],
+      "correct": 0,
+      "explanation": "Pemberton was een apotheker en brouwde een geneeskrachtig drankje tegen hoofdpijn."
+    },
+    {
+      "id": "rt5-taal-10",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Morsecode op je telefoon",
+      "question": "Welke bekende afkorting betekent het klassieke sms-piepje in morsecode (· · · / — — / · · ·)?",
+      "options": [
+        "S M S (Short Message Service)",
+        "S O S (Noodsignaal)",
+        "G S M",
+        "W W W"
+      ],
+      "correct": 0,
+      "explanation": "3 korte piepjes zijn de S, 2 lange streepjes de M, en weer 3 korte de S: SMS!"
+    },
+    {
+      "id": "rt5-taal-11",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Spellingweter 20: Woorden me",
+      "question": "In welke woorden schrijf je \"th\" (zoals thee)?",
+      "options": [
+        "thermometer, apotheek, kathedraal, methode",
+        "toerist, tomaat, tafel, trein",
+        "trapezium, tram, trap, toren",
+        "tandarts, telefoon, tuin, tent"
+      ],
+      "correct": 0,
+      "explanation": "Woorden van Griekse oorsprong met th: thermometer, apotheek, theater, methode."
+    },
+    {
+      "id": "rt5-taal-12",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Spellingweter 36: Apostrof a",
+      "question": "Hoe schrijf je \"in de ochtend\" korter met een apostrof?",
+      "options": [
+        "’s ochtends (met apostrof vóór de s)",
+        "sochtends",
+        "s'ochtends",
+        "’s-ochtends"
+      ],
+      "correct": 0,
+      "explanation": "Apostrof + s + spatie + ochtends: ’s ochtends."
+    },
+    {
+      "id": "rt5-taal-13",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Escape room Trwa-fwa-fwagra:",
+      "question": "Wat betekent het culinaire spreekwoord: \"Hij kookt van woede\"?",
+      "options": [
+        "Hij is heel erg boos.",
+        "Hij staat soep te maken op het fornuis.",
+        "Hij heeft het te warm in de keuken.",
+        "Hij eet zijn eten te snel op."
+      ],
+      "correct": 0,
+      "explanation": "Als iemand \"kookt van woede\", is hij laaiend kwaad!"
+    },
+    {
+      "id": "rt5-taal-14",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • De foute toets (Frank Pollet",
+      "question": "Wat betekent de uitdrukking: \"De telefoons stonden roodgloeiend\"?",
+      "options": [
+        "Er werd ontzettend veel en onophoudelijk gebeld en geappt.",
+        "De telefoons waren in brand gevlogen door de hitte.",
+        "De batterijen van alle telefoons waren leeg.",
+        "De telefoons hadden allemaal een rood hoesje."
+      ],
+      "correct": 0,
+      "explanation": "Als een telefoonlijn roodgloeiend staat, wordt er non-stop naar elkaar gebeld!"
+    },
+    {
+      "id": "rt5-taal-15",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Spellingweter 27: Woorden me",
+      "question": "Hoe schrijf je leenwoorden uit het Frans met de klank ee aan het einde, zoals \"café\", \"paté\" en \"privé\"?",
+      "options": [
+        "Met een é (accent aigu)",
+        "Met een dubbele ee (cafee)",
+        "Met een trema (ë)",
+        "Met een apostrof ('e)"
+      ],
+      "correct": 0,
+      "explanation": "Je schrijft café, privé en paté met een é."
+    },
+    {
+      "id": "rt5-taal-16",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Woorden met ig(e) in de zin",
+      "question": "Vul het juiste woord in de zin in: \"Jij bent geen [ ? ] boontje!\" zei de juf boos.",
+      "options": [
+        "heilig",
+        "heilijk",
+        "heelech",
+        "heelig"
+      ],
+      "correct": 0,
+      "explanation": "Denk aan de uitdrukking: \"een heilig boontje\". Je hoort /uch/, maar schrijft -ig."
+    },
+    {
+      "id": "rt5-taal-17",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Woorden met ig(e) in de zin",
+      "question": "Vul aan: \"Korneel vindt het [ ? ] dat de taart al op is.\"",
+      "options": [
+        "spijtig",
+        "spijtelijk",
+        "spijtech",
+        "speutig"
+      ],
+      "correct": 0,
+      "explanation": "Spijt + ig = spijtig."
+    },
+    {
+      "id": "rt5-taal-18",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Woorden met ig(e) in de zin",
+      "question": "Vul aan: \"Meestal is ze braaf, maar vandaag is het een [ ? ] baby.\"",
+      "options": [
+        "lastige",
+        "lastelijke",
+        "lastege",
+        "lasteche"
+      ],
+      "correct": 0,
+      "explanation": "Last + ige = lastige."
+    },
+    {
+      "id": "rt5-taal-19",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Woorden met ig(e) in de zin",
+      "question": "Vul aan: \"De hond heeft zijn kom brokken [ ? ] leeggegeten.\"",
+      "options": [
+        "volledig",
+        "volledijk",
+        "volledeg",
+        "volledich"
+      ],
+      "correct": 0,
+      "explanation": "Volledig schrijf je met -ig achteraan."
+    },
+    {
+      "id": "rt5-taal-20",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Woorden met (e)lijk(e)",
+      "question": "Vul aan: \"Het is niet moeilijk. Het is een [ ? ] oefening.\"",
+      "options": [
+        "gemakkelijke",
+        "gemakkige",
+        "gemaklukke",
+        "gemakelijke"
+      ],
+      "correct": 0,
+      "explanation": "Korte klank a -> dubbele k, gevolgd door -elijke: gemakkelijke."
+    },
+    {
+      "id": "rt5-taal-21",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Woorden met (e)lijk(e)",
+      "question": "Vul aan: \"Hij weet [ ? ] dat hij niet mag lopen in de gang.\"",
+      "options": [
+        "eigenlijk",
+        "eigenig",
+        "eigeluk",
+        "ijgenlijk"
+      ],
+      "correct": 0,
+      "explanation": "Eigen + lijk = eigenlijk."
+    },
+    {
+      "id": "rt5-taal-22",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Woorden met (e)lijk(e)",
+      "question": "Vul aan: \"Die machine maakt [ ? ] veel lawaai.\"",
+      "options": [
+        "verschrikkelijk",
+        "verschrikkig",
+        "verschrikkeluk",
+        "verschrikelijk"
+      ],
+      "correct": 0,
+      "explanation": "Verschrikkelijk schrijf je met dubbele k en -elijk."
+    },
+    {
+      "id": "rt5-taal-23",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Woorden met (e)lijk(e)",
+      "question": "Vul aan: \"Hij is er niet. Hij is het [ ? ] vergeten.\"",
+      "options": [
+        "waarschijnlijk",
+        "waarschijnig",
+        "waarscheinlijk",
+        "waarschinluk"
+      ],
+      "correct": 0,
+      "explanation": "Waar + schijn + lijk = waarschijnlijk."
+    },
+    {
+      "id": "rt5-taal-24",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Kies: ig of lijk?",
+      "question": "Welk achtervoegsel hoort bij \"avontuur...\": ig of lijk?",
+      "options": [
+        "avontuurlijk (-lijk)",
+        "avonturig (-ig)",
+        "avontuurluk",
+        "avontuurig"
+      ],
+      "correct": 0,
+      "explanation": "Je zegt \"avontuurlijk\", dus met het achtervoegsel -lijk."
+    },
+    {
+      "id": "rt5-taal-25",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Kies: ig of lijk?",
+      "question": "Welk achtervoegsel hoort bij \"hand...\": ig of lijk?",
+      "options": [
+        "handig (-ig)",
+        "handelijk (-lijk)",
+        "handluk",
+        "handech"
+      ],
+      "correct": 0,
+      "explanation": "Je bent \"handig\", dus met het achtervoegsel -ig."
+    },
+    {
+      "id": "rt5-taal-26",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Zin aanvullen: eindelijk of ",
+      "question": "Vul aan: \"Ik ben al uren bezig aan mijn huiswerk. Nu ben ik [ ? ] klaar.\"",
+      "options": [
+        "eindelijk",
+        "lastig",
+        "spijtig",
+        "volledig"
+      ],
+      "correct": 0,
+      "explanation": "Na lang wachten of werken ben je \"eindelijk\" klaar!"
+    },
+    {
+      "id": "rt5-taal-27",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Boeken in de bib: Synoniemen",
+      "question": "Kies het juiste woord voor \"(niet alle)\": \"[ ? ] verhalen zijn erg eng.\"",
+      "options": [
+        "Sommige",
+        "Weinig",
+        "Lastige",
+        "Volledige"
+      ],
+      "correct": 0,
+      "explanation": "\"Niet alle\" betekent \"sommige\". Let op de hoofdletter aan het begin van de zin!"
+    },
+    {
+      "id": "rt5-taal-28",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Boeken in de bib: Synoniemen",
+      "question": "Kies het juiste woord voor \"(mijn keuze)\": \"[ ? ] lees ik graag fantasieverhalen.\"",
+      "options": [
+        "Persoonlijk",
+        "Dadelijk",
+        "Spijtig",
+        "Gemakkelijk"
+      ],
+      "correct": 0,
+      "explanation": "\"Mijn eigen keuze\" druk je uit met \"persoonlijk\"."
+    },
+    {
+      "id": "rt5-taal-29",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Dicteekaartjes: Woordspellin",
+      "question": "Welke zin van het dicteekaartje is helemaal FOUTLOOS gespeld?",
+      "options": [
+        "Dat is een verschrikkelijke jas.",
+        "Dat is een verschrikkelukke jas.",
+        "Dat is een verschrikelijke jas.",
+        "Dat is een verschrikkige jas."
+      ],
+      "correct": 0,
+      "explanation": "Verschrikkelijke schrijf je met dubbele k en -elijke."
+    },
+    {
+      "id": "rt5-taal-30",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Waarom gebruiken we werkwoor",
+      "question": "Wat drukken werkwoorden meestal uit in een zin?",
+      "options": [
+        "Een handeling, gebeurtenis of toestand (wat iemand doet, is of wordt).",
+        "Alleen de naam van een stad of een dier.",
+        "Een getal om voorwerpen mee te tellen.",
+        "Een leesteken aan het einde van de zin."
+      ],
+      "correct": 0,
+      "explanation": "Werkwoorden geven een actie weer (fietsen, slapen) of een toestand (zijn, worden)."
+    },
+    {
+      "id": "rt5-taal-31",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Herken het werkwoord in een ",
+      "question": "Welk woord uit dit rijtje is een WERKWOORD?\nspeelgoed – gezellig – giechelt – boekentas",
+      "options": [
+        "giechelt",
+        "speelgoed",
+        "gezellig",
+        "boekentas"
+      ],
+      "correct": 0,
+      "explanation": "Je kunt giechelen (ik giechel, hij giechelt). Speelgoed en boekentas zijn dingen (zelfstandige naamwoorden)."
+    },
+    {
+      "id": "rt5-taal-32",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Herken het werkwoord in een ",
+      "question": "Welk woord uit dit rijtje is GEEN werkwoord?\nzoeken – groeit – dankbaar – versieren",
+      "options": [
+        "dankbaar",
+        "zoeken",
+        "groeit",
+        "versieren"
+      ],
+      "correct": 0,
+      "explanation": "Dankbaar zegt hoe iemand zich voelt (een bijvoeglijk naamwoord). Zoeken, groeien en versieren zijn werkwoorden."
+    },
+    {
+      "id": "rt5-taal-33",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Alle werkwoorden in een zin",
+      "question": "Welke WERKWOORDEN staan in de zin:\n\"Het regent buiten en de wind waait hard.\"?",
+      "options": [
+        "regent en waait",
+        "buiten en hard",
+        "wind en regent",
+        "alleen waait"
+      ],
+      "correct": 0,
+      "explanation": "Regenen en waaien zijn beide gebeurtenissen / werkwoorden."
+    },
+    {
+      "id": "rt5-taal-34",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Meerdere werkwoorden in een ",
+      "question": "Welke werkwoorden vind je in:\n\"De treinpassagiers schrikken wanneer ze de auto’s zien botsen.\"?",
+      "options": [
+        "schrikken, zien en botsen",
+        "treinpassagiers, auto’s en botsen",
+        "wanneer en zien",
+        "alleen schrikken"
+      ],
+      "correct": 0,
+      "explanation": "Schrikken, zien en botsen kun je allemaal vervoegen."
+    },
+    {
+      "id": "rt5-taal-35",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Persoonsvorm via de ja-neevr",
+      "question": "Stel de ja-neevraag en zoek de PERSOONSVORM:\n\"De Bonnenman vult een zakje met 207 kortingsbonnen.\"",
+      "options": [
+        "vult",
+        "De Bonnenman",
+        "kortingsbonnen",
+        "zakje"
+      ],
+      "correct": 0,
+      "explanation": "Het werkwoord dat vooraan komt in de ja-neevraag is de persoonsvorm: \"Vult\"."
+    },
+    {
+      "id": "rt5-taal-36",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Persoonsvorm via de ja-neevr",
+      "question": "Wat is de persoonsvorm in:\n\"Met een cameraploeg trekt hij naar het shoppingcenter in Wijnegem.\"?",
+      "options": [
+        "trekt",
+        "cameraploeg",
+        "hij",
+        "shoppingcenter"
+      ],
+      "correct": 0,
+      "explanation": "Maak de vraag: \"Trekt hij met een cameraploeg...?\" -> Trekt komt vooraan!"
+    },
+    {
+      "id": "rt5-taal-37",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Tekst Malala Yousafzai",
+      "question": "Wat is de persoonsvorm in de zin:\n\"Ook zijn dochter en twee zonen gaan elke dag naar school.\"?",
+      "options": [
+        "gaan",
+        "zonen",
+        "school",
+        "elke dag"
+      ],
+      "correct": 0,
+      "explanation": "Ja-neevraag: \"Gaan ook zijn dochter en twee zonen elke dag naar school?\" -> gaan."
+    },
+    {
+      "id": "rt5-taal-38",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Verlengingsregel d of t",
+      "question": "Vul aan: \"Koning Triton heerst over de zee met zijn drie-tan[ ? ].\"",
+      "options": [
+        "drietand (met een d, want drietanden)",
+        "drietant (met een t)",
+        "drietandt",
+        "drietante"
+      ],
+      "correct": 0,
+      "explanation": "Maak het woord langer: één drietand, twee drietanden. Je hoort een d!"
+    },
+    {
+      "id": "rt5-taal-39",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Verlengingsregel d of t",
+      "question": "Vul aan: \"De dief wordt zwaar gestraft voor zijn mis-daa[ ? ].\"",
+      "options": [
+        "misdaad (met een d, want misdaden)",
+        "misdaat (met een t)",
+        "misdaadt",
+        "misdat"
+      ],
+      "correct": 0,
+      "explanation": "Verleng het woord: misdaden -> d!"
+    },
+    {
+      "id": "rt5-taal-40",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Verlengingsregel b of p",
+      "question": "Vul aan: \"De spin weeft haar [ ? ] in de hoek van de kamer.\"",
+      "options": [
+        "web (met een b, want webben)",
+        "wep (met een p)",
+        "webt",
+        "wept"
+      ],
+      "correct": 0,
+      "explanation": "Meervoud is spinnenwebben -> je hoort een b!"
+    },
+    {
+      "id": "rt5-taal-41",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Verlengingsregel b of p",
+      "question": "Vul aan: \"Mijn broertje vond een levende [ ? ] op het strand.\"",
+      "options": [
+        "krab (met een b, want krabben)",
+        "krap (met een p)",
+        "krabt",
+        "krapp"
+      ],
+      "correct": 0,
+      "explanation": "Twee krabben -> krab schrijf je met een b."
+    },
+    {
+      "id": "rt5-taal-42",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Verlengingsregel b of p",
+      "question": "Vul aan: \"Door de hevige overstroming ligt er overal modderig [ ? ] in de straten.\"",
+      "options": [
+        "slib (met een b)",
+        "slip (met een p)",
+        "slibt",
+        "slipp"
+      ],
+      "correct": 0,
+      "explanation": "Slib (rivierslib) schrijf je net als heb met een b."
+    },
+    {
+      "id": "rt5-taal-43",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Samenstellingen: letters ver",
+      "question": "Waarom schrijf je \"brandweer\" met een d?",
+      "options": [
+        "Omdat brand komt van \"branden\" (je hoort een d bij het verlengen).",
+        "Omdat woorden voor de brandweer altijd met een d beginnen.",
+        "Omdat weer op een r eindigt.",
+        "Dat is gewoon toevallig."
+      ],
+      "correct": 0,
+      "explanation": "Hak de samenstelling in twee: brand + weer. Branden -> d!"
+    },
+    {
+      "id": "rt5-taal-44",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Homofonen: want of wand?",
+      "question": "Kies het juiste woord: \"Er hangt een schilderij aan de [ ? 1 ], [ ? 2 ] mama vindt dat mooi.\"",
+      "options": [
+        "wand (muur) en want (omdat)",
+        "want en wand",
+        "wand en wand",
+        "want en want"
+      ],
+      "correct": 0,
+      "explanation": "Een wand = een muur (wanden -> d). Want = voegwoord (omdat)."
+    },
+    {
+      "id": "rt5-taal-45",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Homofonen: nood of noot?",
+      "question": "Kies het juiste woord: \"Help jij altijd een mens in [ ? 1 ]? Die meneer stikte bijna in een [ ? 2 ]!\"",
+      "options": [
+        "nood (gevaar) en noot (om op te eten)",
+        "noot en nood",
+        "nood en nood",
+        "noot en noot"
+      ],
+      "correct": 0,
+      "explanation": "In nood verkeren = gevaar (noden -> d). Een walnoot/noot = om te eten (noten -> t)."
+    },
+    {
+      "id": "rt5-taal-46",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Homofonen: eet of eed?",
+      "question": "Kies het juiste woord: \"De koning legt de plechtige [ ? 1 ] af. Wat [ ? 2 ] hij daarna als feestmaal?\"",
+      "options": [
+        "eed (belofte) en eet (eten)",
+        "eet en eed",
+        "eed en eed",
+        "eet en eet"
+      ],
+      "correct": 0,
+      "explanation": "Een eed afleggen = belofte (eden -> d). Eten = van het werkwoord eten (hij eet -> t)."
+    },
+    {
+      "id": "rt5-taal-47",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Enkelvoud of meervoud?",
+      "question": "Staat de persoonsvorm in het enkelvoud of meervoud?\n\"In Wetteren moet een speeltuin weg.\"",
+      "options": [
+        "Enkelvoud (want \"een speeltuin\" is enkelvoud)",
+        "Meervoud",
+        "Geen van beide",
+        "Kan allebei"
+      ],
+      "correct": 0,
+      "explanation": "Het onderwerp is \"een speeltuin\" (één ding), dus de persoonsvorm \"moet\" is enkelvoud."
+    },
+    {
+      "id": "rt5-taal-48",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Enkelvoud of meervoud?",
+      "question": "Staat de persoonsvorm in het enkelvoud of meervoud?\n\"Kinderen zijn hier een soort last.\"",
+      "options": [
+        "Meervoud (want \"Kinderen\" is meervoud)",
+        "Enkelvoud",
+        "Geen getal",
+        "Onvoltooid"
+      ],
+      "correct": 0,
+      "explanation": "Kinderen = meer dan één kind, dus de pv \"zijn\" is meervoud."
+    },
+    {
+      "id": "rt5-taal-49",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Persoon en getal bepalen",
+      "question": "In welke persoon en in welk getal staat de persoonsvorm \"beheert\" in:\n\"Infrabel beheert de Belgische spoorwegen.\"?",
+      "options": [
+        "3e persoon enkelvoud (hij/het)",
+        "1e persoon enkelvoud (ik)",
+        "2e persoon meervoud (jullie)",
+        "3e persoon meervoud (zij)"
+      ],
+      "correct": 0,
+      "explanation": "Infrabel is een bedrijf (het/hij), dus de derde persoon enkelvoud."
+    },
+    {
+      "id": "rt5-taal-50",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Persoon en getal bepalen",
+      "question": "In welke persoon en welk getal staat \"brengen\" in:\n\"Jullie brengen andere passagiers zo ook in gevaar.\"?",
+      "options": [
+        "2e persoon meervoud",
+        "1e persoon meervoud",
+        "3e persoon enkelvoud",
+        "3e persoon meervoud"
+      ],
+      "correct": 0,
+      "explanation": "Het onderwerp is \"jullie\" = de 2e persoon in het meervoud."
+    },
+    {
+      "id": "rt5-taal-51",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Vervoeging: antwoorden (stam",
+      "question": "Vervoeg het werkwoord \"antwoorden\":\nik antwoord → hij [ ? ] → wij antwoorden",
+      "options": [
+        "antwoordt (antwoord + t)",
+        "antwoord",
+        "antwoort",
+        "antwoordde"
+      ],
+      "correct": 0,
+      "explanation": "Stam is antwoord (eindigt op d) + t = antwoordt."
+    },
+    {
+      "id": "rt5-taal-52",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Scheidbare werkwoorden",
+      "question": "Vervoeg het scheidbare werkwoord \"opletten\":\nik let op → de jongen [ ? ] → jullie letten op",
+      "options": [
+        "let op",
+        "letten op",
+        "opletten",
+        "oplet"
+      ],
+      "correct": 0,
+      "explanation": "De jongen is 3e persoon enkelvoud (stam + t): \"let op\"."
+    },
+    {
+      "id": "rt5-taal-53",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • De Zoutmars van Gandhi: Juis",
+      "question": "Kies de juiste persoonsvorm:\n\"Samen met zijn volgelingen [ ? ] hij op een mars naar het zoutstrand.\"",
+      "options": [
+        "vertrekt (enkelvoud, want het onderwerp is \"hij\")",
+        "vertrekken (meervoud)",
+        "vertrok",
+        "vertrek"
+      ],
+      "correct": 0,
+      "explanation": "Kijk naar het onderwerp: \"hij\" staat in het enkelvoud, dus vertrekt!"
+    },
+    {
+      "id": "rt5-taal-54",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Werkwoordspelling Les 14: la",
+      "question": "Vul de juiste vorm in: \"In mijn droom [ ? ] (landen) het vliegtuig op een tropisch eiland.\"",
+      "options": [
+        "landt (land + t)",
+        "land",
+        "lant",
+        "landen"
+      ],
+      "correct": 0,
+      "explanation": "Stam is land + t (3e persoon: het vliegtuig) = landt."
+    },
+    {
+      "id": "rt5-taal-55",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Infinitief vinden uit de tek",
+      "question": "Wat is de INFINITIEF van het werkwoord \"zit\" in:\n\"Om zijn voet zit een reusachtig verband.\"?",
+      "options": [
+        "zitten (ik zal zitten)",
+        "zittten",
+        "gezet",
+        "zat"
+      ],
+      "correct": 0,
+      "explanation": "Maak de minizin \"Ik zal...\": Ik zal zitten."
+    },
+    {
+      "id": "rt5-taal-56",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Infinitief van samengesteld ",
+      "question": "Wat is de INFINITIEF van het onderstreepte werkwoord in:\n\"Hij heeft zijn kamerjas [aangetrokken].\"?",
+      "options": [
+        "aantrekken",
+        "aangetrokken",
+        "trekken",
+        "aantrekkken"
+      ],
+      "correct": 0,
+      "explanation": "Minizin: Ik zal mijn kamerjas aantrekken."
+    },
+    {
+      "id": "rt5-taal-57",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Persoonsvorm of niet?",
+      "question": "Is het onderstreepte woord een PERSOONSVORM (pv) of niet?\n\"Ik heb een ander geluid [gehoord].\"",
+      "options": [
+        "Geen pv (het is een voltooid deelwoord; \"heb\" is de pv)",
+        "Wel een persoonsvorm",
+        "Het is het onderwerp",
+        "Het is een zelfstandig naamwoord"
+      ],
+      "correct": 0,
+      "explanation": "Stel de ja-neevraag: \"Heb ik een ander geluid gehoord?\" -> \"heb\" staat vooraan en is de pv, niet \"gehoord\"!"
+    },
+    {
+      "id": "rt5-taal-58",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • Persoonsvorm of niet?",
+      "question": "Is het onderstreepte woord een PERSOONSVORM (pv) of niet?\n\"Het elftal moet thuis [spelen].\"",
+      "options": [
+        "Geen pv (het is een infinitief; \"moet\" is de pv)",
+        "Wel een persoonsvorm",
+        "Het is een bijvoeglijk naamwoord",
+        "Het is het gezegde van één woord"
+      ],
+      "correct": 0,
+      "explanation": "Ja-neevraag: \"Moet het elftal thuis spelen?\" -> \"Moet\" is de persoonsvorm."
+    },
+    {
+      "id": "rt5-taal-59",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • De stam van een werkwoord vi",
+      "question": "Wat is de STAM van het werkwoord in:\n\"De meester [leert] ons iets vreemds vandaag.\"?",
+      "options": [
+        "leer (ik leer)",
+        "leert",
+        "leren",
+        "leerde"
+      ],
+      "correct": 0,
+      "explanation": "De stam is de ik-vorm van het werkwoord: \"ik leer\"."
+    },
+    {
+      "id": "rt5-taal-60",
+      "category": "taal-5",
+      "badge": "📖 Taal 5 • De stam van een werkwoord vi",
+      "question": "Wat is de STAM van het werkwoord in:\n\"Natuurlijk [weten] alle kinderen dat al.\"?",
+      "options": [
+        "weet (ik weet)",
+        "weeten",
+        "weten",
+        "wist"
+      ],
+      "correct": 0,
+      "explanation": "Minizin: \"Ik weet\"."
+    },
+    {
+      "id": "rt5-rekenen-1",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 1a: Het ontbrekende",
+      "question": "Het gemiddelde van 5 getallen is 12. Vier van die getallen zijn 10, 15, 13 en 8. Welk getal ontbreekt er?",
+      "options": [
+        "14",
+        "12",
+        "16",
+        "10"
+      ],
+      "correct": 0,
+      "explanation": "Vermenigvuldig het gemiddelde 12 eerst met 5 (totale som = 60) en trek daar de som van de 4 bekende getallen (46) van af."
+    },
+    {
+      "id": "rt5-rekenen-2",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 1b: Twee ontbrekend",
+      "question": "Het gemiddelde van 6 getallen is 14. De 4 getallen die je al kent, zijn 17, 19, 14 en 10. Het ene ontbrekende getal is het DUBBEL van het andere. Welke twee getallen ontbreken er?",
+      "options": [
+        "8 en 16",
+        "6 en 18",
+        "7 en 14",
+        "10 en 14"
+      ],
+      "correct": 0,
+      "explanation": "De som van de twee ontbrekende getallen is 84 - 60 = 24. Omdat het ene het dubbel is van het andere, verdeel je 24 in 3 gelijke delen: 24 : 3 = 8."
+    },
+    {
+      "id": "rt5-rekenen-3",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 1a: Getalraadsel — ",
+      "question": "Welk getal ben ik? \"Ik kom net na de helft van 98 410.\"",
+      "options": [
+        "49 206",
+        "49 205",
+        "49 210",
+        "49 207"
+      ],
+      "correct": 0,
+      "explanation": "Deel 98 410 eerst door 2 (49 205) en tel er dan 1 bij op."
+    },
+    {
+      "id": "rt5-rekenen-4",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 1b: Getalraadsel — ",
+      "question": "Welk getal ben ik? \"Ik ben het grootste getal dat je kunt vormen met de vijf oneven cijfers (elk cijfer precies 1 keer gebruikt).\"",
+      "options": [
+        "97 531",
+        "97 513",
+        "98 531",
+        "95 731"
+      ],
+      "correct": 0,
+      "explanation": "Rangschik de oneven cijfers (9, 7, 5, 3, 1) van groot naar klein."
+    },
+    {
+      "id": "rt5-rekenen-5",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 1c: Getalraadsel — ",
+      "question": "Welk getal ben ik? \"Ik besta uit 8 tientallen (T), 2 eenheden (E), 7 honderdduizendtallen (HD) en 6 tienduizendtallen (TD).\"",
+      "options": [
+        "760 082",
+        "760 820",
+        "82 760",
+        "706 082"
+      ],
+      "correct": 0,
+      "explanation": "Plaats elk cijfer in de positietabel: 7HD = 700 000, 6TD = 60 000, D = 0, H = 0, 8T = 80, 2E = 2."
+    },
+    {
+      "id": "rt5-rekenen-6",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 1d: Getalraadsel — ",
+      "question": "Welk getal ben ik? \"Ik ben 4 duizendtallen (4D) kleiner dan 600 295.\"",
+      "options": [
+        "596 295",
+        "596 000",
+        "604 295",
+        "560 295"
+      ],
+      "correct": 0,
+      "explanation": "4D staat voor 4 000. Bereken 600 295 - 4 000."
+    },
+    {
+      "id": "rt5-rekenen-7",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 1e: Net voor 380 00",
+      "question": "Welk getal komt net voor 380 000? En hoe rangschik je de 5 gevonden getallen van GROOT naar KLEIN?\nDe getallen zijn: 49 206, 97 531, 760 082, 596 295 en het getal net voor 380 000.",
+      "options": [
+        "379 999 en volgorde: 760 082 > 596 295 > 379 999 > 97 531 > 49 206",
+        "379 999 en volgorde: 49 206 < 97 531 < 379 999 < 596 295 < 760 082",
+        "379 990 en volgorde: 760 082 > 596 295 > 379 990 > 97 531 > 49 206",
+        "379 999 en volgorde: 596 295 > 760 082 > 379 999 > 97 531 > 49 206"
+      ],
+      "correct": 0,
+      "explanation": "380 000 - 1 = 379 999. Rangschik vervolgens beginnend bij het grootste getal (760 082)."
+    },
+    {
+      "id": "rt5-rekenen-8",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 3b: Hoeveel kost de",
+      "question": "Er moet 38,5 m² muur geschilderd worden. De directeur leest op het etiket dat je met 1 pot verf 20 m² kunt schilderen. Eén pot verf kost € 79,50.\nHoeveel kost de nodige verf?",
+      "options": [
+        "€ 159",
+        "€ 79,50",
+        "€ 119,25",
+        "€ 175"
+      ],
+      "correct": 0,
+      "explanation": "Met 1 pot (20 m²) kom je niet toe. Je moet 2 potten kopen: 2 × € 79,50 = € 159."
+    },
+    {
+      "id": "rt5-rekenen-9",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 3b: Welk 4-letterwo",
+      "question": "Gebruik dezelfde letterwaardes:\nKlinkers: a=100, e=215, i=565, o=445, u=95\nMedeklinkers: k=305, m=775, n=910, s=295, p=825\nWelk van de volgende 4-letterwoorden levert de MEESTE punten op?",
+      "options": [
+        "spin (2 595 punten)",
+        "pien (2 515 punten)",
+        "mans (2 080 punten)",
+        "moes (1 730 punten)"
+      ],
+      "correct": 0,
+      "explanation": "Vergelijk spin (2 595) en pien (2 515). s is 295 en e is 215, dus spin wint met 80 punten verschil!"
+    },
+    {
+      "id": "rt5-rekenen-10",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 1b: Outfits met sho",
+      "question": "De meester koopt daarnaast ook nog 3 zomerhemdjes: een geel, een wit en een blauw hemdje. Hoeveel verschillende combinaties kan hij in totaal maken met zijn 3 shorts, 2 paar sneakers én 3 zomerhemdjes?",
+      "options": [
+        "18 combinaties",
+        "12 combinaties",
+        "15 combinaties",
+        "24 combinaties"
+      ],
+      "correct": 0,
+      "explanation": "3 × 2 = 6 outfits, en 6 × 3 = 18 verschillende combinaties."
+    },
+    {
+      "id": "rt5-rekenen-11",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 2a: Kans om juist t",
+      "question": "Bij de start van een wedstrijd gooit de scheidsrechter een munt op (kop of munt). Hoeveel kans heeft een kapitein om juist te raden?",
+      "options": [
+        "1 op 2 (50%)",
+        "1 op 4 (25%)",
+        "1 op 3 (33%)",
+        "2 op 2 (100%)"
+      ],
+      "correct": 0,
+      "explanation": "Er zijn 2 kanten aan een muntstuk: 1 kans op 2."
+    },
+    {
+      "id": "rt5-rekenen-12",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 2b: Precies 2 keer ",
+      "question": "Je gooit een muntstuk 3 keer na elkaar op. In een boomschema zie je 8 mogelijke uitkomsten (2 × 2 × 2 = 8). Hoe groot is de kans dat je PRECIES 2 keer kop werpt?",
+      "options": [
+        "3 op 8",
+        "2 op 8",
+        "4 op 8",
+        "1 op 8"
+      ],
+      "correct": 0,
+      "explanation": "Tel de takken met 2 letters K en 1 letter M: dat zijn er 3 van de 8."
+    },
+    {
+      "id": "rt5-rekenen-13",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 2c: Twee keer na el",
+      "question": "Onze kapitein kiest altijd \"munt\". Hoeveel kans heeft hij om 2 keer na elkaar juist te raden?",
+      "options": [
+        "1 op 4",
+        "1 op 2",
+        "2 op 4",
+        "1 op 8"
+      ],
+      "correct": 0,
+      "explanation": "Bij 2 worpen zijn er 4 mogelijkheden (2 × 2 = 4). Slechts 1 daarvan is 2× munt."
+    },
+    {
+      "id": "rt5-rekenen-14",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 2c: Vier keer na el",
+      "question": "De kapitein kiest weer altijd \"munt\". Hoe groot is de kans dat hij 4 keer na elkaar juist raadt?",
+      "options": [
+        "1 op 16",
+        "1 op 8",
+        "1 op 4",
+        "4 op 16"
+      ],
+      "correct": 0,
+      "explanation": "Elke worp halveert de kans: 1/2 ➔ 1/4 ➔ 1/8 ➔ 1/16."
+    },
+    {
+      "id": "rt5-rekenen-15",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 2d: Evenveel keer k",
+      "question": "Je gooit 4 keer met de munt (in totaal 16 mogelijke uitkomsten). Hoe groot is de kans dat je EVENVEEL keer kop als munt werpt (dus precies 2 keer kop en 2 keer munt)?",
+      "options": [
+        "6 op 16 (of 3 op 8)",
+        "4 op 16 (of 1 op 4)",
+        "8 op 16 (of 1 op 2)",
+        "2 op 16"
+      ],
+      "correct": 0,
+      "explanation": "Er zijn 6 takken met precies 2 keer K en 2 keer M: 6 op 16 = 3 op 8."
+    },
+    {
+      "id": "rt5-rekenen-16",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 3: Italiaans menu m",
+      "question": "Op de menukaart staat een uitzondering: \"Wie minestrone kiest, kan GEEN spaghetti bolognaise kiezen.\" Hoeveel verschillende menucombinaties kun je maken als je start met MINESTRONE?",
+      "options": [
+        "6 combinaties",
+        "8 combinaties",
+        "4 combinaties",
+        "5 combinaties"
+      ],
+      "correct": 0,
+      "explanation": "Omdat bolognaise afvalt, blijven er 3 hoofdgerechten over: 1 × 3 × 2 = 6."
+    },
+    {
+      "id": "rt5-rekenen-17",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 3: Totaal aantal me",
+      "question": "Uit hoeveel verschillende menucombinaties kun je in het totaal kiezen op de Italiaanse avond (8 met carpaccio en 6 met minestrone)?",
+      "options": [
+        "14 combinaties",
+        "16 combinaties",
+        "12 combinaties",
+        "18 combinaties"
+      ],
+      "correct": 0,
+      "explanation": "Tel de combinaties met carpaccio (8) en minestrone (6) bij elkaar op: 8 + 6 = 14."
+    },
+    {
+      "id": "rt5-rekenen-18",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 4: Hoeveel leerling",
+      "question": "Er zijn in totaal 30 zwemmers in de zwemgroep. Hoeveel van deze 30 leerlingen moeten iemand anders opbellen?",
+      "options": [
+        "14 leerlingen",
+        "15 leerlingen",
+        "16 leerlingen",
+        "30 leerlingen"
+      ],
+      "correct": 0,
+      "explanation": "De leerlingen die bellen zijn die uit ronde 1, 2 en 3: 2 + 4 + 8 = 14 leerlingen."
+    },
+    {
+      "id": "rt5-rekenen-19",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 1a: Gemiddelde snel",
+      "question": "Het 5e leerjaar maakt tijdens de verkeersweek een fietstocht van 42 km. De juf schat dat ze er 3,5 uur over zullen doen (3 uur en 30 minuten). Wat is de gemiddelde snelheid die ze moeten halen?",
+      "options": [
+        "12 km/uur",
+        "14 km/uur",
+        "10 km/uur",
+        "15 km/uur"
+      ],
+      "correct": 0,
+      "explanation": "42 km : 3,5 uur = 12 km/uur. In een half uur fietsen ze 6 km, dus in 1 uur 12 km."
+    },
+    {
+      "id": "rt5-rekenen-20",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 1b: Kilometers voor",
+      "question": "De totale tocht is 42 km. De juf wil in de voormiddag DUBBEL zover fietsen als in de namiddag. Hoeveel kilometer moeten ze voor de middag afleggen?",
+      "options": [
+        "28 km",
+        "21 km",
+        "24 km",
+        "30 km"
+      ],
+      "correct": 0,
+      "explanation": "Verdeel 42 km in 3 delen: 14 km per deel. Voormiddag heeft 2 delen: 2 × 14 = 28 km."
+    },
+    {
+      "id": "rt5-rekenen-21",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 1c: Snelheid van he",
+      "question": "Het zesde leerjaar fietst dezelfde tocht, maar zij fietsen 25% sneller dan het vijfde (dat aan 12 km/uur fietst). Wat is de snelheid van het zesde leerjaar?",
+      "options": [
+        "15 km/uur",
+        "16 km/uur",
+        "14 km/uur",
+        "18 km/uur"
+      ],
+      "correct": 0,
+      "explanation": "25% van 12 = 3. Tel dat erbij op: 12 + 3 = 15 km/uur."
+    },
+    {
+      "id": "rt5-rekenen-22",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 1c: Uiterste vertre",
+      "question": "Het zesde moet in de namiddag nog 14 km fietsen aan 15 km/uur. Ze doen daar 56 minuten over. Hoe laat moeten zij na de middagpauze ten laatste vertrekken om om 15.00 uur weer op school te zijn?",
+      "options": [
+        "14.04 uur",
+        "14.14 uur",
+        "14.06 uur",
+        "13.56 uur"
+      ],
+      "correct": 0,
+      "explanation": "60 min - 56 min = 4 min over. Het is dus 4 minuten na 14.00 uur: 14.04 uur."
+    },
+    {
+      "id": "rt5-rekenen-23",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 2: De verhouding va",
+      "question": "De juf wil een foto van de fietstocht vergroten en inlijsten. De originele foto heeft een basis van 6 cm en een hoogte van 4 cm. Welke verhouding hebben de zijden van deze foto?",
+      "options": [
+        "3 : 2 (of factor 1,5)",
+        "2 : 1",
+        "4 : 3",
+        "5 : 2"
+      ],
+      "correct": 0,
+      "explanation": "Vereenvoudig 6 : 4 door beide door 2 te delen: 3 op 2."
+    },
+    {
+      "id": "rt5-rekenen-24",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 2: Kader 1 (30 cm ×",
+      "question": "Is Kader 1 met afmetingen 30 cm × 20 cm geschikt om de foto van 6 cm × 4 cm gelijkvormig in te vergroten zonder vervorming?",
+      "options": [
+        "Ja, het kader is geschikt (vergrotingsfactor 5)",
+        "Nee, het kader is te smal",
+        "Nee, het kader is te hoog",
+        "Alleen als je de foto bijsnijdt"
+      ],
+      "correct": 0,
+      "explanation": "30 : 6 = 5 en 20 : 4 = 5. Beide zijden worden met dezelfde factor 5 vergroot."
+    },
+    {
+      "id": "rt5-rekenen-25",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 2: Alle geschikte k",
+      "question": "Welke van de 5 fotokaders zijn precies gelijkvormig met de foto van 6 cm × 4 cm? (Kader 1: 30×20, Kader 2: 16×9, Kader 3: 25×20, Kader 4: 15×10, Kader 5: 45×30)",
+      "options": [
+        "Kaders 1, 4 en 5",
+        "Kaders 1, 2 en 3",
+        "Kaders 2, 3 en 4",
+        "Alle 5 kaders"
+      ],
+      "correct": 0,
+      "explanation": "Kader 1 (×5), Kader 4 (×2,5) en Kader 5 (×7,5) zijn gelijkvormig."
+    },
+    {
+      "id": "rt5-rekenen-26",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 3: Oppervlakte van ",
+      "question": "Lotte schildert een fiets op haar kamermuur. De 2 wielen zijn vierkanten van 30 cm bij 30 cm. Wat is de oppervlakte van de 2 wielen samen?",
+      "options": [
+        "1 800 cm²",
+        "900 cm²",
+        "1 200 cm²",
+        "3 600 cm²"
+      ],
+      "correct": 0,
+      "explanation": "30 × 30 = 900 cm² per wiel. Twee wielen: 2 × 900 = 1 800 cm²."
+    },
+    {
+      "id": "rt5-rekenen-27",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 3: Totale oppervlak",
+      "question": "De wielen (1 800 cm²) en driehoeken (330 cm²) zijn samen 2 130 cm² (= 0,213 m²). Met 1 dl verf kun je ongeveer 0,5 m² schilderen. Lukt het om de fiets met 1 dl verf te schilderen?",
+      "options": [
+        "Ja, dat lukt, want 2 130 cm² (0,213 m²) is minder dan 0,5 m².",
+        "Nee, dat lukt niet, want 2 130 cm² is veel te groot.",
+        "Nee, je hebt minstens 1 liter verf nodig.",
+        "Ja, maar alleen als je het zadel niet meerekent."
+      ],
+      "correct": 0,
+      "explanation": "0,213 m² is minder dan de helft van een vierkante meter (0,5 m²), dus 1 dl is ruim voldoende!"
+    },
+    {
+      "id": "rt5-rekenen-28",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 1a: Kleur hesje van",
+      "question": "Loréna staat net achter Dounia in de rij (op de 22ste plaats). Welke kleur hesje krijgt Loréna volgens hetzelfde patroon van 6 kleuren (rood, geel, groen, oranje, blauw, wit)?",
+      "options": [
+        "Oranje",
+        "Blauw",
+        "Groen",
+        "Wit"
+      ],
+      "correct": 0,
+      "explanation": "Na groen (kleur 3) komt oranje (kleur 4): 22 = 18 + 4."
+    },
+    {
+      "id": "rt5-rekenen-29",
+      "category": "rekenen-5",
+      "badge": "🧮 Rekenen 5 • Oefening 1b: Aantal wedstrij",
+      "question": "Er zijn 6 voetbalploegen (A, B, C, D, E, F). De turnjuf wil dat alle ploegen precies 1 keer tegen elkaar spelen. Hoeveel wedstrijden spelen ze in totaal?",
+      "options": [
+        "15 wedstrijden",
+        "12 wedstrijden",
+        "18 wedstrijden",
+        "30 wedstrijden"
+      ],
+      "correct": 0,
+      "explanation": "Tel af vanaf 5: 5 + 4 + 3 + 2 + 1 = 15 wedstrijden."
+    },
+    {
+      "id": "rt5-frans-1",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Les mots du sac à dos: Begro",
+      "question": "Kies het juiste woord uit de rugzak om de zin aan te vullen: \"[ ? ] ça va?\"",
+      "options": [
+        "Comment",
+        "Avec",
+        "Déjà",
+        "Voilà"
+      ],
+      "correct": 0,
+      "explanation": "Als je vraagt hoe het gaat in het Frans, zeg je: \"Comment ça va?\"."
+    },
+    {
+      "id": "rt5-frans-2",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Les mots du sac à dos: Naar ",
+      "question": "Welk woord past in de zin? \"Tu vas [ ? ] à la maison?\"",
+      "options": [
+        "déjà",
+        "comment",
+        "voilà",
+        "bien"
+      ],
+      "correct": 0,
+      "explanation": "\"Déjà\" betekent \"al\" in het Frans."
+    },
+    {
+      "id": "rt5-frans-3",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Les mots du sac à dos: Samen",
+      "question": "Welk voorzetsel past in de zin? \"Je vais à la gare [ ? ] toi.\"",
+      "options": [
+        "avec",
+        "déjà",
+        "bien",
+        "voilà"
+      ],
+      "correct": 0,
+      "explanation": "\"Avec\" betekent \"met\" in het Frans."
+    },
+    {
+      "id": "rt5-frans-4",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Fais des phrases correctes: ",
+      "question": "Zet de woorden in de juiste volgorde: \"vont / à l’ / déjà / Elles / école\"",
+      "options": [
+        "Elles vont déjà à l’école.",
+        "Elles à l’école déjà vont.",
+        "Déjà vont elles à l’école.",
+        "Vont elles déjà école à l’."
+      ],
+      "correct": 0,
+      "explanation": "Begin met het onderwerp (Elles), dan de persoonsvorm (vont), dan het bijwoord (déjà) en de plaats (à l’école)."
+    },
+    {
+      "id": "rt5-frans-5",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Le verbe aller: Vervoeging",
+      "question": "Kies de juiste vorm van het werkwoord \"aller\": \"Nous [ ? ] à la piscine.\"",
+      "options": [
+        "allons",
+        "allez",
+        "vont",
+        "vais"
+      ],
+      "correct": 0,
+      "explanation": "Bij \"nous\" hoort altijd de uitgang \"-ons\": nous allons."
+    },
+    {
+      "id": "rt5-frans-6",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Le verbe aller: Hij gaat",
+      "question": "Welke vorm van \"aller\" hoort bij Christophe? \"Christophe [ ? ] bientôt à la maison.\"",
+      "options": [
+        "va",
+        "vas",
+        "vais",
+        "vont"
+      ],
+      "correct": 0,
+      "explanation": "Bij \"il\" of \"Christophe\" schrijf je \"va\" (zonder s)."
+    },
+    {
+      "id": "rt5-frans-7",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Woordenlijst Passepartout: e",
+      "question": "Wat is het Franse woord voor \"een bakker\"?",
+      "options": [
+        "un boulanger",
+        "un boucher",
+        "un épicier",
+        "un fermier"
+      ],
+      "correct": 0,
+      "explanation": "De bakkerij is \"la boulangerie\", de bakker is \"un boulanger\"."
+    },
+    {
+      "id": "rt5-frans-8",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Woordenlijst Passepartout: u",
+      "question": "Wat betekent het Franse woord \"une pomme\"?",
+      "options": [
+        "een appel",
+        "een peer",
+        "een banaan",
+        "een aardappel"
+      ],
+      "correct": 0,
+      "explanation": "\"Une pomme\" is een appel (\"une pomme de terre\" is een aardappel)."
+    },
+    {
+      "id": "rt5-frans-9",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Woordenlijst Passepartout: a",
+      "question": "Hoe zeg je \"aankomen\" in het Frans?",
+      "options": [
+        "arriver",
+        "partir",
+        "entrer",
+        "rester"
+      ],
+      "correct": 0,
+      "explanation": "Denk aan \"de aankomst\" = \"l’arrivée\". Het werkwoord is \"arriver\"."
+    },
+    {
+      "id": "rt5-frans-10",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 3: Barre l’intrus (S",
+      "question": "Welk woord hoort NIET in het rijtje thuis? \"une école – un instant – une gare – une maison\"",
+      "options": [
+        "un instant",
+        "une école",
+        "une gare",
+        "une maison"
+      ],
+      "correct": 0,
+      "explanation": "De andere drie woorden zijn gebouwen of plaatsen. \"Un instant\" (een ogenblik) heeft met tijd te maken."
+    },
+    {
+      "id": "rt5-frans-11",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 3: Le verbe être (Wi",
+      "question": "Vul aan met de juiste vorm van \"être\": \"Nous [ ? ] dans le séjour.\"",
+      "options": [
+        "sommes",
+        "êtes",
+        "sont",
+        "suis"
+      ],
+      "correct": 0,
+      "explanation": "Vervoeging être: je suis, tu es, il est, nous sommes, vous êtes, ils sont."
+    },
+    {
+      "id": "rt5-frans-12",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 3: Werkwoordsvormen ",
+      "question": "Wat is de infinitief van het werkwoord in: \"Christophe et Marie sont dans le magasin\"?",
+      "options": [
+        "être",
+        "avoir",
+        "aller",
+        "faire"
+      ],
+      "correct": 0,
+      "explanation": "\"Sont\" komt van het werkwoord \"être\" (zijn)."
+    },
+    {
+      "id": "rt5-frans-13",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 4: Le verbe avoir (J",
+      "question": "Vul aan met de juiste vorm van \"avoir\": \"Damian et Charlotte, vous [ ? ] un cadeau pour Julie?\"",
+      "options": [
+        "avez",
+        "avons",
+        "ont",
+        "as"
+      ],
+      "correct": 0,
+      "explanation": "Bij \"vous\" hoort \"avez\": vous avez."
+    },
+    {
+      "id": "rt5-frans-14",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 4: Le verbe avoir (Z",
+      "question": "Kies de juiste vorm van \"avoir\": \"Et Sarah et Marie, ont-[ ? ] aussi un cadeau?\"",
+      "options": [
+        "elles",
+        "ils",
+        "nous",
+        "vous"
+      ],
+      "correct": 0,
+      "explanation": "Sarah en Marie zijn twee meisjes, dus meervoud vrouwelijk: \"elles\"."
+    },
+    {
+      "id": "rt5-frans-15",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 4: Écris la traducti",
+      "question": "Wat is de juiste Franse vertaling voor: \"Waar is Margot?\"",
+      "options": [
+        "Où est Margot?",
+        "Qui est Margot?",
+        "Comment est Margot?",
+        "D’où vient Margot?"
+      ],
+      "correct": 0,
+      "explanation": "\"Waar\" is \"Où\" met een accent grave."
+    },
+    {
+      "id": "rt5-frans-16",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 4: Natuurlijk!",
+      "question": "Hoe zeg je \"Natuurlijk!\" of \"Zeker!\" in het Frans?",
+      "options": [
+        "Bien sûr!",
+        "Pas du tout!",
+        "De rien!",
+        "Merci bien!"
+      ],
+      "correct": 0,
+      "explanation": "\"Bien sûr\" betekent natuurlijk / zeker."
+    },
+    {
+      "id": "rt5-frans-17",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 5: La famille (De fa",
+      "question": "Vul aan: Arthur heeft twee zussen. In het Frans: \"Arthur a deux [ ? ].\"",
+      "options": [
+        "sœurs",
+        "frères",
+        "filles",
+        "copines"
+      ],
+      "correct": 0,
+      "explanation": "\"Une sœur\" is een zus, in het meervoud met een -s: \"sœurs\"."
+    },
+    {
+      "id": "rt5-frans-18",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 5: Les nombres en le",
+      "question": "Welk getal in letters ontbreekt in de rij? \"onze < treize < quinze < [ ? ] < dix-huit < vingt\"",
+      "options": [
+        "seize",
+        "quatorze",
+        "douze",
+        "dix-sept"
+      ],
+      "correct": 0,
+      "explanation": "16 schrijf je in het Frans als \"seize\"."
+    },
+    {
+      "id": "rt5-frans-19",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 5: Barre l’intrus (G",
+      "question": "Welk woord is de indringer tussen de Franse getallen? \"trois – sept – très – treize\"",
+      "options": [
+        "très",
+        "trois",
+        "sept",
+        "treize"
+      ],
+      "correct": 0,
+      "explanation": "Trois (3), sept (7) en treize (13) zijn getallen. \"Très\" betekent \"zeer\" of \"erg\"."
+    },
+    {
+      "id": "rt5-frans-20",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 6: Quelle heure est-",
+      "question": "Het is 12:10 op de klok. Hoe zeg je dat in het Frans?",
+      "options": [
+        "Il est midi dix.",
+        "Il est minuit dix.",
+        "Il est dix heures.",
+        "Il est deux heures dix."
+      ],
+      "correct": 0,
+      "explanation": "12 uur ’s middags is \"midi\", plus 10 minuten = \"midi dix\"."
+    },
+    {
+      "id": "rt5-frans-21",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 6: Quelle heure est-",
+      "question": "Het is 18:40. Welke Franse uitdrukking hoort hierbij?",
+      "options": [
+        "Il est sept heures moins vingt du soir.",
+        "Il est six heures quarante du matin.",
+        "Il est huit heures moins vingt.",
+        "Il est sept heures et demie."
+      ],
+      "correct": 0,
+      "explanation": "18:40 is 20 minuten voor 7 uur: \"sept heures moins vingt\". Omdat het 18 uur is, is het \"du soir\"."
+    },
+    {
+      "id": "rt5-frans-22",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 6: Le petit déjeuner",
+      "question": "Wat betekent \"une tartine\" in het Nederlands?",
+      "options": [
+        "een boterham",
+        "een croissant",
+        "een taart",
+        "een pannenkoek"
+      ],
+      "correct": 0,
+      "explanation": "\"Une tartine\" is een boterham (een sneetje brood met beleg)."
+    },
+    {
+      "id": "rt5-frans-23",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 7: Les contraires (T",
+      "question": "Wat is het Franse tegengestelde van \"gauche\" (links)?",
+      "options": [
+        "droite",
+        "devant",
+        "derrière",
+        "sous"
+      ],
+      "correct": 0,
+      "explanation": "Links is \"gauche\", rechts is \"droite\"."
+    },
+    {
+      "id": "rt5-frans-24",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 7: Les contraires (G",
+      "question": "Wat is het Franse tegengestelde van \"grand\" (groot)?",
+      "options": [
+        "petit",
+        "beaucoup",
+        "gentil",
+        "jeune"
+      ],
+      "correct": 0,
+      "explanation": "Groot is \"grand\", klein is \"petit\"."
+    },
+    {
+      "id": "rt5-frans-25",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 7: C’est vs Il est /",
+      "question": "Kies de juiste combinatie: \"[ ? ] un professeur. [ ? ] très gentil.\"",
+      "options": [
+        "C’est un professeur. Il est très gentil.",
+        "Il est un professeur. C’est très gentil.",
+        "Ce sont un professeur. Ils sont très gentil.",
+        "Elle est un professeur. C’est très gentil."
+      ],
+      "correct": 0,
+      "explanation": "Vóór een zelfstandig naamwoord met lidwoord gebruik je \"C’est\" (C’est un professeur). Vóór een bijvoeglijk naamwoord gebruik je \"Il est\" (Il est très gentil)."
+    },
+    {
+      "id": "rt5-frans-26",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 8: Les couleurs (Kle",
+      "question": "Kies de juiste vrouwelijke vorm van de kleur: \"une table [ ? ]\" (wit)",
+      "options": [
+        "blanche",
+        "blanc",
+        "blanches",
+        "blancs"
+      ],
+      "correct": 0,
+      "explanation": "Het mannelijk is \"blanc\", het vrouwelijk is \"blanche\"."
+    },
+    {
+      "id": "rt5-frans-27",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 8: Les yeux bleus",
+      "question": "Hoe schrijf je \"blauwe ogen\" in het Frans?",
+      "options": [
+        "les yeux bleus",
+        "les yeux bleu",
+        "les yeux bleues",
+        "les yeux bleue"
+      ],
+      "correct": 0,
+      "explanation": "\"Les yeux\" is mannelijk meervoud, dus \"bleu\" krijgt een meervouds-s: \"bleus\"."
+    },
+    {
+      "id": "rt5-frans-28",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 9: Le verbe faire (V",
+      "question": "Kies de juiste vorm van \"faire\": \"Vous [ ? ] une promenade demain?\"",
+      "options": [
+        "faites",
+        "faisons",
+        "font",
+        "fais"
+      ],
+      "correct": 0,
+      "explanation": "Let op: bij \"vous\" is het een uitzondering: \"vous faites\" (met -tes)."
+    },
+    {
+      "id": "rt5-frans-29",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 9: La négation (Ne .",
+      "question": "Maak de zin ontkennend: \"Ma maman a des fruits\" ➔ \"Mijn mama heeft geen fruit meer.\"",
+      "options": [
+        "Ma maman n’a plus de fruits.",
+        "Ma maman a plus de fruits.",
+        "Ma maman ne plus a fruits.",
+        "Ma maman n’a pas fruits."
+      ],
+      "correct": 0,
+      "explanation": "Geen meer = \"ne ... plus\". Vóór een klinker wordt \"ne\" \"n’\": \"n’a plus de fruits\"."
+    },
+    {
+      "id": "rt5-frans-30",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 10: Prix en euros (P",
+      "question": "Hoe lees je het prijskaartje \"1,20 €\" in het Frans?",
+      "options": [
+        "un euro vingt",
+        "un euro deux",
+        "douze euros",
+        "vingt euros"
+      ],
+      "correct": 0,
+      "explanation": "1 euro en 20 cent = \"un euro vingt\"."
+    },
+    {
+      "id": "rt5-frans-31",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 10: Les rayons du su",
+      "question": "In welke afdeling vind je \"le poulet, le jambon et la saucisse\"?",
+      "options": [
+        "Au rayon «boucherie»",
+        "Au rayon «boulangerie»",
+        "Au rayon «crèmerie»",
+        "Au rayon «légumes»"
+      ],
+      "correct": 0,
+      "explanation": "Kip, ham en worst zijn vleeswaren, die horen bij de beenhouwerij/slagerij: \"la boucherie\"."
+    },
+    {
+      "id": "rt5-frans-32",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 11: Demander le chem",
+      "question": "Wat betekent: \"Tu prends la première rue à droite\"?",
+      "options": [
+        "Je neemt de eerste straat rechts.",
+        "Je neemt de eerste straat links.",
+        "Je gaat rechtdoor aan het kruispunt.",
+        "Je steekt de rotonde over."
+      ],
+      "correct": 0,
+      "explanation": "première rue = eerste straat; à droite = rechts."
+    },
+    {
+      "id": "rt5-frans-33",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 11: Les ordinaux (Ra",
+      "question": "Louise behaalde de hoogste score (19/20). Hoe zeg je \"Louise is de eerste\"?",
+      "options": [
+        "Louise est la première.",
+        "Louise est le premier.",
+        "Louise est la deuxième.",
+        "Louise est une première."
+      ],
+      "correct": 0,
+      "explanation": "Voor een meisje is \"de eerste\" = \"la première\". Voor een jongen = \"le premier\"."
+    },
+    {
+      "id": "rt5-frans-34",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 12: Les animaux au p",
+      "question": "Wat is het meervoud van \"un cheval\" (een paard)?",
+      "options": [
+        "chevaux",
+        "chevals",
+        "chevauces",
+        "chevales"
+      ],
+      "correct": 0,
+      "explanation": "Woorden op -al krijgen in het meervoud meestal -aux: un cheval ➔ des chevaux."
+    },
+    {
+      "id": "rt5-frans-35",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 12: Les animaux au p",
+      "question": "Wat is het meervoud van \"un oiseau\" (een vogel)?",
+      "options": [
+        "oiseaux",
+        "oiseaus",
+        "oiseau",
+        "oiseauces"
+      ],
+      "correct": 0,
+      "explanation": "Woorden op -eau krijgen in het meervoud een -x: un oiseau ➔ des oiseaux."
+    },
+    {
+      "id": "rt5-frans-36",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 13: Les pièces de la",
+      "question": "Waar in huis slaap je? \"On dort dans [ ? ].\"",
+      "options": [
+        "la chambre",
+        "la cuisine",
+        "la cave",
+        "le garage"
+      ],
+      "correct": 0,
+      "explanation": "De slaapkamer is \"la chambre\"."
+    },
+    {
+      "id": "rt5-frans-37",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 13: Les adjectifs po",
+      "question": "Kies het juiste bezittelijk voornaamwoord: \"Voilà, une photo de [ ? ] famille (vrouwelijk).\"",
+      "options": [
+        "ma",
+        "mon",
+        "mes",
+        "ta"
+      ],
+      "correct": 0,
+      "explanation": "\"Famille\" is vrouwelijk enkelvoud, dus gebruik je \"ma\" voor \"mijn\"."
+    },
+    {
+      "id": "rt5-frans-38",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 14: Les verbes parti",
+      "question": "Vul aan met de juiste vorm van \"partir\": \"Quand [ ? ]-tu pour la fête?\"",
+      "options": [
+        "pars",
+        "part",
+        "partons",
+        "partez"
+      ],
+      "correct": 0,
+      "explanation": "Vervoeging partir: je pars, tu pars, il part, nous partons, vous partez, ils partent."
+    },
+    {
+      "id": "rt5-frans-39",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 14: Les mots interro",
+      "question": "Welk vraagwoord past het best? \"[ ? ] d’animaux as-tu à la maison? — J’ai trois chiens.\"",
+      "options": [
+        "Combien",
+        "Où",
+        "Quand",
+        "Comment"
+      ],
+      "correct": 0,
+      "explanation": "Als je naar een aantal vraagt (\"hoeveel\"), gebruik je \"Combien (de)\"."
+    },
+    {
+      "id": "rt5-frans-40",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 15: Mettre la table ",
+      "question": "Wat betekent \"une fourchette\" in het Nederlands?",
+      "options": [
+        "een vork",
+        "een lepel",
+        "een mes",
+        "een bord"
+      ],
+      "correct": 0,
+      "explanation": "lepel = une cuillère, mes = un couteau, vork = une fourchette."
+    },
+    {
+      "id": "rt5-frans-41",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 15: Uitdrukkingen me",
+      "question": "Hoe zeg je \"Ik heb zin om muziek te luisteren\" in het Frans?",
+      "options": [
+        "J’ai envie d’écouter de la musique.",
+        "J’ai faim d’écouter de la musique.",
+        "J’ai besoin la musique.",
+        "Je veux musique écouter."
+      ],
+      "correct": 0,
+      "explanation": "Zin hebben in / om = \"avoir envie de\"."
+    },
+    {
+      "id": "rt5-frans-42",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 16: Pouvoir et Voulo",
+      "question": "Kies de juiste vorm van \"pouvoir\": \"Je [ ? ] regarder la télé?\"",
+      "options": [
+        "peux",
+        "peut",
+        "pouvons",
+        "peuvent"
+      ],
+      "correct": 0,
+      "explanation": "Vervoeging pouvoir: je peux, tu peux, il peut, nous pouvons, vous pouvez, ils peuvent."
+    },
+    {
+      "id": "rt5-frans-43",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 16: Les adjectifs dé",
+      "question": "Welk aanwijzend voornaamwoord hoort vóór \"enfant\" (mannelijk woord dat begint met een klinker)?",
+      "options": [
+        "Cet",
+        "Ce",
+        "Cette",
+        "Ces"
+      ],
+      "correct": 0,
+      "explanation": "Vóór een mannelijk woord dat begint met een klinker of stomme h gebruik je \"cet\" in plaats van \"ce\"."
+    },
+    {
+      "id": "rt5-frans-44",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 17: Les parties du c",
+      "question": "Welk lichaamsdeel is \"la dent\"?",
+      "options": [
+        "een tand",
+        "een vinger",
+        "een oor",
+        "een been"
+      ],
+      "correct": 0,
+      "explanation": "\"Une dent\" is een tand (denk aan dentiste)."
+    },
+    {
+      "id": "rt5-frans-45",
+      "category": "frans-5",
+      "badge": "🇫🇷 Frans 5 • Contact 17: Avoir mal (Pijn ",
+      "question": "Kies het juiste voorzetsel: \"Je n’ai plus mal [ ? ] dents (meervoud).\"",
+      "options": [
+        "aux",
+        "au",
+        "à la",
+        "à l’"
+      ],
+      "correct": 0,
+      "explanation": "À + les wordt altijd \"aux\" (met een x) voor een meervoud."
+    }
+  ]
+}
