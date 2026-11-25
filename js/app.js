@@ -447,7 +447,14 @@
     el.quizRoundBadge.textContent = `Ronde ${roundInfo.num} • ${roundInfo.title}`;
     el.quizTopicBadge.textContent = q.badge;
     el.quizCounter.textContent = `Vraag ${state.currentIndex + 1} / ${state.deck.length}`;
-    el.quizQuestionText.textContent = q.question;
+    const safeHtml = String(q.question || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/\[\s*\?\s*\]/g, '<span class="px-2 py-0.5 rounded-lg bg-amber-400/20 border border-amber-400/50 text-amber-300">?</span>')
+      .replace(/\[([^\]]+)\]/g, '<u class="underline decoration-amber-400 decoration-4 underline-offset-4 text-amber-200">$1</u>')
+      .replace(/\n/g, '<br />');
+    el.quizQuestionText.innerHTML = safeHtml;
     el.quizRevealBox.classList.add('hidden');
 
     if (state.currentRoundType === 'fastest') {
